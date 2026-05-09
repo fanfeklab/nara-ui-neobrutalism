@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* =============================================
+   Tema NARA EVENTS - Neo-Brutalism
+   Aturan Emas: Border & Shadow SELALU #000000
+   ============================================= */
+@theme {
+  /* --- Font --- */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "IBM Plex Mono", ui-monospace, monospace;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* --- Breakpoint --- */
+  --breakpoint-3xl: 1920px;
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-destructive: var(--destructive);
+  --color-info: var(--info);
+
+  /* Shadow Neo-Brutalism */
+  --shadow-brutal: 4px 4px 0px 0px #000000;
+  --shadow-brutal-sm: 2px 2px 0px 0px #000000;
+  --shadow-brutal-lg: 8px 8px 0px 0px #000000;
+}
+
+/* =============================================
+   Light Mode (Default)
+   ============================================= */
+:root {
+  /* Palet Utama */
+  --primary: #ccff00;       /* Ijo Stabilo / Lime */
+  --primary-foreground: #000000;
+  --secondary: #8a2be2;    /* Violet */
+  --secondary-foreground: #ffffff;
+  --accent: #ff5500;       /* Orange */
+  --accent-foreground: #000000;
+
+  /* Latar & Teks */
+  --background: #FDFBD4;   /* Cream terang kuning */
+  --foreground: #000000;
+  --card: #ffffff;         /* Solid white */
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+
+  /* Elemen UI */
+  --muted: #f3f4f6;
+  --muted-foreground: #4b5563;
+  --border: #000000;       /* MANDATORY HITAM */
+  --input: #000000;
+  --ring: #ccff00;
+
+  /* Semantik */
+  --success: #22c55e;
+  --warning: #eab308;
+  --destructive: #ef4444;
+  --info: #06b6d4;
+}
+
+/* =============================================
+   Dark Mode (Navy Pekat + Cyberpunk-Brutalism)
+   ============================================= */
+.dark {
+  --background: #0a192f;   /* Navy pekat */
+  --foreground: #ffffff;
+  --card: #112240;         /* Solid navy lebih terang */
+  --card-foreground: #ffffff;
+  --popover: #112240;
+  --popover-foreground: #ffffff;
+
+  --muted: #1e3a5f;
+  --muted-foreground: #94a3b8;
+  --border: #000000;       /* TETAP HITAM di dark mode */
+  --input: #000000;
+  --ring: #ccff00;
+}
+
+@utility shadow-brutal {
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+@utility shadow-brutal-sm {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+@utility shadow-brutal-lg {
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+@layer base {
+  * {
+    @apply border-black outline-[#ccff00]/50;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply font-body antialiased;
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: 0 0;
+    animation: grid-dance 20s linear infinite;
+  }
+  .dark body {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-foreground;
+  }
+}
+
+@keyframes grid-dance {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 32px 32px;
+  }
+}
