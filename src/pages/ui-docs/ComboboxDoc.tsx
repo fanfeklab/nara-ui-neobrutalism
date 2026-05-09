@@ -68,15 +68,17 @@ export default function ComboboxDoc() {
               variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="w-[200px] justify-between"
+              className="w-[280px] justify-between px-4"
             >
-              {value
-                ? frameworks.find((framework) => framework.value === value)?.label
-                : "Select framework..."}
+              <span className="flex-1 truncate text-left">
+                {value
+                  ? frameworks.find((framework) => framework.value === value)?.label
+                  : "Select framework..."}
+              </span>
               <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-[200px] p-0 border-2 border-black rounded-xl shadow-brutal-sm font-body">
+          <PopoverContent className="w-[280px] p-0 border-2 border-black rounded-xl shadow-brutal-sm font-body">
             <Command>
               <CommandInput placeholder="Search framework..." />
               <CommandList>
@@ -91,13 +93,13 @@ export default function ComboboxDoc() {
                         setOpen(false);
                       }}
                     >
+                      {framework.label}
                       <Check
                         className={cn(
-                          "mr-2 h-4 w-4",
+                          "ml-auto h-4 w-4",
                           value === framework.value ? "opacity-100" : "opacity-0"
                         )}
                       />
-                      {framework.label}
                     </CommandItem>
                   ))}
                 </CommandGroup>

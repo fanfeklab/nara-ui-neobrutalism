@@ -15,6 +15,17 @@ export default function SwitchDoc() {
       </div>
 
       <ComponentPreview
+        title="Theme Switch (Day & Night)"
+        description="A specialized variant built for toggling between light and dark modes with Neobrutalism flair."
+        code={`import { Switch } from "@/components/ui/switch"\nimport { Label } from "@/components/ui/label"\n\nexport function ThemeSwitchDemo() {\n  return (\n    <div className="flex items-center space-x-4">\n      <Label htmlFor="theme-mode">Theme</Label>\n      <Switch id="theme-mode" variant="theme" />\n    </div>\n  )\n}`}
+      >
+        <div className="flex items-center space-x-4 p-4 border-2 border-black shadow-brutal-sm rounded-xl bg-card">
+          <Label htmlFor="theme-mode" className="font-display font-bold text-lg">Theme</Label>
+          <Switch id="theme-mode" variant="theme" />
+        </div>
+      </ComponentPreview>
+
+      <ComponentPreview
         title="Default"
         description="A standard switch toggler."
         code={`import { Switch } from "@/components/ui/switch"\nimport { Label } from "@/components/ui/label"\n\nexport function SwitchDemo() {\n  return (\n    <div className="flex items-center space-x-2">\n      <Switch id="airplane-mode" />\n      <Label htmlFor="airplane-mode">Airplane Mode</Label>\n    </div>\n  )\n}`}

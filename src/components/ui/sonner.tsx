@@ -37,10 +37,15 @@ const Toaster = ({ ...props }: ToasterProps) => {
       }
       toastOptions={{
         classNames: {
-          toast: "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-2 group-[.toaster]:border-black group-[.toaster]:shadow-brutal group-[.toaster]:rounded-xl font-bold font-body",
-          description: "group-[.toast]:text-muted-foreground font-medium",
+          toast: "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-2 group-[.toaster]:border-black group-[.toaster]:shadow-brutal group-[.toaster]:rounded-2xl font-body p-4",
+          title: "font-display font-bold text-lg leading-none tracking-tight mb-1",
+          description: "group-[.toast]:text-muted-foreground font-body text-sm",
+          success: "group-[.toaster]:!bg-success group-[.toaster]:!text-white [&>svg]:!text-white group-[.toast]:[&_[data-title]]:!text-white group-[.toast]:[&_[data-description]]:!text-white/90",
+          error: "group-[.toaster]:!bg-destructive group-[.toaster]:!text-white [&>svg]:!text-white group-[.toast]:[&_[data-title]]:!text-white group-[.toast]:[&_[data-description]]:!text-white/90",
+          info: "group-[.toaster]:!bg-info group-[.toaster]:!text-white [&>svg]:!text-white group-[.toast]:[&_[data-title]]:!text-white group-[.toast]:[&_[data-description]]:!text-white/90",
+          warning: "group-[.toaster]:!bg-warning group-[.toaster]:!text-black [&>svg]:!text-black group-[.toast]:[&_[data-title]]:!text-black group-[.toast]:[&_[data-description]]:!text-black/90",
           actionButton:
-            "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground group-[.toast]:border-2 group-[.toast]:border-black group-[.toast]:font-bold",
+            "group-[.toast]:bg-[#ccff00] group-[.toast]:text-black group-[.toast]:border-2 group-[.toast]:border-black group-[.toast]:font-bold group-[.toast]:shadow-brutal-sm hover:group-[.toast]:translate-x-[2px] hover:group-[.toast]:translate-y-[2px] hover:group-[.toast]:shadow-none transition-all",
           cancelButton:
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground group-[.toast]:border-2 group-[.toast]:border-black group-[.toast]:font-bold",
         },

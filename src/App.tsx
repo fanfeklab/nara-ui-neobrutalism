@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import PublicPage from "./pages/PublicPage";
 import Dashboard from "./pages/Dashboard";
 import { DxTool } from "./components/DxTool";
+import { Toaster } from "@/components/ui/sonner";
 
 // Layouts
 import UiDocsLayout from "./layouts/UiDocsLayout";
@@ -23,6 +24,7 @@ import CardDoc from "./pages/ui-docs/CardDoc";
 import DataTableDoc from "./pages/ui-docs/DataTableDoc";
 import ChartDoc from "./pages/ui-docs/ChartDoc";
 import StepperDoc from "./pages/ui-docs/StepperDoc";
+import SortableListDoc from "./pages/ui-docs/SortableListDoc";
 import TableDoc from "./pages/ui-docs/TableDoc";
 import SeparatorDoc from "./pages/ui-docs/SeparatorDoc";
 import TabsDoc from "./pages/ui-docs/TabsDoc";
@@ -46,6 +48,7 @@ import CalendarDoc from "./pages/ui-docs/CalendarDoc";
 import DatePickerDoc from "./pages/ui-docs/DatePickerDoc";
 import SonnerDoc from "./pages/ui-docs/SonnerDoc";
 import InputOtpDoc from "./pages/ui-docs/InputOtpDoc";
+import FileUploadDoc from "./pages/ui-docs/FileUploadDoc";
 import CommandDoc from "./pages/ui-docs/CommandDoc";
 import PaginationDoc from "./pages/ui-docs/PaginationDoc";
 import NavigationMenuDoc from "./pages/ui-docs/NavigationMenuDoc";
@@ -92,6 +95,7 @@ export default function App() {
           <Route path="data-table" element={<DataTableDoc />} />
           <Route path="chart" element={<ChartDoc />} />
           <Route path="stepper" element={<StepperDoc />} />
+          <Route path="sortable-list" element={<SortableListDoc />} />
           <Route path="separator" element={<SeparatorDoc />} />
           <Route path="skeleton" element={<SkeletonDoc />} />
           <Route path="tabs" element={<TabsDoc />} />
@@ -107,6 +111,7 @@ export default function App() {
           <Route path="dialog" element={<DialogDoc />} />
           <Route path="dropdown-menu" element={<DropdownMenuDoc />} />
           <Route path="input-otp" element={<InputOtpDoc />} />
+          <Route path="file-upload" element={<FileUploadDoc />} />
           <Route path="command" element={<CommandDoc />} />
           <Route path="pagination" element={<PaginationDoc />} />
           <Route path="navigation-menu" element={<NavigationMenuDoc />} />
@@ -122,6 +127,7 @@ export default function App() {
         </Route>
       </Routes>
       <DxTool />
+      <Toaster />
     </>
   );
 }
