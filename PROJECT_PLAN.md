@@ -64,68 +64,68 @@ DILARANG membuat halaman/organism *hardcode* jika elemen dasar belum ada di Atom
 
 #### 🧱 Atoms (Elemen paling dasar)
 Komponen primitif yang tidak bisa dipecah lagi.
-- [ ] Avatar
-- [ ] Badge (Beragam warna kategori: Sound, LED, Catering, Tenda, Stage, Status Verified)
-- [ ] Breadcrumb
-- [ ] Button (Varian: Solid, Outline, Ghost, Link, Icon)
-- [ ] Checkbox
-- [ ] Empty State Illustration
+- [x] Avatar
+- [x] Badge (Beragam warna kategori: Sound, LED, Catering, Tenda, Stage, Status Verified)
+- [x] Breadcrumb
+- [x] Button (Varian: Solid, Outline, Ghost, Link, Icon)
+- [x] Checkbox
+- [x] Empty State Illustration
 - [ ] Icon / Item
-- [ ] Input
-- [ ] Kbd (Keyboard key)
-- [ ] Label
-- [ ] Progress / Spinner
-- [ ] Radio Group
-- [ ] Separator
-- [ ] Skeleton (Loading state)
-- [ ] Slider
-- [ ] Switch
-- [ ] Textarea
-- [ ] Toggle
-- [ ] Typography (H1-H6, P, Blockquote, Inline Code)
+- [x] Input
+- [x] Kbd (Keyboard key)
+- [x] Label
+- [x] Progress / Spinner
+- [x] Radio Group
+- [x] Separator
+- [x] Skeleton (Loading state)
+- [x] Slider
+- [x] Switch
+- [x] Textarea
+- [x] Toggle
+- [x] Typography (H1-H6, P, Blockquote, Inline Code)
 
 #### 🧬 Molecules (Kumpulan Atoms)
 Gabungan atom fungsional sederhana.
-- [ ] Alert
-- [ ] Button Group
-- [ ] Combobox
-- [ ] Date Picker
-- [ ] Dropdown Menu
-- [ ] Field
-- [ ] Hover Card
-- [ ] Input Group (Input + Label + Error/Helper Text)
-- [ ] Input OTP
+- [x] Alert
+- [x] Button Group
+- [x] Combobox
+- [x] Date Picker
+- [x] Dropdown Menu
+- [x] Field
+- [x] Hover Card
+- [x] Input Group (Input + Label + Error/Helper Text)
+- [x] Input OTP
 - [ ] Native Select
-- [ ] Select
-- [ ] Sonner / Toast
-- [ ] Toggle Group
-- [ ] Tooltip
+- [x] Select
+- [x] Sonner / Toast
+- [x] Toggle Group
+- [x] Tooltip
 
 #### 🫀 Organisms (Komponen kompleks)
 Kumpulan molecule untuk membentuk bagian UI utuh.
-- [ ] Accordion
-- [ ] Alert Dialog
-- [ ] Aspect Ratio Container
-- [ ] Calendar
-- [ ] Card (Varian: Stat Card, Data Card, Image Card)
-- [ ] Carousel
-- [ ] Chart
-- [ ] Collapsible
-- [ ] Command (Command Palette)
-- [ ] Context Menu
-- [ ] Data Table (Dengan pagination, sort, search)
-- [ ] Dialog / Modal
+- [x] Accordion
+- [x] Alert Dialog
+- [x] Aspect Ratio Container
+- [x] Calendar
+- [x] Card (Varian: Stat Card, Data Card, Image Card)
+- [x] Carousel
+- [x] Chart
+- [x] Collapsible
+- [x] Command (Command Palette)
+- [x] Context Menu
+- [x] Data Table (Dengan pagination, sort, search)
+- [x] Dialog / Modal
 - [ ] Directional Layout
-- [ ] Drawer
+- [x] Drawer
 - [ ] Hero Banner
-- [ ] Menubar
-- [ ] Navigation Menu
-- [ ] Pagination
-- [ ] Popover
-- [ ] Resizable Container
-- [ ] Scroll Area
-- [ ] Sheet
-- [ ] Sidebar
+- [x] Menubar
+- [x] Navigation Menu
+- [x] Pagination
+- [x] Popover
+- [x] Resizable Container
+- [x] Scroll Area
+- [x] Sheet
+- [x] Sidebar
 
 ---
 
