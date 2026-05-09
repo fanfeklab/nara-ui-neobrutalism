@@ -140,20 +140,22 @@ Rencana pembangunan ujung-ke-ujung berskala masif. Checklist ini wajib dipatuhi 
 - [x] Base Atoms: Typography, Button (varian lengkap: icon, social, payment, dll), Input, Label, Badge.
 - [x] Base Molecules: Input Group, Card Structure, Alerts, Tabs, Breadcrumbs.
 - [x] Base Organisms: Master Sidebar, Master Header, standard Master DataGrid (Tabel).
-- [x] Membangun Dev Toolbar (Role Switcher) di ujung layar untuk kemudahan demo per-role.
+- [x] Membangun DX Toolbar Lanjutan (Role Switcher, MSW Network Mock Toggle, Zustand State Inspector, A11y Visualizer).
 - [x] Setup Framer Motion base animations (untuk transisi halaman standar).
-- [x] Pipeline Setup: Vercel preparation, GitHub Actions (.github/workflows), dan config tests Playwright/Vitest.
+- [x] Pipeline & Test Setup: Vitest (Unit/Hook tests), Playwright (E2E flows config), dan GitHub Actions. Termasuk file script `test`, `test:ui`, `test:e2e` di package.json.
 - [x] Standard Form Wrapper & Validation display UI.
 - [x] Standard Dialog/Modal & Drawer (Panel Kanan) component shell.
 
 ### STAGE 2: Public Facing Pages (± 15 Tasks)
 *Tujuan: Etalase perusahaan dan entry point pembelian tiket (Role: Guest/Public).*
+*Penting: Copywriting murni berfokus pada NARA EVENTS sebagai Event Organizer profesional (Company Profile B2B/B2C), bukan menampilkan aplikasi ERP ini.*
 *Referensi Dokumen:* `DNA_01_SOFTWARE_OVERVIEW.md` (Zona Halaman Publik), `DNA_06_USER_JOURNEY.md` (Alur 6A/6B: Eksplorasi & Checkout).
-- [ ] Landing Page Utama (Hero Banner Neo-brutalism, Feature USP, Navigasi).
-- [ ] Section / Page About Us & Our Team.
-- [ ] Section / Page Services yang ditawarkan Nara Events.
-- [ ] Section / Page Portfolio / Past Events (Carousel Grid).
-- [ ] Section / Page Blog / Artikel (Hanya Mockup UI Grid & Detail).
+- [x] Landing Page Utama (Hero Banner Neo-brutalism, Feature USP NARA Events sbg EO, Navigasi).
+- [x] Section / Page About Us & Our Team.
+- [x] Section / Page Services yang ditawarkan Nara Events.
+- [x] Section / Page Portfolio / Past Events / Gallery (Carousel & Masonry Grid).
+- [x] Section / Page Our Clients / Partners (Logo showcase & Testimonial).
+- [x] Section / Page Blog / Artikel / News (Hanya Mockup UI Grid & Detail).
 - [ ] Halaman Event Explorer (`/events` - Daftar event aktif untuk publik).
 - [ ] Halaman Detail Event Publik (`/events/[slug]` - Informasi, jadwal, harga tiket). *Ref: DNA_11 (Tabel events).*
 - [ ] Alur Checkout Tiket Walk-in - Step 1: Pemilihan Tiket (`/checkout/[id]/step-1`). *Ref: DNA_06 (Pasal 2.1), DNA_11 (Tabel tickets).*
@@ -244,8 +246,12 @@ Rencana pembangunan ujung-ke-ujung berskala masif. Checklist ini wajib dipatuhi 
 - [ ] **Portal Member:** Histori Pembelian & Reward Poin UI.
 - [ ] **Portal Member:** Validasi Identitas (Mockup e-KTP/NIK form).
 
-### STAGE 7: Master Data & Settings (± 10 Tasks)
-*Tujuan: Halaman administrasi data terpusat (MDM).*
+### STAGE 7: CMS, Master Data & Settings (± 15 Tasks)
+*Tujuan: Halaman administrasi data terpusat (MDM) dan pengelolaan konten Publik (CMS).*
+- [ ] CMS - Manajemen Artikel Blog & News (DataGrid & Editor Form).
+- [ ] CMS - Manajemen Portfolio, Past Events & Gallery.
+- [ ] CMS - Manajemen Our Clients / Partners.
+- [ ] CMS - Manajemen Konten Landing Page (Hero, USP, Testimonial).
 - [ ] Pengaturan Profil Perusahaan & Branding.
 - [ ] Settings - Feature Flags UI (Enable/Disable module).
 - [ ] Settings - Role & Permissions Matrix (Tabel Checklist).

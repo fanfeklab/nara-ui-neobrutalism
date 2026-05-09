@@ -8,12 +8,14 @@ Dokumen ini adalah peta panduan (blueprint) bagi kita selama fase assemblesi kom
 
 Berdasarkan `DNA_01_SOFTWARE_OVERVIEW.md`, sistem NARA EVENTS dipecah menjadi beberapa *entry points* dengan URL base yang berbeda.
 
-### A. Situs Publik (B2C & B2B Leads) - *Dikerjakan pada STAGE 2*
-*   `/` : **Landing Page**. (Hero banner, USP, Call to Action ke Explore Events).
+### A. Situs Publik (Company Profile & Ticketing) - *Dikerjakan pada STAGE 2*
+*Penting: Copywriting di area ini murni berfokus pada NARA EVENTS sebagai Event Organizer (EO) yang inovatif, profil perusahaan, portofolio acara, dan sistem penjualan tiket. Tidak ada mention terkait fitur ERP/Internal tools.*
+*   `/` : **Landing Page**. (Hero banner, USP EO Nara Events, Call to Action ke Explore Events).
 *   `/about` : **About Us & Team**.
 *   `/services` : **Layanan NARA Events**.
-*   `/portfolio` : **Histori Event Masa Lalu**.
-*   `/blog` / `/blog/[slug]`: **Grid Artikel & Detail**.
+*   `/portfolio` : **Histori Event Masa Lalu & Gallery**.
+*   `/clients` : **Our Clients / Partners**.
+*   `/blog` / `/blog/[slug]`: **Grid Artikel, News & Detail**.
 *   `/events` : **Event Explorer** (Pencarian, filter kategori/tanggal).
 *   `/events/[slug]` : **Pusat Informasi Event**. (Rujukan utama untuk pembelian).
 *   `/checkout/[eventId]/step-1` : **Pemilihan Tiket** (Validasi sisa kuota, pemilihan tier).
@@ -23,7 +25,7 @@ Berdasarkan `DNA_01_SOFTWARE_OVERVIEW.md`, sistem NARA EVENTS dipecah menjadi be
 *   `/refund-request` : **Pengajuan Refund**.
 *   `/contact` : **Hubungi Kami**.
 
-### B. Dashboard Internal (Operasional Manajemen) - *Dikerjakan pada STAGE 3, 4, 5*
+### B. Dashboard Internal (Operasional Manajemen & CMS) - *Dikerjakan pada STAGE 3, 4, 5, 7*
 *   `/login`, `/register`, `/forgot-password` : **Gerbang Akses**.
 *   `/dashboard` : **Global Overview** (Analitik, Revenue, Ticker).
 *   `/dashboard/events` : **Master DataGrid Event** (Filter status: Draft, Published, Selesai).
@@ -31,6 +33,9 @@ Berdasarkan `DNA_01_SOFTWARE_OVERVIEW.md`, sistem NARA EVENTS dipecah menjadi be
 *   `/dashboard/events/[id]` : **Command Center Event** (Tab: RAB, Kanban Timeline, Vendor, Ticketing, Lineup).
 *   `/dashboard/finance` : **Monitor Laba/Rugi, Transaksi Masuk/Keluar, AP/AR**.
 *   `/dashboard/hr` : **Direktori Kru, Slip Gaji, Kalender Penugasan**.
+*   `/dashboard/cms/blog` : **Manajemen Konten Blog & Berita**.
+*   `/dashboard/cms/portfolio` : **Manajemen Portofolio, Klien & Galeri**.
+*   `/dashboard/cms/landing` : **Pengaturan Landing Page (Hero, USP, Testimonial)**.
 
 ### C. Ekosistem Portal (Vendor, Klien, Member) - *Dikerjakan pada STAGE 6*
 *   `/portal/vendor/dashboard` : **Brief Tender & Submit Penawaran**.

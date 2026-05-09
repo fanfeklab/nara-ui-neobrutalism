@@ -6,8 +6,10 @@ import { Toaster } from "@/components/ui/sonner";
 
 // Layouts
 import UiDocsLayout from "./layouts/UiDocsLayout";
+import { PublicLayout } from "./layouts/PublicLayout";
 
 // UI Docs Pages
+// ... (imports remain)
 import IntroDoc from "./pages/ui-docs/IntroDoc";
 import DecorationsDoc from "./pages/ui-docs/DecorationsDoc";
 import TypographyDoc from "./pages/ui-docs/TypographyDoc";
@@ -63,11 +65,27 @@ import ComboboxDoc from "./pages/ui-docs/ComboboxDoc";
 
 import FormDoc from "./pages/ui-docs/FormDoc";
 
+import AboutPage from "./pages/public/AboutPage";
+import ServicesPage from "./pages/public/ServicesPage";
+import PortfolioPage from "./pages/public/PortfolioPage";
+import ClientsPage from "./pages/public/ClientsPage";
+import BlogPage from "./pages/public/BlogPage";
+import BlogDetailPage from "./pages/public/BlogDetailPage";
+
 export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<PublicPage />} />
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<PublicPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/clients" element={<ClientsPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogDetailPage />} />
+        </Route>
+        
         <Route path="/dashboard" element={<Dashboard />} />
         
         {/* UI Documentation Routes */}
