@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Quote } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function ClientsPage() {
   const testimonials = [
@@ -61,12 +62,16 @@ export default function ClientsPage() {
              <p className="font-body text-lg font-bold uppercase text-muted-foreground">Apa yang mereka ucapkan setelah asap menghilang.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {testimonials.map((t, i) => (
-              <div key={i} className="bg-white dark:bg-card border-4 border-black p-8 rounded-2xl shadow-brutal relative hover:-translate-y-2 transition-transform flex flex-col">
+              <div key={i} className={cn("bg-white dark:bg-card border-4 border-black p-8 rounded-2xl shadow-brutal relative hover:-translate-y-2 transition-transform flex flex-col items-start",
+                 i === 0 ? "md:col-span-2 lg:col-span-2" :
+                 i === 2 ? "md:col-span-2 lg:col-span-3" :
+                 "md:col-span-1 lg:col-span-1"
+              )}>
                  <Quote className="absolute top-6 right-6 w-12 h-12 text-[#ccff00] opacity-50" />
-                 <p className="font-body font-medium text-lg mb-8 flex-1 relative z-10">"{t.text}"</p>
-                 <div className="flex items-center gap-4 mt-auto pt-6 border-t-2 border-black">
+                 <p className={cn("font-body font-medium mb-8 flex-1 relative z-10", i !== 1 ? "text-xl md:text-2xl" : "text-lg")}>"{t.text}"</p>
+                 <div className="flex items-center gap-4 mt-auto pt-6 border-t-2 border-black w-full">
                     <img 
                       src={`https://api.dicebear.com/7.x/notionists/svg?seed=${t.avatarSeed}`} 
                       alt="" 

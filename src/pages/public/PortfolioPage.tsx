@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function PortfolioPage() {
   const [filter, setFilter] = useState("all");
@@ -57,23 +58,29 @@ export default function PortfolioPage() {
             ))}
           </div>
 
-          {/* Masonry-like Grid */}
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-            {filteredProjects.map((p) => (
-              <div key={p.id} className="break-inside-avoid group cursor-pointer">
-                <div className="bg-card border-4 border-black p-4 rounded-2xl shadow-brutal hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] hover:bg-[#FDFBD4] transition-all duration-300">
-                  <div className="border-2 border-black rounded-xl overflow-hidden relative mb-4">
-                    <img src={p.image} alt={p.title} className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" />
+          {/* Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row-dense gap-6 md:gap-8">
+            {filteredProjects.map((p, i) => (
+              <div key={p.id} className={cn("group cursor-pointer flex flex-col items-stretch",
+                i % 6 === 0 ? "md:col-span-2 lg:col-span-2 lg:row-span-2" :
+                i % 6 === 3 ? "md:col-span-2 lg:col-span-2" :
+                "md:col-span-1 lg:col-span-1"
+              )}>
+                <div className="bg-card border-4 border-black p-4 rounded-2xl shadow-brutal hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] hover:bg-[#FDFBD4] transition-all duration-300 flex-1 flex flex-col">
+                  <div className="border-2 border-black rounded-xl overflow-hidden relative mb-4 flex-1">
+                    <img src={p.image} alt={p.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100 min-h-[200px]" />
                     <div className="absolute top-3 right-3 bg-white text-black text-xs font-bold font-body px-2 py-1 border-2 border-black rounded-lg">
                       {p.year}
                     </div>
                   </div>
-                  <h3 className="font-display font-black text-2xl uppercase tracking-tighter mb-1 group-hover:text-[#ccff00] dark:group-hover:text-[#8a2be2] transition-colors" style={{ WebkitTextStroke: '1px black' }}>
-                    {p.title}
-                  </h3>
-                  <p className="font-body text-xs font-bold uppercase text-muted-foreground">
-                    {p.category.replace('-', ' ')}
-                  </p>
+                  <div className="mt-auto">
+                    <h3 className="font-display font-black text-2xl uppercase tracking-tighter mb-1 group-hover:text-[#ccff00] dark:group-hover:text-[#8a2be2] transition-colors" style={{ WebkitTextStroke: '1px black' }}>
+                      {p.title}
+                    </h3>
+                    <p className="font-body text-xs font-bold uppercase text-muted-foreground">
+                      {p.category.replace('-', ' ')}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}

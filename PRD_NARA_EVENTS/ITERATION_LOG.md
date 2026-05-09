@@ -68,6 +68,30 @@ Dokumen ini mencatat seluruh histori diskusi, revisi, dan keputusan penting sela
 
 **Tindakan Resolusi:**
 - **Standardisasi Container:** Mengganti kombinasi class `container ...` yang sporadis menjadi komposisi baku utilitas: `w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` di SEMUA komponen (Navbar, Footer, Hero, Section). Ini mengunci *alignment* vertikal dari atas ke bawah.
-- **Variasi Card Acara:** Mengubah *Featured Card* di "Acara Mendatang" menjadi layout Horizontal (Kiri gambar, Kanan teks) pada breakpoint `lg`, membedakannya dari *sub-cards* yang vertikal.
+- **Variasi Card Acara:** Mengubah *Featured Card* di "Acara Mendatang" menjadi layout Horizontal (Kiri gambar, Kanan teks) pada breakpoint `lg`, membedakannya dari *sub-cards* yang vertikal. (Diralat pada Iterasi 4).
 - **Efek Fade Scroll:** Menambahkan utilitas `[mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]` pada container horizontal "Rekam Jejak" untuk transisi ujung layar yang elegan.
 - *Styling* khusus untuk brand colors Social Media telah ditetapkan.
+
+## Iterasi 4 - 9 Mei 2026 (Perbaikan Responsivitas Sub-Card Bento Grid)
+
+**Masalah & Masukan User:**
+1. **Acara Mendatang Terlalu Memanjang:** Di layar desktop, Section "Acara Mendatang" masih menumpuk ke bawah (vertical stack) secara memanjang tanpa mengisi lebar kolom secara dinamis.
+
+**Tindakan Resolusi:**
+- **Refleksi Grid Architecture:** Menulis ulang kerangka Layout "Acara Mendatang" menjadi Bento Grid Sejati (`grid-cols-1 md:grid-cols-2 lg:grid-cols-3`).
+- **Optimalisasi Ruang:** Pada desktop (`lg`), *Big Card* akan span 2 kolom dan 2 row (`lg:col-span-2 lg:row-span-2`), sedangkan 2 *Small Cards* mengisi sisi kanan/tersisa masing-masing 1 baris.
+- Mengubah desain gambar di Big Card agar menyesuaikan tinggi sisa dan tidak mengganggu alur Grid.
+
+## Iterasi 5 - 9 Mei 2026 (Ekspansi Bento Grid Keseluruhan)
+
+**Masalah & Masukan User:**
+1. **Penerapan Bento Grid:** Pengguna menginginkan kepastian bahwa *semua* layout card menggunakan estetika Bento Grid "agar estetik" sesuai ciri khas modern.
+
+**Tindakan Resolusi:**
+- **Refactoring Jaringan Grid:** Menerapkan sistem kelas CSS berbasis index (seperti `i === 0 ? "md:col-span-2 lg:col-span-2" : ...`) pada berbagai halaman yang me-render list komponen.
+- **Daftar Modifikasi Bento Grid:**
+  - *PublicPage.tsx (Mengapa Nara Events):* Menerapkan bento grid 3-item di mana argumen utama pertama memakan 2 kolom, dan argumen ke-3 melebar penuh.
+  - *ServicesPage.tsx:* Menerapkan komposisi 5-item, menciptakan grid 2 baris (3-kolom) di mana card pertama membentang 2 kolom.
+  - *PortfolioPage.tsx:* Menghapus layout `columns/masonry` yang agak standar, diganti dengan bento grid (`grid-cols-4`) berirama ganjil-genap yang terukur menggunakan modulo (`i % 6`).
+  - *ClientsPage.tsx:* Memo-layout grid testimonials dengan sistem bento 3-item.
+- **Konsolidasi Tooling:** Mengimpor `cn` dari `lib/utils` di semua halaman terkait untuk mengatur *conditional styling* kelas-kelas bentang span secara efisien.

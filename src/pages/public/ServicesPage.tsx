@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Ticket, Speaker, Music, Megaphone, Zap, Laptop, ShieldCheck } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function ServicesPage() {
   const services = [
@@ -60,16 +61,16 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section className="w-full py-24 bg-card border-b-2 border-black">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((svc, i) => (
-              <div key={i} className="group bg-background border-4 border-black rounded-2xl p-8 shadow-[8px_8px_0_0_#000] hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] transition-all flex flex-col">
+              <div key={i} className={cn("group bg-background border-4 border-black rounded-2xl p-8 shadow-brutal hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] transition-all flex flex-col", i === 0 ? "md:col-span-2 lg:col-span-2" : i === 4 ? "md:col-span-2 lg:col-span-1" : "")}>
                 <div className={`w-16 h-16 ${svc.color} border-2 border-black rounded-2xl flex items-center justify-center mb-8 shadow-brutal-sm`}>
                   <svc.icon className={`w-8 h-8 ${svc.color === 'bg-black' ? 'text-white' : 'text-black'}`} />
                 </div>
-                <h3 className="text-2xl font-display font-black uppercase tracking-tighter mb-4 border-b-2 border-black pb-2">
+                <h3 className={cn("font-display font-black uppercase tracking-tighter mb-4 border-b-2 border-black pb-2", i === 0 ? "text-3xl lg:text-4xl" : "text-2xl")}>
                   {svc.title}
                 </h3>
-                <p className="font-body text-muted-foreground font-medium flex-1">
+                <p className={cn("font-body text-muted-foreground font-medium flex-1", i === 0 ? "text-lg lg:text-xl" : "")}>
                   {svc.desc}
                 </p>
               </div>

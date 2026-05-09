@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Target, Ticket, Rocket, Calendar, Users, MapPin } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function PublicPage() {
   return (
@@ -54,11 +55,11 @@ export default function PublicPage() {
             </Button>
           </div>
 
-          {/* Fixed Responsivitas di Desktop */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            {/* 1 Big Featured Card (Horizontal layout on large screens) */}
-            <div className="lg:col-span-8 group bg-background border-4 border-black rounded-2xl overflow-hidden shadow-brutal flex flex-col lg:flex-row hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] transition-all h-full">
-              <div className="relative aspect-video lg:aspect-auto lg:w-1/2 border-b-4 lg:border-b-0 lg:border-r-4 border-black overflow-hidden min-h-[300px] lg:min-h-full">
+          {/* Fixed Responsivitas di Desktop & Tablet (Bento Grid) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* 1 Big Featured Card */}
+            <div className="md:col-span-2 lg:col-span-2 lg:row-span-2 group bg-white dark:bg-[#112240] border-4 border-black rounded-2xl overflow-hidden shadow-brutal flex flex-col hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] transition-all h-full">
+              <div className="relative w-full aspect-video md:aspect-[2/1] lg:aspect-auto lg:h-[55%] border-b-4 border-black overflow-hidden bg-muted">
                 <img src="https://picsum.photos/seed/naramain/1200/1200" alt="Main Event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute top-4 left-4 bg-[#8a2be2] text-white font-display font-black text-lg lg:text-xl uppercase px-4 py-2 border-2 border-black rounded-xl shadow-brutal-sm">
                   FESTIVAL
@@ -68,14 +69,14 @@ export default function PublicPage() {
                   Tiket Tersedia
                 </div>
               </div>
-              <div className="p-6 md:p-8 lg:w-1/2 bg-white dark:bg-[#112240] flex flex-col justify-center gap-4">
-                <h3 className="text-3xl md:text-4xl font-display font-black uppercase tracking-tighter leading-tight">Neo-Brutalism Tech Summit 2026</h3>
+              <div className="p-6 md:p-8 flex flex-col flex-1 gap-4">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-black uppercase tracking-tighter leading-tight">Neo-Brutalism Tech Summit 2026</h3>
                 <div className="flex flex-col sm:flex-row flex-wrap sm:items-center gap-4 font-body text-sm font-bold text-muted-foreground">
                   <span className="flex items-center gap-2"><Calendar className="w-4 h-4 text-black dark:text-white shrink-0" /> 24-26 AGUSTUS 2026</span>
                   <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-black dark:text-white shrink-0" /> JCC SENAYAN, JAKARTA</span>
                 </div>
-                <p className="font-body font-medium mt-2 mb-4 line-clamp-3 text-sm md:text-base">
-                  Konferensi teknologi terbesar tahun ini. Mempertemukan para inovator, startup, dan investor dalam satu ekosistem tanpa batas.
+                <p className="font-body font-medium mt-2 mb-4 line-clamp-3 md:line-clamp-none text-sm md:text-base">
+                  Konferensi teknologi terbesar tahun ini. Mempertemukan para inovator, startup, dan investor dalam satu ekosistem tanpa batas. Kehadiran lebih dari 10ribu profesional industri menjanjikan kolaborasi eksklusif.
                 </p>
                 <div className="mt-auto pt-4">
                   <Button size="lg" className="w-full bg-black text-white hover:bg-[#ccff00] hover:text-black border-2 border-black rounded-xl shadow-brutal font-display text-lg tracking-tight transition-all">
@@ -86,31 +87,32 @@ export default function PublicPage() {
             </div>
 
             {/* 2 Small Cards List */}
-            <div className="lg:col-span-4 flex flex-col gap-8 h-full">
-              {[1, 2].map((item) => (
-                <div key={item} className="flex flex-col bg-background border-4 border-black rounded-2xl overflow-hidden shadow-brutal hover:-translate-y-1 transition-transform group flex-1">
-                  <div className="h-48 border-b-4 border-black overflow-hidden relative">
-                    <img src={`https://picsum.photos/seed/subevent${item}/600/300`} alt="Sub Event" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    <div className="absolute top-2 left-2 bg-white text-black font-display font-bold text-xs uppercase px-2 py-1 border-2 border-black rounded-lg">
-                      KONSER
-                    </div>
+            {[1, 2].map((item) => (
+              <div key={item} className="md:col-span-1 lg:col-span-1 flex flex-col bg-white dark:bg-[#112240] border-4 border-black rounded-2xl overflow-hidden shadow-brutal hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#000] transition-all group h-full">
+                <div className="aspect-[3/2] lg:aspect-auto lg:h-48 border-b-4 border-black overflow-hidden relative bg-muted shrink-0">
+                  <img src={`https://picsum.photos/seed/subevent${item}/600/400`} alt="Sub Event" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute top-2 left-2 bg-white text-black font-display font-bold text-xs uppercase px-2 py-1 border-2 border-black rounded-lg">
+                    KONSER
                   </div>
-                  <div className="p-5 flex flex-col justify-between flex-1 bg-white dark:bg-[#112240]">
-                    <div>
-                      <h4 className="text-xl md:text-2xl font-display font-black uppercase tracking-tight mb-2 leading-tight">
-                        {item === 1 ? "Underground Synth Rave" : "Startup Pitch Battle Vol.4"}
-                      </h4>
-                      <div className="flex flex-col gap-1 font-body text-xs md:text-sm font-bold text-muted-foreground mb-4">
-                        <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 1{item} September 2026</span>
-                      </div>
-                    </div>
-                    <Button variant="outline" className="w-full rounded-xl font-bold uppercase text-xs md:text-sm mt-auto">
+                </div>
+                <div className="p-5 md:p-6 flex flex-col flex-1">
+                  <h4 className="text-xl md:text-2xl font-display font-black uppercase tracking-tight mb-2 leading-tight">
+                    {item === 1 ? "Underground Synth Rave" : "Startup Pitch Battle Vol.4"}
+                  </h4>
+                  <div className="flex flex-col gap-1 font-body text-xs md:text-sm font-bold text-muted-foreground mb-4">
+                    <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 1{item} September 2026</span>
+                  </div>
+                  <p className="font-body text-sm font-medium mb-4 line-clamp-2 text-muted-foreground">
+                    {item === 1 ? "Nikmati irama distorsi gelap di warehouse event paling epik." : "Kumpulkan momentum dan menangkan investasi seed tanpa basa-basi."}
+                  </p>
+                  <div className="mt-auto pt-2">
+                    <Button variant="outline" className="w-full rounded-xl font-bold uppercase text-xs md:text-sm border-2 border-black shadow-brutal-sm hover:translate-x-[2px] hover:translate-y-[2px] shrink-[0]">
                       Lihat Info
                     </Button>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -127,32 +129,35 @@ export default function PublicPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 icon: Target,
                 title: "Eksekusi Presisi",
-                desc: "Setiap detail direncanakan secara militer. Tidak ada ruang untuk kesalahan, memastikan acara Anda berjalan sempurna."
+                desc: "Setiap detail direncanakan secara militer. Tidak ada ruang untuk kesalahan, memastikan acara Anda berjalan sempurna.",
+                span: "md:col-span-2 lg:col-span-2"
               },
               {
                 icon: Rocket,
                 title: "Inovasi Agresif",
-                desc: "Penggunaan teknologi tata panggung dan pencahayaan paling mutakhir yang tidak bisa direplikasi oleh kompetitor."
+                desc: "Penggunaan teknologi tata panggung dan pencahayaan paling mutakhir yang tidak bisa direplikasi oleh kompetitor.",
+                span: "md:col-span-1 lg:col-span-1"
               },
               {
                 icon: Ticket,
                 title: "Ticketing Berdaulat",
-                desc: "Sistem tiket in-house tanpa perantara. Manajemen kuota real-time dan anti-calo tingkat dewa."
+                desc: "Sistem tiket in-house tanpa perantara. Manajemen kuota real-time dan anti-calo tingkat dewa.",
+                span: "md:col-span-2 md:col-start-1 lg:col-span-3"
               }
             ].map((feature, i) => (
-              <div key={i} className="bg-white border-2 border-black p-8 rounded-2xl shadow-brutal hover:-translate-y-2 transition-transform group">
+              <div key={i} className={cn("bg-white text-black border-4 border-black p-8 rounded-2xl shadow-brutal hover:-translate-y-2 transition-transform group flex flex-col items-start", feature.span)}>
                 <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mb-6 shadow-brutal-sm group-hover:bg-[#8a2be2] transition-colors group-hover:rotate-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-display font-black uppercase tracking-tight mb-3 text-black">
+                <h3 className={cn("font-display font-black uppercase tracking-tight mb-3 text-black", i === 0 || i === 2 ? "text-3xl" : "text-2xl")}>
                   {feature.title}
                 </h3>
-                <p className="font-body text-gray-700 font-medium">
+                <p className="font-body text-gray-700 font-medium text-lg">
                   {feature.desc}
                 </p>
               </div>
