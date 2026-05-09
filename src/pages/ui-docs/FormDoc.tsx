@@ -74,6 +74,7 @@ export default function FormDoc() {
       <div className="space-y-4">
         <h2 className="text-xl font-display font-bold uppercase tracking-tighter">Basic Form Wrapper</h2>
         <ComponentPreview
+          title="Basic Form Wrapper"
           code={`import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"

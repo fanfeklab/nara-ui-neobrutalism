@@ -4,6 +4,7 @@ import React from "react";
 interface PageTransitionProps {
   children: React.ReactNode;
   className?: string;
+  key?: React.Key;
 }
 
 export function PageTransition({ children, className }: PageTransitionProps) {
