@@ -38,3 +38,22 @@ Dokumen ini mencatat seluruh histori diskusi, revisi, dan keputusan penting sela
 - Struktur grid dan UI dirapikan dengan `rounded-2xl` sesuai pedoman di `AGENTS.md`.
 - Mobile Nav Sidebar diimplementasi menggunakan *conditional rendering state* di Layout.
 - File config tes dan DX Tools direncanakan pada tahap lanjut.
+
+## Iterasi 2 - 9 Mei 2026 (Refinement Layout & Tema)
+
+**Masalah & Masukan User:**
+1. **Teks Hilang/Transparan:** Teks "MERAIH" pada "BERHENTI MERAIH HASIL BIASA" tidak terlihat jelas / tertutup di layar tertentu karena penggunaan teknik *text-stroke* transparan yang salah.
+2. **Button Overlap:** Tombol (Button) di area bawah (CTA) mengalami overlap/tumpang tindih pada layar kecil.
+3. **Desain Card Tim:** Area background hijau pada foto Avatar Card "Our Team" terlalu lebar dan kurang proporsional.
+4. **Responsivitas Acara Mendatang:** Grid/Layout di bagian Upcoming Events belum fully responsive di desktop.
+5. **Konsistensi Padding Container:** Padding kiri/kanan antar section dan halaman (seperti bagian Wawasan Lokasi vs lainnya) tidak konsisten.
+6. **Dark/Light Mode:** Belum ada toggle ganti tema dan belum mengikuti *system default* OS.
+7. **Ukuran Logo Topbar:** Ukuran teks "NARA EVENTS" terlalu besar dibanding tinggi tombol (button) di baris yang sama.
+
+**Tindakan Resolusi:**
+- Padding kiri-kanan diseragamkan dengan konfigurasi class `container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl` di seluruh section di semua page publik.
+- Mengganti styling teks `text-transparent WebkitTextStroke` dengan utilitas Tailwind yang lebih aman (solid color atau opacity/stroke yang kompatibel lintas peramban).
+- Mengatur ulang responsivitas flexbox/grid pada section Acara Mendatang, dan memperbaiki urutan/tumpukan elemen CTA agar tidak overlapping di mobile.
+- Membuat `<ThemeProvider>` untuk menangani dark/light/system theme, serta menempatkan tombol toggle di Navbar `PublicLayout`.
+- Mengecilkan ukuran teks Header Logo (dari `text-2xl/3xl` menjadi proporsional `text-xl/2xl`) dan mensejajarkannya (align-items-center) dengan Button di Navbar.
+- Merombak struktur Card di `AboutPage.tsx` agar foto tim lebih clean dan background hijaunya sebatas wadah wajar.

@@ -93,22 +93,26 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, i) => (
-              <div key={i} className="group bg-background border-2 border-black rounded-2xl overflow-hidden shadow-brutal hover:-translate-y-2 transition-transform pb-2 flex flex-col">
-                <div className="aspect-square bg-[#ccff00] border-b-2 border-black p-6 flex flex-col items-center justify-center relative overflow-hidden group-hover:bg-[#ff5500] transition-colors">
+              <div key={i} className="group bg-background border-4 border-black rounded-2xl overflow-hidden shadow-brutal hover:-translate-y-2 transition-transform flex flex-col">
+                <div className="bg-[#ccff00] border-b-4 border-black pt-8 pb-4 flex flex-col items-center relative overflow-hidden group-hover:bg-[#ff5500] transition-colors h-32">
                   <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#000 2px, transparent 2px)', backgroundSize: '16px 16px' }} />
-                  <img 
-                    src={`https://api.dicebear.com/7.x/notionists/svg?seed=${member.imageSeed}&backgroundColor=transparent`} 
-                    alt={member.name}
-                    className="w-32 h-32 relative z-10 drop-shadow-[-4px_4px_0_rgba(0,0,0,0.5)] bg-white rounded-full border-4 border-black"
-                  />
                 </div>
-                <div className="p-6 text-center flex flex-col flex-1">
-                  <h3 className="font-display font-black text-xl uppercase tracking-tighter mb-1">{member.name}</h3>
-                  <p className="font-body text-sm font-bold text-[#8a2be2] dark:text-[#ff5500] uppercase mb-4">{member.role}</p>
+                <div className="p-6 pt-0 text-center flex flex-col flex-1 bg-white dark:bg-[#112240] relative">
+                  <div className="flex justify-center -mt-16 mb-4 relative z-10">
+                    <img 
+                      src={`https://api.dicebear.com/7.x/notionists/svg?seed=${member.imageSeed}&backgroundColor=transparent`} 
+                      alt={member.name}
+                      className="w-28 h-28 drop-shadow-[4px_4px_0_rgba(0,0,0,1)] bg-white rounded-2xl border-4 border-black"
+                    />
+                  </div>
+                  <h3 className="font-display font-black text-xl uppercase tracking-tighter mb-1 mt-2">{member.name}</h3>
+                  <p className="font-body text-xs font-bold text-[#8a2be2] dark:text-[#ff5500] uppercase mb-4 px-3 py-1 border-2 border-black rounded-lg inline-block self-center bg-gray-50 dark:bg-card">
+                    {member.role}
+                  </p>
                   <p className="font-body text-sm text-muted-foreground font-medium mb-6 flex-1">
                     {member.bio}
                   </p>
-                  <Button variant="outline" size="sm" className="w-full font-bold uppercase rounded-xl" asChild>
+                  <Button variant="outline" size="sm" className="w-full font-bold uppercase rounded-xl border-2 border-black shadow-brutal-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none" asChild>
                     <a href="#" target="_blank" rel="noopener noreferrer">
                       LinkedIn <ExternalLink className="w-3 h-3 ml-2" />
                     </a>

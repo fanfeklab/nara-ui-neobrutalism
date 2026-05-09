@@ -3,6 +3,7 @@ import PublicPage from "./pages/PublicPage";
 import Dashboard from "./pages/Dashboard";
 import { DxTool } from "./components/DxTool";
 import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 // Layouts
 import UiDocsLayout from "./layouts/UiDocsLayout";
@@ -74,7 +75,7 @@ import BlogDetailPage from "./pages/public/BlogDetailPage";
 
 export default function App() {
   return (
-    <>
+    <ThemeProvider>
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<PublicPage />} />
@@ -149,6 +150,6 @@ export default function App() {
       </Routes>
       <DxTool />
       <Toaster />
-    </>
+    </ThemeProvider>
   );
 }

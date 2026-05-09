@@ -4,6 +4,7 @@ import { PageTransition } from "@/components/layout/PageTransition";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Menu, X, Instagram, Facebook, Youtube, MapPin, Phone, Mail, Globe, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function PublicLayout() {
   const { pathname } = useLocation();
@@ -49,7 +50,7 @@ export function PublicLayout() {
           
           <Link to="/" className="flex items-center gap-2 group">
             {/* Animated Text Logo purely CSS */}
-            <span className="font-display font-black text-2xl md:text-3xl uppercase tracking-tighter hover:skew-x-[-10deg] hover:scale-105 transition-transform origin-left cursor-pointer inline-block duration-200">
+            <span className="font-display font-black text-xl md:text-2xl uppercase tracking-tighter hover:skew-x-[-10deg] hover:scale-105 transition-transform origin-left cursor-pointer inline-block duration-200">
               NARA EVENTS
             </span>
           </Link>
@@ -89,20 +90,21 @@ export function PublicLayout() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-4">
-            <Button asChild variant="outline" className="hidden lg:flex rounded-xl font-bold">
+          <div className="flex items-center gap-3 md:gap-4">
+            <ThemeToggle />
+            <Button asChild variant="outline" className="hidden lg:flex rounded-xl font-bold h-10 md:h-12 border-2 border-black dark:bg-card">
               <Link to="/login">Portal Klien</Link>
             </Button>
-            <Button asChild variant="solid" className="hidden md:flex rounded-xl font-bold">
+            <Button asChild variant="solid" className="hidden md:flex rounded-xl font-bold h-10 md:h-12">
               <Link to="/events">Beli Tiket <ArrowRight className="w-4 h-4 ml-2" /></Link>
             </Button>
             
             {/* Mobile Menu Toggle */}
             <button 
-              className="lg:hidden p-2 bg-[#ccff00] text-black border-2 border-black rounded-xl shadow-brutal-sm"
+              className="lg:hidden p-2 bg-[#ccff00] text-black border-2 border-black rounded-xl shadow-brutal-sm h-10 w-10 md:h-12 md:w-12 flex items-center justify-center"
               onClick={() => setMobileMenuOpen(true)}
             >
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5 md:w-6 md:h-6" />
             </button>
           </div>
         </div>
@@ -222,17 +224,23 @@ export function PublicLayout() {
               <h4 className="font-display font-black text-xl uppercase tracking-tighter border-b-2 border-black pb-2 inline-block">Sosial Media</h4>
               <p className="font-body text-sm font-bold text-muted-foreground mb-4">@naraevents.id</p>
               <div className="flex items-center gap-3">
-                <a href="#" className="w-12 h-12 bg-black text-white flex items-center justify-center rounded-xl border-2 border-black hover:bg-[#C13584] hover:-translate-y-1 transition-all shadow-brutal-sm">
-                  <Instagram className="w-5 h-5" />
+                <a href="#" className="w-12 h-12 bg-[#E1306C] text-white flex items-center justify-center rounded-xl border-2 border-black hover:-translate-y-1 transition-all shadow-brutal-sm group">
+                  <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-black text-white flex items-center justify-center rounded-xl border-2 border-black hover:bg-[#4267B2] hover:-translate-y-1 transition-all shadow-brutal-sm">
-                  <Facebook className="w-5 h-5" />
+                <a href="#" className="w-12 h-12 bg-[#1877F2] text-white flex items-center justify-center rounded-xl border-2 border-black hover:-translate-y-1 transition-all shadow-brutal-sm group">
+                  <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-black text-white flex items-center justify-center rounded-xl border-2 border-black hover:bg-[#FF0000] hover:-translate-y-1 transition-all shadow-brutal-sm">
-                  <Youtube className="w-5 h-5" />
+                <a href="#" className="w-12 h-12 bg-[#FF0000] text-white flex items-center justify-center rounded-xl border-2 border-black hover:-translate-y-1 transition-all shadow-brutal-sm group">
+                  <Youtube className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-black text-white font-display font-black flex items-center justify-center rounded-xl border-2 border-black hover:bg-[#00f2fe] hover:text-black hover:-translate-y-1 transition-all shadow-brutal-sm">
-                  TK
+                <a href="#" className="w-12 h-12 bg-black text-white flex items-center justify-center rounded-xl border-2 border-black hover:bg-[#25F4EE] hover:text-black hover:-translate-y-1 transition-all shadow-brutal-sm group">
+                  <svg 
+                    viewBox="0 0 24 24" 
+                    fill="currentColor" 
+                    className="w-5 h-5 group-hover:scale-110 transition-transform"
+                  >
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                  </svg>
                 </a>
               </div>
             </div>

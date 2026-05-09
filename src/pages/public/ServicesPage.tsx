@@ -84,12 +84,12 @@ export default function ServicesPage() {
          <div className="absolute top-10 left-[10%] w-32 h-32 bg-[#ff5500] border-4 border-black rounded-full mix-blend-multiply opacity-50 dark:opacity-20 blur-xl animate-pulse" />
          <div className="absolute bottom-10 right-[10%] w-48 h-48 bg-[#06b6d4] border-4 border-black rounded-full mix-blend-multiply opacity-50 dark:opacity-20 blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
 
-        <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter mb-8">
-            BERHENTI <span className="text-transparent" style={{ WebkitTextStroke: '2px currentColor' }}>MERAIH</span> HASIL BIASA.
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black uppercase tracking-tighter mb-8 max-w-4xl mx-auto leading-tight">
+            BERHENTI <span className="text-muted-foreground border-black dark:border-white">MERAIH</span> HASIL BIASA.
           </h2>
-          <Button asChild size="lg" className="bg-black text-white hover:bg-[#8a2be2] border-2 border-black shadow-brutal text-xl h-16 px-12 rounded-2xl transition-all">
-            <Link to="/contact">EKSKUSI BERSAMA KAMI DARI SEKARANG <ArrowRight className="w-6 h-6 ml-3" /></Link>
+          <Button asChild size="lg" className="w-full sm:w-auto max-w-full min-h-16 h-auto py-4 px-6 md:px-12 bg-black text-white hover:bg-[#8a2be2] border-2 border-black shadow-brutal text-lg md:text-xl rounded-2xl transition-all whitespace-normal text-center leading-tight">
+            <Link to="/contact">EKSKUSI BERSAMA KAMI TERKINI <ArrowRight className="w-6 h-6 ml-2 shrink-0 hidden sm:inline-block" /></Link>
           </Button>
         </div>
       </section>
