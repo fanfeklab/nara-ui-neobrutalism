@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils"
 import { Check, Copy } from "lucide-react"
 import { Highlight, themes } from "prism-react-renderer"
 
-interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
+export type CodeBlockProps = React.HTMLAttributes<HTMLDivElement> & {
   code: string;
   language?: string;
-}
+};
 
 export function CodeBlock({
   className,

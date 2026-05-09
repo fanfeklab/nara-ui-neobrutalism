@@ -253,7 +253,7 @@ Agar UI Kit ini mudah di-*porting* atau dipelajari oleh developer maupun designe
 - **Varias Eksahustif**: Jangan hanya menampilkan contoh dasar. Setiap varian mutlak harus dipamerkan (misal pada Button: *Solid, Outline, Destructive, Ghost, With Icon, Loading State, Social/Payment Button*). 
 - **Tab Preview vs Code**: Setiap komponen `showcase` Wajib memiliki **2 Tab utama**:
   - **Preview**: Menunjukkan komponen yang dirender dan interaktif.
-  - **Code**: Menampilkan *snippet code* cara memakai komponen tersebut (bisa direpresentasikan melalui komponen `<CodeBlock />` atau custom Tabs).
+  - **Code**: Menampilkan *snippet code* cara memakai komponen tersebut (diwakili oleh komponen `<CodeBlock />` berspesifikasi macOS Window Style yang sudah dilengkapi Prism syntax highlighter dan number line).
 - **Struktur Menu Sidebar (Contoh)**:
   - **Atoms**: Buttons, Badges, Avatars, Inputs, Checkbox, dll.
   - **Molecules**: Cards, Tables, dll.

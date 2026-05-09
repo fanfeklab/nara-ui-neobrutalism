@@ -8,10 +8,12 @@ import UiDocsLayout from "./layouts/UiDocsLayout";
 
 // UI Docs Pages
 import IntroDoc from "./pages/ui-docs/IntroDoc";
+import TypographyDoc from "./pages/ui-docs/TypographyDoc";
 import ButtonDoc from "./pages/ui-docs/ButtonDoc";
 import BadgeDoc from "./pages/ui-docs/BadgeDoc";
 import AvatarDoc from "./pages/ui-docs/AvatarDoc";
 import InputDoc from "./pages/ui-docs/InputDoc";
+import LabelDoc from "./pages/ui-docs/LabelDoc";
 import CheckboxDoc from "./pages/ui-docs/CheckboxDoc";
 import SwitchDoc from "./pages/ui-docs/SwitchDoc";
 import SliderDoc from "./pages/ui-docs/SliderDoc";
@@ -44,10 +46,12 @@ export default function App() {
         {/* UI Documentation Routes */}
         <Route path="/ui-docs" element={<UiDocsLayout />}>
           <Route index element={<IntroDoc />} />
+          <Route path="typography" element={<TypographyDoc />} />
           <Route path="buttons" element={<ButtonDoc />} />
           <Route path="badges" element={<BadgeDoc />} />
           <Route path="avatars" element={<AvatarDoc />} />
           <Route path="inputs" element={<InputDoc />} />
+          <Route path="labels" element={<LabelDoc />} />
           <Route path="checkbox" element={<CheckboxDoc />} />
           <Route path="switch" element={<SwitchDoc />} />
           <Route path="slider" element={<SliderDoc />} />

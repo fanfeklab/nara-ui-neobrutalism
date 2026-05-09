@@ -3,10 +3,11 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { ComponentPreview } from "@/components/ui/component-preview";
 
 export default function TabsDoc() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-8">
       <div>
         <h1 className="text-4xl sm:text-5xl font-display font-black uppercase tracking-tighter text-foreground mb-4">
           Tabs
@@ -16,63 +17,64 @@ export default function TabsDoc() {
         </p>
       </div>
 
-      <div className="p-6 sm:p-8 border-2 border-black bg-background border-dashed rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Examples</h2>
-        <div className="flex justify-center flex-col items-center gap-6">
-          <Tabs defaultValue="account" className="w-[400px]">
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="account">Account</TabsTrigger>
-              <TabsTrigger value="password">Password</TabsTrigger>
-            </TabsList>
-            <TabsContent value="account">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Account</CardTitle>
-                  <CardDescription>
-                    Make changes to your account here. Click save when you're done.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="space-y-1">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" defaultValue="Pedro Duarte" />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="username">Username</Label>
-                    <Input id="username" defaultValue="@peduarte" />
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button>Save changes</Button>
-                </CardFooter>
-              </Card>
-            </TabsContent>
-            <TabsContent value="password">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Password</CardTitle>
-                  <CardDescription>
-                    Change your password here. After saving, you'll be logged out.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="space-y-1">
-                    <Label htmlFor="current">Current password</Label>
-                    <Input id="current" type="password" />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="new">New password</Label>
-                    <Input id="new" type="password" />
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button>Save password</Button>
-                </CardFooter>
-              </Card>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
+      <ComponentPreview
+        title="Default"
+        description="Standard tabs with cards inside."
+        code={`import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"\nimport { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"\nimport { Button } from "@/components/ui/button"\nimport { Label } from "@/components/ui/label"\nimport { Input } from "@/components/ui/input"\n\nexport function TabsDemo() {\n  return (\n    <Tabs defaultValue="account" className="w-full max-w-md">\n      <TabsList className="grid w-full grid-cols-2">\n        <TabsTrigger value="account">Account</TabsTrigger>\n        <TabsTrigger value="password">Password</TabsTrigger>\n      </TabsList>\n      <TabsContent value="account">\n        <Card>\n          <CardHeader>\n            <CardTitle>Account</CardTitle>\n            <CardDescription>\n              Make changes to your account here.\n            </CardDescription>\n          </CardHeader>\n          <CardContent className="space-y-2">\n            <div className="space-y-1">\n              <Label htmlFor="name">Name</Label>\n              <Input id="name" defaultValue="Nadia Kusuma" />\n            </div>\n          </CardContent>\n          <CardFooter>\n            <Button>Save changes</Button>\n          </CardFooter>\n        </Card>\n      </TabsContent>\n      <TabsContent value="password">\n        <Card>\n          <CardHeader>\n            <CardTitle>Password</CardTitle>\n            <CardDescription>\n              Change your password here.\n            </CardDescription>\n          </CardHeader>\n          <CardContent className="space-y-2">\n            <div className="space-y-1">\n              <Label htmlFor="current">Current password</Label>\n              <Input id="current" type="password" />\n            </div>\n          </CardContent>\n          <CardFooter>\n            <Button>Save password</Button>\n          </CardFooter>\n        </Card>\n      </TabsContent>\n    </Tabs>\n  )\n}`}
+      >
+        <Tabs defaultValue="account" className="w-full max-w-md">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="account">Account</TabsTrigger>
+            <TabsTrigger value="password">Password</TabsTrigger>
+          </TabsList>
+          <TabsContent value="account">
+            <Card>
+              <CardHeader>
+                <CardTitle>Account</CardTitle>
+                <CardDescription>
+                  Make changes to your account here. Click save when you're done.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="space-y-1">
+                  <Label htmlFor="name">Name</Label>
+                  <Input id="name" defaultValue="Nadia Kusuma" />
+                </div>
+                <div className="space-y-1">
+                  <Label htmlFor="username">Username</Label>
+                  <Input id="username" defaultValue="@nadiakusuma" />
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button>Save changes</Button>
+              </CardFooter>
+            </Card>
+          </TabsContent>
+          <TabsContent value="password">
+            <Card>
+              <CardHeader>
+                <CardTitle>Password</CardTitle>
+                <CardDescription>
+                  Change your password here. After saving, you'll be logged out.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="space-y-1">
+                  <Label htmlFor="current">Current password</Label>
+                  <Input id="current" type="password" />
+                </div>
+                <div className="space-y-1">
+                  <Label htmlFor="new">New password</Label>
+                  <Input id="new" type="password" />
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button>Save password</Button>
+              </CardFooter>
+            </Card>
+          </TabsContent>
+        </Tabs>
+      </ComponentPreview>
     </div>
   );
 }

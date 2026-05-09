@@ -14,10 +14,12 @@ const navGroups = [
   {
     title: "Atoms",
     links: [
+      { name: "Typography", href: "/ui-docs/typography" },
       { name: "Buttons", href: "/ui-docs/buttons" },
       { name: "Badges", href: "/ui-docs/badges" },
       { name: "Avatars", href: "/ui-docs/avatars" },
-      { name: "Inputs & Labels", href: "/ui-docs/inputs" },
+      { name: "Input", href: "/ui-docs/inputs" },
+      { name: "Label", href: "/ui-docs/labels" },
       { name: "Checkbox", href: "/ui-docs/checkbox" },
       { name: "Switch", href: "/ui-docs/switch" },
       { name: "Slider", href: "/ui-docs/slider" },
