@@ -1,8 +1,9 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { ComponentPreview } from "@/components/ui/component-preview";
 
 export default function AvatarDoc() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-8">
       <div>
         <h1 className="text-4xl sm:text-5xl font-display font-black uppercase tracking-tighter text-foreground mb-4">
           Avatars
@@ -12,11 +13,14 @@ export default function AvatarDoc() {
         </p>
       </div>
 
-      <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Basic Avatars & Sizes</h2>
+      <ComponentPreview
+        title="Basic Avatars & Sizes"
+        description="Standard sizes."
+        code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"\n\nexport function AvatarDemo() {\n  return (\n    <div className="flex gap-4 items-center">\n      <Avatar>\n        <AvatarImage src="https://api.dicebear.com/7.x/notionists/svg?seed=Nadia Kirana" alt="@nadia" />\n        <AvatarFallback>NA</AvatarFallback>\n      </Avatar>\n      <Avatar className="w-16 h-16">\n        <AvatarImage src="https://api.dicebear.com/7.x/notionists/svg?seed=Budi" alt="@budi" />\n        <AvatarFallback>BU</AvatarFallback>\n      </Avatar>\n      <Avatar className="w-24 h-24">\n        <AvatarImage src="https://api.dicebear.com/7.x/notionists/svg?seed=Hanif" alt="@hanif" />\n        <AvatarFallback>HA</AvatarFallback>\n      </Avatar>\n    </div>\n  )\n}`}
+      >
         <div className="flex flex-wrap gap-8 items-center">
           <Avatar>
-            <AvatarImage src="https://api.dicebear.com/7.x/notionists/svg?seed=Nadia" />
+            <AvatarImage src="https://api.dicebear.com/7.x/notionists/svg?seed=Nadia Kirana" />
             <AvatarFallback>NA</AvatarFallback>
           </Avatar>
           
@@ -26,14 +30,17 @@ export default function AvatarDoc() {
           </Avatar>
           
           <Avatar className="w-24 h-24">
-            <AvatarImage src="https://api.dicebear.com/7.x/notionists/svg?seed=Joko" />
-            <AvatarFallback>JK</AvatarFallback>
+            <AvatarImage src="https://api.dicebear.com/7.x/notionists/svg?seed=Hanif" />
+            <AvatarFallback>HA</AvatarFallback>
           </Avatar>
         </div>
-      </div>
+      </ComponentPreview>
 
-      <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Fallback Only</h2>
+      <ComponentPreview
+        title="Fallback Only"
+        description="If the image fails to load or isn't provided."
+        code={`import { Avatar, AvatarFallback } from "@/components/ui/avatar"\n\nexport function AvatarFallbackDemo() {\n  return (\n    <div className="flex gap-4 items-center">\n      <Avatar>\n        <AvatarFallback>NA</AvatarFallback>\n      </Avatar>\n      <Avatar className="w-16 h-16">\n        <AvatarFallback className="bg-primary text-primary-foreground">US</AvatarFallback>\n      </Avatar>\n    </div>\n  )\n}`}
+      >
         <div className="flex flex-wrap gap-8 items-center">
           <Avatar>
             <AvatarFallback>NA</AvatarFallback>
@@ -43,7 +50,7 @@ export default function AvatarDoc() {
             <AvatarFallback className="bg-primary text-primary-foreground">US</AvatarFallback>
           </Avatar>
         </div>
-      </div>
+      </ComponentPreview>
     </div>
   );
 }

@@ -8,6 +8,7 @@ import UiDocsLayout from "./layouts/UiDocsLayout";
 
 // UI Docs Pages
 import IntroDoc from "./pages/ui-docs/IntroDoc";
+import DecorationsDoc from "./pages/ui-docs/DecorationsDoc";
 import TypographyDoc from "./pages/ui-docs/TypographyDoc";
 import ButtonDoc from "./pages/ui-docs/ButtonDoc";
 import BadgeDoc from "./pages/ui-docs/BadgeDoc";
@@ -19,6 +20,9 @@ import SwitchDoc from "./pages/ui-docs/SwitchDoc";
 import SliderDoc from "./pages/ui-docs/SliderDoc";
 import ProgressDoc from "./pages/ui-docs/ProgressDoc";
 import CardDoc from "./pages/ui-docs/CardDoc";
+import DataTableDoc from "./pages/ui-docs/DataTableDoc";
+import ChartDoc from "./pages/ui-docs/ChartDoc";
+import StepperDoc from "./pages/ui-docs/StepperDoc";
 import TableDoc from "./pages/ui-docs/TableDoc";
 import SeparatorDoc from "./pages/ui-docs/SeparatorDoc";
 import TabsDoc from "./pages/ui-docs/TabsDoc";
@@ -35,6 +39,24 @@ import PopoverDoc from "./pages/ui-docs/PopoverDoc";
 import SheetDoc from "./pages/ui-docs/SheetDoc";
 import ContextMenuDoc from "./pages/ui-docs/ContextMenuDoc";
 import ScrollAreaDoc from "./pages/ui-docs/ScrollAreaDoc";
+import TextareaDoc from "./pages/ui-docs/TextareaDoc";
+import RadioGroupDoc from "./pages/ui-docs/RadioGroupDoc";
+import ToggleDoc from "./pages/ui-docs/ToggleDoc";
+import CalendarDoc from "./pages/ui-docs/CalendarDoc";
+import DatePickerDoc from "./pages/ui-docs/DatePickerDoc";
+import SonnerDoc from "./pages/ui-docs/SonnerDoc";
+import InputOtpDoc from "./pages/ui-docs/InputOtpDoc";
+import CommandDoc from "./pages/ui-docs/CommandDoc";
+import PaginationDoc from "./pages/ui-docs/PaginationDoc";
+import NavigationMenuDoc from "./pages/ui-docs/NavigationMenuDoc";
+import MenubarDoc from "./pages/ui-docs/MenubarDoc";
+import ResizableDoc from "./pages/ui-docs/ResizableDoc";
+import AspectRatioDoc from "./pages/ui-docs/AspectRatioDoc";
+import CollapsibleDoc from "./pages/ui-docs/CollapsibleDoc";
+import SelectDoc from "./pages/ui-docs/SelectDoc";
+import CarouselDoc from "./pages/ui-docs/CarouselDoc";
+import DrawerDoc from "./pages/ui-docs/DrawerDoc";
+import ComboboxDoc from "./pages/ui-docs/ComboboxDoc";
 
 export default function App() {
   return (
@@ -46,8 +68,10 @@ export default function App() {
         {/* UI Documentation Routes */}
         <Route path="/ui-docs" element={<UiDocsLayout />}>
           <Route index element={<IntroDoc />} />
+          <Route path="decorations" element={<DecorationsDoc />} />
           <Route path="typography" element={<TypographyDoc />} />
           <Route path="buttons" element={<ButtonDoc />} />
+          <Route path="combobox" element={<ComboboxDoc />} />
           <Route path="badges" element={<BadgeDoc />} />
           <Route path="avatars" element={<AvatarDoc />} />
           <Route path="inputs" element={<InputDoc />} />
@@ -56,8 +80,18 @@ export default function App() {
           <Route path="switch" element={<SwitchDoc />} />
           <Route path="slider" element={<SliderDoc />} />
           <Route path="progress" element={<ProgressDoc />} />
+          <Route path="textarea" element={<TextareaDoc />} />
+          <Route path="radio-group" element={<RadioGroupDoc />} />
+          <Route path="toggle" element={<ToggleDoc />} />
+          <Route path="aspect-ratio" element={<AspectRatioDoc />} />
           <Route path="cards" element={<CardDoc />} />
+          <Route path="calendar" element={<CalendarDoc />} />
+          <Route path="collapsible" element={<CollapsibleDoc />} />
+          <Route path="date-picker" element={<DatePickerDoc />} />
           <Route path="table" element={<TableDoc />} />
+          <Route path="data-table" element={<DataTableDoc />} />
+          <Route path="chart" element={<ChartDoc />} />
+          <Route path="stepper" element={<StepperDoc />} />
           <Route path="separator" element={<SeparatorDoc />} />
           <Route path="skeleton" element={<SkeletonDoc />} />
           <Route path="tabs" element={<TabsDoc />} />
@@ -72,7 +106,17 @@ export default function App() {
           <Route path="context-menu" element={<ContextMenuDoc />} />
           <Route path="dialog" element={<DialogDoc />} />
           <Route path="dropdown-menu" element={<DropdownMenuDoc />} />
+          <Route path="input-otp" element={<InputOtpDoc />} />
+          <Route path="command" element={<CommandDoc />} />
+          <Route path="pagination" element={<PaginationDoc />} />
+          <Route path="navigation-menu" element={<NavigationMenuDoc />} />
+          <Route path="menubar" element={<MenubarDoc />} />
+          <Route path="resizable" element={<ResizableDoc />} />
           <Route path="sheet" element={<SheetDoc />} />
+          <Route path="select" element={<SelectDoc />} />
+          <Route path="carousel" element={<CarouselDoc />} />
+          <Route path="drawer" element={<DrawerDoc />} />
+          <Route path="sonner" element={<SonnerDoc />} />
           {/* Fallback for unknown ui-docs routes */}
           <Route path="*" element={<Navigate to="/ui-docs" replace />} />
         </Route>

@@ -29,7 +29,7 @@ export default function CardDoc() {
           <CardContent className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="name">Full Name</Label>
-              <Input type="text" id="name" placeholder="Nadia Kusuma" />
+              <Input type="text" id="name" placeholder="Nadia Kirana" />
             </div>
           </CardContent>
           <CardFooter>

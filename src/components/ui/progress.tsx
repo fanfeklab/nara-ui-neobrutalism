@@ -1,22 +1,58 @@
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
+import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
+const progressVariants = cva(
+  "relative w-full overflow-hidden rounded-full border-2 border-black bg-muted shadow-brutal-sm",
+  {
+    variants: {
+      size: {
+        default: "h-6",
+        sm: "h-4",
+        lg: "h-8",
+      },
+    },
+    defaultVariants: {
+      size: "default",
+    },
+  }
+)
+
+const indicatorVariants = cva(
+  "h-full w-full flex-1 border-r-2 border-black transition-all",
+  {
+    variants: {
+      variant: {
+        default: "bg-[#ccff00]",
+        secondary: "bg-[#8a2be2]",
+        destructive: "bg-[#ef4444]",
+        striped: "bg-[#ccff00] bg-[linear-gradient(45deg,rgba(0,0,0,0.1)_25%,transparent_25%,transparent_50%,rgba(0,0,0,0.1)_50%,rgba(0,0,0,0.1)_75%,transparent_75%,transparent)] bg-[length:1rem_1rem]",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+)
+
+export interface ProgressProps
+  extends React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>,
+    VariantProps<typeof progressVariants>,
+    VariantProps<typeof indicatorVariants> {}
+
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
->(({ className, value, ...props }, ref) => (
+  ProgressProps
+>(({ className, value, size, variant, ...props }, ref) => (
   <ProgressPrimitive.Root
     ref={ref}
-    className={cn(
-      "relative h-6 w-full overflow-hidden rounded-full border-2 border-black bg-muted shadow-brutal-sm",
-      className
-    )}
+    className={cn(progressVariants({ size }), className)}
     {...props}
   >
     <ProgressPrimitive.Indicator
-      className="h-full w-full flex-1 bg-[#ccff00] border-r-2 border-black transition-all"
+      className={cn(indicatorVariants({ variant }))}
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
     />
   </ProgressPrimitive.Root>

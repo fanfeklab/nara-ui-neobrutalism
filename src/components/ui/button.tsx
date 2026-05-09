@@ -1,51 +1,61 @@
 import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
+import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center font-bold tracking-tight rounded-xl border-2 border-black transition-all duration-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ccff00] disabled:pointer-events-none disabled:opacity-50",
+  "group/button inline-flex shrink-0 items-center justify-center rounded-xl border-2 border-black font-bold uppercase tracking-tight whitespace-nowrap transition-all outline-hidden select-none hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none focus-visible:ring-2 focus-visible:ring-[#ccff00] active:translate-y-[2px] active:translate-x-[2px] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-5",
   {
     variants: {
       variant: {
-        solid: "bg-[#ccff00] text-black shadow-brutal hover:-translate-y-[2px] hover:-translate-x-[2px] hover:shadow-brutal-lg hover:brightness-110 active:translate-x-[6px] active:translate-y-[6px] active:shadow-none",
-        outline: "bg-transparent text-foreground shadow-brutal hover:bg-[#ccff00] hover:text-black hover:-translate-y-[2px] hover:-translate-x-[2px] hover:shadow-brutal-lg active:translate-x-[6px] active:translate-y-[6px] active:shadow-none",
-        destructive: "bg-[#ef4444] text-white shadow-brutal hover:-translate-y-[2px] hover:-translate-x-[2px] hover:shadow-brutal-lg hover:brightness-110 active:translate-x-[6px] active:translate-y-[6px] active:shadow-none",
-        ghost: "border-transparent shadow-none hover:bg-muted active:scale-95",
+        default: "bg-[#ccff00] text-black shadow-brutal",
+        solid: "bg-[#ccff00] text-black shadow-brutal hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none",
+        outline: "bg-white text-black shadow-brutal hover:bg-[#ccff00] hover:text-black hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none",
+        secondary: "bg-[#8a2be2] text-white shadow-brutal",
+        ghost: "border-transparent shadow-none hover:bg-muted active:shadow-none active:translate-x-0 active:translate-y-0",
+        destructive: "bg-[#ef4444] text-white shadow-brutal hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none",
+        link: "text-primary underline-offset-4 hover:underline border-transparent shadow-none active:translate-x-0 active:translate-y-0",
       },
       size: {
-        default: "h-12 px-6 py-3 text-base",
-        sm: "h-9 px-4 py-2 text-sm",
-        lg: "h-14 px-8 py-4 text-lg",
-        icon: "h-12 w-12",
+        default: "h-12 px-6 py-3 text-base gap-2",
+        xs: "h-8 px-3 text-xs gap-1",
+        sm: "h-10 px-4 text-sm gap-1.5",
+        lg: "h-14 px-8 text-lg gap-2",
+        icon: "size-12",
+        "icon-xs": "size-8",
+        "icon-sm": "size-10",
+        "icon-lg": "size-14",
       },
     },
     defaultVariants: {
-      variant: "solid",
+      variant: "default",
       size: "default",
     },
   }
 )
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean
-}
+function Button({
+  className,
+  variant = "default",
+  size = "default",
+  asChild = false,
+  ...props
+}: React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean
+  }) {
+  const Comp = asChild ? Slot : "button"
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
-    return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
-    )
-  }
-)
-Button.displayName = "Button"
+  return (
+    <Comp
+      data-slot="button"
+      data-variant={variant}
+      data-size={size}
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
+  )
+}
 
 export { Button, buttonVariants }

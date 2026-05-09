@@ -168,10 +168,10 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
             
             <div className="flex items-center gap-3 pl-4 border-l-2 border-black">
               <div className="w-10 h-10 rounded-full border-2 border-black overflow-hidden bg-primary shadow-brutal-sm">
-                <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=Nadia`} alt="Avatar" className="w-full h-full object-cover" />
+                <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=Nadia Kirana`} alt="Avatar" className="w-full h-full object-cover" />
               </div>
               <div className="hidden md:block leading-tight">
-                <p className="text-sm font-bold font-mono">Nadia Kira...</p>
+                <p className="text-sm font-bold font-mono">Nadia Kirana</p>
                 <p className="text-xs font-mono text-muted-foreground uppercase">CEO</p>
               </div>
             </div>
