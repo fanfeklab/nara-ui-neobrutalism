@@ -46,7 +46,7 @@ export function PublicLayout() {
     <div className="min-h-screen flex flex-col bg-background font-body text-foreground">
       {/* Public Navbar */}
       <header className="sticky top-0 z-50 w-full border-b-2 border-black bg-card">
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           
           <Link to="/" className="flex items-center gap-2 group">
             {/* Animated Text Logo purely CSS */}
@@ -171,8 +171,8 @@ export function PublicLayout() {
       </main>
 
       {/* Public Footer */}
-      <footer className="border-t-2 border-black bg-white dark:bg-[#0a192f] mt-auto">
-        <div className="container mx-auto px-4 py-16">
+      <footer className="border-t-2 border-black bg-white dark:bg-[#0a192f] mt-auto w-full">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             
             {/* Company Info */}

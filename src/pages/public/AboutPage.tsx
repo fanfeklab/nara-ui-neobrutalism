@@ -44,8 +44,8 @@ export default function AboutPage() {
 
       {/* The Manifesto */}
       <section className="w-full py-24 bg-[#FDFBD4] dark:bg-[#112240] border-b-2 border-black">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-white dark:bg-card border-4 border-black p-8 md:p-12 shadow-[8px_8px_0_0_#000] rounded-2xl">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white dark:bg-card border-4 border-black p-8 md:p-12 shadow-[8px_8px_0_0_#000] rounded-2xl max-w-4xl mx-auto">
             <h2 className="text-4xl font-display font-black uppercase tracking-tighter border-b-4 border-black pb-4 mb-8">
               MANIFESTO KAMI
             </h2>
@@ -81,7 +81,7 @@ export default function AboutPage() {
 
       {/* The Team */}
       <section className="w-full py-24 bg-card">
-        <div className="container mx-auto px-4">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tighter mb-4">
               PARA KOMANDAN
@@ -126,7 +126,7 @@ export default function AboutPage() {
 
       {/* CTE */}
       <section className="w-full py-24 bg-black text-white border-t-2 border-black overflow-hidden relative">
-        <div className="container mx-auto px-4 text-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tighter mb-6 text-white">
             INGIN BERGABUNG DENGAN PASUKAN?
           </h2>

@@ -14,7 +14,7 @@ export default function BlogDetailPage() {
     <div className="w-full relative bg-background">
       {/* Sticky top-nav back button */}
       <div className="sticky top-20 z-40 bg-card border-b-2 border-black w-full py-3 h-14 flex items-center shadow-brutal-sm">
-         <div className="container mx-auto px-4">
+         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Link to="/blog" className="inline-flex items-center text-sm font-body font-bold uppercase tracking-tight hover:text-[#ff5500] transition-colors">
                <ArrowLeft className="w-4 h-4 mr-2" /> KEMBALI KE PANGKALAN DATA
             </Link>
@@ -23,7 +23,7 @@ export default function BlogDetailPage() {
 
       {/* Hero Header Article */}
       <header className="w-full pt-16 pb-12 bg-white dark:bg-[#112240] border-b-2 border-black">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
+        <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
            <div className="mb-6 flex justify-center gap-3">
               <span className="bg-[#ccff00] text-black font-body font-bold text-xs uppercase px-3 py-1 border-2 border-black rounded-lg shadow-brutal-sm">STUDI KASUS</span>
               <span className="bg-black text-white font-body font-bold text-xs uppercase px-3 py-1 border-2 border-black rounded-lg shadow-brutal-sm">09 MEI 2026</span>
@@ -49,7 +49,7 @@ export default function BlogDetailPage() {
       </div>
 
       {/* Content Body */}
-      <article className="container mx-auto px-4 py-16 max-w-3xl prose prose-lg dark:prose-invert prose-headings:font-display prose-headings:font-black prose-headings:uppercase prose-p:font-body prose-p:font-medium prose-a:text-[#8a2be2] dark:prose-a:text-[#ccff00] prose-a:font-bold border-b-2 border-black">
+      <article className="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 prose prose-lg dark:prose-invert prose-headings:font-display prose-headings:font-black prose-headings:uppercase prose-p:font-body prose-p:font-medium prose-a:text-[#8a2be2] dark:prose-a:text-[#ccff00] prose-a:font-bold border-b-2 border-black">
          <p className="lead text-xl">
            Industri hiburan sering kali sangat meromantisasi kerumunan, namun dari sudut pandang rekayasa logistik, 50.000 manusia adalah entitas cair bergerak yang bisa berujung pada bencana jika salah dimanifestasikan. Di sinilah metode kami ikut campur.
          </p>
@@ -79,7 +79,7 @@ export default function BlogDetailPage() {
       </article>
 
       {/* Share & Footer Actions */}
-      <section className="container mx-auto px-4 py-16 max-w-3xl flex flex-col md:flex-row justify-between items-center gap-8">
+      <section className="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row justify-between items-center gap-8">
          <div className="flex items-center gap-4">
             <span className="font-display font-black uppercase tracking-tighter text-xl">Bagikan Transmisi:</span>
             <div className="flex gap-2">

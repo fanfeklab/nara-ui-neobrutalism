@@ -59,7 +59,7 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section className="w-full py-24 bg-card border-b-2 border-black">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((svc, i) => (
               <div key={i} className="group bg-background border-4 border-black rounded-2xl p-8 shadow-[8px_8px_0_0_#000] hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] transition-all flex flex-col">
@@ -84,7 +84,7 @@ export default function ServicesPage() {
          <div className="absolute top-10 left-[10%] w-32 h-32 bg-[#ff5500] border-4 border-black rounded-full mix-blend-multiply opacity-50 dark:opacity-20 blur-xl animate-pulse" />
          <div className="absolute bottom-10 right-[10%] w-48 h-48 bg-[#06b6d4] border-4 border-black rounded-full mix-blend-multiply opacity-50 dark:opacity-20 blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
 
-        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black uppercase tracking-tighter mb-8 max-w-4xl mx-auto leading-tight">
             BERHENTI <span className="text-muted-foreground border-black dark:border-white">MERAIH</span> HASIL BIASA.
           </h2>

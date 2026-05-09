@@ -57,3 +57,17 @@ Dokumen ini mencatat seluruh histori diskusi, revisi, dan keputusan penting sela
 - Membuat `<ThemeProvider>` untuk menangani dark/light/system theme, serta menempatkan tombol toggle di Navbar `PublicLayout`.
 - Mengecilkan ukuran teks Header Logo (dari `text-2xl/3xl` menjadi proporsional `text-xl/2xl`) dan mensejajarkannya (align-items-center) dengan Button di Navbar.
 - Merombak struktur Card di `AboutPage.tsx` agar foto tim lebih clean dan background hijaunya sebatas wadah wajar.
+
+## Iterasi 3 - 9 Mei 2026 (Responsivitas Container & Variasi Card UI)
+
+**Masalah & Masukan User:**
+1. **Logo Medsos Vektor:** Logo TikTok hilang/tidak ada icon. Warna fill button medsos minta disesuaikan dengan brand aslinya. (Telah diselesaikan di patch sebelumnya).
+2. **Fleksibilitas & Variasi Card:** Card terlalu monoton (semua kotak menurun). Minta variasi desain card antar section (grid masonry, horizontal, dll).
+3. **Efek Potongan Kasar (Horizontal Scroll):** Carousel/List horizontal "Rekam Jejak" terpotong kaku di ujung layar. Minta efek *fade* di tepi.
+4. **Inkonsistensi Garis Tepi (Padding/Margin Kiri-Kanan):** Layar desktop memperlihatkan Logo Navbar, Hero, dan Acara Mendatang memiliki garis batas kiri-kanan yang tidak rata (ada yang menjorok, ada yang keluar).
+
+**Tindakan Resolusi:**
+- **Standardisasi Container:** Mengganti kombinasi class `container ...` yang sporadis menjadi komposisi baku utilitas: `w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` di SEMUA komponen (Navbar, Footer, Hero, Section). Ini mengunci *alignment* vertikal dari atas ke bawah.
+- **Variasi Card Acara:** Mengubah *Featured Card* di "Acara Mendatang" menjadi layout Horizontal (Kiri gambar, Kanan teks) pada breakpoint `lg`, membedakannya dari *sub-cards* yang vertikal.
+- **Efek Fade Scroll:** Menambahkan utilitas `[mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]` pada container horizontal "Rekam Jejak" untuk transisi ujung layar yang elegan.
+- *Styling* khusus untuk brand colors Social Media telah ditetapkan.

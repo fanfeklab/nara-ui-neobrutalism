@@ -38,7 +38,7 @@ export default function ClientsPage() {
 
       {/* Grid of Logos */}
       <section className="w-full py-24 bg-card border-b-2 border-black">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
              {['BCA', 'GOJEK', 'TELKOMSEL', 'TOKOPEDIA', 'SAMSUNG', 'BINTANG', 'MANDIRI', 'TRAVELOKA', 'SHOPEE', 'NISSAN', 'HYUNDAI', 'DANA'].map((brand, i) => (
                 <div key={i} className="bg-white dark:bg-[#112240] aspect-video border-2 border-black rounded-2xl flex items-center justify-center p-6 shadow-brutal-sm hover:translate-x-1 hover:-translate-y-1 hover:shadow-brutal transition-all cursor-crosshair">
@@ -53,7 +53,7 @@ export default function ClientsPage() {
 
       {/* Testimonials */}
       <section className="w-full py-24 bg-[#FDFBD4] dark:bg-[#0a192f] border-b-2 border-black">
-        <div className="container mx-auto px-4">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
              <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tighter mb-4">
                CATATAN <span className="text-[#ff5500]">PERANG</span>

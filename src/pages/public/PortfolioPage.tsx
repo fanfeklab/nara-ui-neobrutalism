@@ -33,7 +33,7 @@ export default function PortfolioPage() {
 
       {/* Portfolio Grid */}
       <section className="w-full py-16 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
@@ -83,7 +83,7 @@ export default function PortfolioPage() {
 
       {/* CTA Footer */}
       <section className="w-full py-24 bg-[#ff5500] text-black border-t-4 border-black">
-        <div className="container mx-auto px-4 text-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
            <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tighter mb-4">
              PROYEK ANDA BERIKUTNYA?
            </h2>

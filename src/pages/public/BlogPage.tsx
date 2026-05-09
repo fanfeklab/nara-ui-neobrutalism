@@ -55,7 +55,7 @@ export default function BlogPage() {
 
       {/* Featured / Hero Blog */}
       <section className="w-full py-16 bg-card border-b-2 border-black">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <Link to={`/blog/${posts[0].id}`} className="group flex flex-col md:flex-row bg-background border-4 border-black rounded-2xl overflow-hidden shadow-brutal hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] transition-all">
               <div className="w-full md:w-3/5 border-b-4 md:border-b-0 md:border-r-4 border-black overflow-hidden relative">
                  <img src={posts[0].image} alt="Featured" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -83,7 +83,7 @@ export default function BlogPage() {
 
       {/* Grid List */}
       <section className="w-full py-24 bg-background">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.slice(1).map((post) => (
                  <Link key={post.id} to={`/blog/${post.id}`} className="group bg-card border-2 border-black rounded-2xl flex flex-col overflow-hidden shadow-[4px_4px_0_0_#000] hover:-translate-y-1 hover:shadow-brutal transition-all">
