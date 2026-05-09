@@ -148,48 +148,51 @@ Rencana pembangunan ujung-ke-ujung berskala masif. Checklist ini wajib dipatuhi 
 
 ### STAGE 2: Public Facing Pages (± 15 Tasks)
 *Tujuan: Etalase perusahaan dan entry point pembelian tiket (Role: Guest/Public).*
-- [ ] Landing Page Utama (Hero Banner Neo-brutalism, Feature USP).
+*Referensi Dokumen:* `DNA_01_SOFTWARE_OVERVIEW.md` (Zona Halaman Publik), `DNA_06_USER_JOURNEY.md` (Alur 6A/6B: Eksplorasi & Checkout).
+- [ ] Landing Page Utama (Hero Banner Neo-brutalism, Feature USP, Navigasi).
 - [ ] Section / Page About Us & Our Team.
 - [ ] Section / Page Services yang ditawarkan Nara Events.
 - [ ] Section / Page Portfolio / Past Events (Carousel Grid).
 - [ ] Section / Page Blog / Artikel (Hanya Mockup UI Grid & Detail).
-- [ ] Halaman Event Explorer (Daftar event aktif untuk publik).
-- [ ] Halaman Detail Event Publik (Informasi, jadwal, harga tiket).
-- [ ] Alur Checkout Tiket Walk-in - Step 1: Pemilihan Tiket.
-- [ ] Alur Checkout Tiket Walk-in - Step 2: Data Pemesan.
-- [ ] Alur Checkout Tiket Walk-in - Step 3: Pembayaran & Eksekusi.
-- [ ] Halaman Sukses Checkout & Download E-Ticket (QR Code).
-- [ ] Form Pengajuan Refund Publik (Walk-in).
+- [ ] Halaman Event Explorer (`/events` - Daftar event aktif untuk publik).
+- [ ] Halaman Detail Event Publik (`/events/[slug]` - Informasi, jadwal, harga tiket). *Ref: DNA_11 (Tabel events).*
+- [ ] Alur Checkout Tiket Walk-in - Step 1: Pemilihan Tiket (`/checkout/[id]/step-1`). *Ref: DNA_06 (Pasal 2.1), DNA_11 (Tabel tickets).*
+- [ ] Alur Checkout Tiket Walk-in - Step 2: Data Pemesan (Form Identity + Zod validation). *Ref: DNA_11 (Tabel ticket_owners).*
+- [ ] Alur Checkout Tiket Walk-in - Step 3: Pembayaran & Eksekusi (Review ringkasan).
+- [ ] Halaman Sukses Checkout & Download E-Ticket (QR Code). *Ref: DNA_06 (Pasal 2.3).*
+- [ ] Form Pengajuan Refund Publik (Walk-in). *Ref: DNA_06 (Pasal 3.1).*
 - [ ] Halaman Status Cek Refund/Pertanyaan Publik.
 - [ ] Halaman Contact Us & FAQ.
 - [ ] Footer Global Publik.
 
 ### STAGE 3: Core Dashboard & Auth (± 10 Tasks)
 *Tujuan: Masuk ke sistem dan melihat big picture (Role: Internal/Management).*
-- [ ] Layar Login Dashboard & Portal.
+*Referensi Dokumen:* `TECH_02_RBAC.md` (Roles & Permissions), `DNA_11_DATABASE_SCHEMA.md` (Tabel users).
+- [ ] Layar Login Dashboard & Portal (Validasi kredensial statis).
 - [ ] Layar Register (Untuk Member/Client baru).
 - [ ] Layar Lupa Password & Reset Password.
-- [ ] Global Main Dashboard (View COO/CEO) - Analitik Utama.
+- [ ] Global Main Dashboard (View COO/CEO) - Analitik Utama. *Ref: DNA_01 (Zona Dashboard).*
 - [ ] Global Dashboard - Penjualan Tiket & Conversion Rate.
 - [ ] Header Dashboard - Global Search & Context Switcher.
 - [ ] Header Dashboard - Notification Hub Panel.
 - [ ] Dashboard Profile Settings & Security.
-- [ ] Widget My Tasks / Approval Pendings di Dashboard.
+- [ ] Widget My Tasks / Approval Pendings di Dashboard. *Ref: DNA_06 (Pasal Approval).*
 - [ ] Widget Kalender Global di Dashboard.
 
 ### STAGE 4: Event Management & Ticketing (± 25 Tasks) 🔥 Paling Kompleks
 *Tujuan: Jantung dari operasional Project Manager (PM).*
-- [ ] DataGrid Semua Event (Tabel Master dengan filter kompleks).
-- [ ] Wizard Creation - Step 1: Info Dasar & Pemilihan Tipe Event.
-- [ ] Wizard Creation - Step 2: Set Tanggal & Lokasi (Multi-day support).
+*Referensi Dokumen:* `DNA_06_USER_JOURNEY.md` (Pasal 1: Event Creation & RAB), `DNA_11_DATABASE_SCHEMA.md` (Skema Inti: Events, RAB, Lineups, Sponsorships). Menganut konsep data-binding DTO yang robust.
+- [ ] DataGrid Semua Event (Tabel Master dengan filter kompeks).
+- [ ] Wizard Creation - Step 1: Info Dasar & Pemilihan Tipe Event. *Ref: DNA_11.*
+- [ ] Wizard Creation - Step 2: Set Tanggal & Lokasi (Multi-day support). *Ref: DNA_09 (Master Venues).*
 - [ ] Wizard Creation - Step 3: Ticketing Setup (Tiers, Harga, Kapasitas).
 - [ ] Wizard Creation - Step 4: Lineup / Artis.
 - [ ] Wizard Creation - Step 5: Pengajuan Kebutuhan Vendor.
 - [ ] Wizard Creation - Step 6: Sponsor Targets.
 - [ ] Wizard Creation - Step 7: Checklists Legal & Dokumen.
-- [ ] Wizard Creation - Step 8: RAB Builder dinamis (Perakitan Harga).
+- [ ] Wizard Creation - Step 8: RAB Builder dinamis (Perakitan Harga). *Ref: DNA_06 (Pasal RAB Creation).*
 - [ ] Wizard Creation - Step 9: Otomatisasi Total Anggaran & Margin.
-- [ ] Wizard Creation - Step 10: Pengajuan Approval ke COO/Finance.
+- [ ] Wizard Creation - Step 10: Pengajuan Approval ke COO/Finance. *Ref: TECH_02_RBAC.*
 - [ ] Event Detail - Hub Utama (Status, Progress Setup).
 - [ ] Event Detail - Tab RAB (Realisasi vs Rencana).
 - [ ] Event Detail - Tab Timeline Kanban (Task Management).
@@ -197,7 +200,7 @@ Rencana pembangunan ujung-ke-ujung berskala masif. Checklist ini wajib dipatuhi 
 - [ ] Event Detail - Tab Ticketing (Live Sales Dashboard per Event).
 - [ ] Event Detail - Tab Lineup / Artis (Jadwal Manggung).
 - [ ] Event Detail - Tab Dokumen (MoU, SPK, Permit).
-- [ ] Scanner App UI - Simulasi Tampilan HP Mobile App.
+- [ ] Scanner App UI - Simulasi Tampilan HP Mobile App. *Ref: DNA_06 (Pasal 2.4 - Ticket Redemption).*
 - [ ] Scanner App UI - Loading UI & Scan Result (Valid/Invalid/Duplicate).
 - [ ] Scanner App UI - Manual Check-in Search.
 - [ ] Management Tiket - Form Reschedule Tiket Participant.
