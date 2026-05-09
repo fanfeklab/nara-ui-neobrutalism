@@ -209,6 +209,7 @@ Setiap data dari sumber eksternal (API, form, localStorage) wajib divalidasi Zod
 - Tema disimpan ke `localStorage` dengan kunci `theme`.
 - **Aturan Emas**: Border `#000000` dan shadow solid tidak berubah di kedua mode.
 - **Background Utama**: Harus memiliki motif grid kertas bergaris (menggunakan linear-gradient untuk `.bg-grid` atau utility terkait) di atas warna `bg-background`.
+- **Dilarang Keras Hardcode Warna**: Jangan pernah menggunakan `bg-white`, `bg-black`, `text-black`, `text-white` secara acak pada Layout utama atau Komponen (kecuali pada elemen spesifik yang mutlak warnanya seperti primary button text). Gunakan semantic colors yang sudah disediakan: `bg-background`, `bg-card`, `bg-popover`, `text-foreground`, `text-muted-foreground` agar komponen otomatis menyesuaikan di Dark Mode.
 
 ---
 
@@ -222,7 +223,7 @@ Setiap data dari sumber eksternal (API, form, localStorage) wajib divalidasi Zod
 
 ## 8. Testing & Pipeline
 
-Testing wajib via GitHub Actions sebelum merge.
+Testing wajib via GitHub Actions sebelum merge. Proyek ini harus siap di-deploy ke Vercel atau diproses melalui CI/CD.
 
 | Jenis Test | Alat |
 |---|---|
@@ -230,6 +231,11 @@ Testing wajib via GitHub Actions sebelum merge.
 | Visual Regression | Chromatic (Storybook) |
 | E2E | Playwright (mengarah ke Preview Vercel) |
 | Validasi Data | Vitest (Zod schema) |
+
+**Ekspektasi File Pipeline & Konfigurasi**:
+- `.github/workflows/main.yml`: Menjalankan *linting*, *typecheck*, *unit test* dan *build* untuk setiap PR dan push ke branch `main`.
+- `vercel.json` (jika dibutuhkan override): Untuk konfigurasi header security atau routing yang spesifik, meskipun Vite/Vercel biasanya out-of-the-box.
+- `vitest.config.ts` dan `playwright.config.ts` harus dikonfigurasi.
 
 Pipeline:
 1. Lint & Typecheck
@@ -243,7 +249,11 @@ Agar UI Kit ini mudah di-*porting* atau dipelajari oleh developer maupun designe
 
 - **Routing Terpisah**: Jangan menumpuk semua showcase di satu rute. Dokumentasi harus disusun dengan nested routing seperti `/ui-docs/buttons`, `/ui-docs/cards`, dll.
 - **Layout Sentral (`UiDocsLayout`)**: Buat tata letak dengan Sidebar Navbar untuk navigasi (dikelompokkan berdasarkan Atoms, Molecules, Organisms) dan area konten utama yang dapat digulir.
-- **Isolasi Halaman**: Setiap komponen memiliki **halamannya sendiri** (misal: `ButtonDoc.tsx`) yang merender setiap varian, ukuran, state, dan penggunaan (usage example).
+- **Isolasi Halaman**: Setiap komponen memiliki **halamannya sendiri** (misal: `ButtonDoc.tsx`).
+- **Varias Eksahustif**: Jangan hanya menampilkan contoh dasar. Setiap varian mutlak harus dipamerkan (misal pada Button: *Solid, Outline, Destructive, Ghost, With Icon, Loading State, Social/Payment Button*). 
+- **Tab Preview vs Code**: Setiap komponen `showcase` Wajib memiliki **2 Tab utama**:
+  - **Preview**: Menunjukkan komponen yang dirender dan interaktif.
+  - **Code**: Menampilkan *snippet code* cara memakai komponen tersebut (bisa direpresentasikan melalui komponen `<CodeBlock />` atau custom Tabs).
 - **Struktur Menu Sidebar (Contoh)**:
   - **Atoms**: Buttons, Badges, Avatars, Inputs, Checkbox, dll.
   - **Molecules**: Cards, Tables, dll.
@@ -269,9 +279,22 @@ Agar UI Kit ini mudah di-*porting* atau dipelajari oleh developer maupun designe
 14. **Gunakan token spesifik NARA EVENTS:** `#ccff00` (primary), `#8a2be2` (secondary), `#0a192f` (dark bg), `#FDFBD4` (light bg kuning cream).
 15. **Rounding:** Semua elemen UI berbentuk *card*, tombol, atau wadah **WAJIB** memakai `rounded-xl`, `rounded-2xl`, atau lebih. Jangan biarkan pinggiran tajam (`rounded-none`), kecuali bagian sisi edge browser/layar (seperti header).
 16. **Grid Background:** Terapkan pola grid pada background dasar aplikasi (misal menggunakan `.bg-grid` yang memanfaatkan transparent linear-gradient).
+17. **Animasi & Interaktivitas:** Gunakan *Tailwind murni* untuk stat hover dan active UI dasar (hindari `framer-motion` untuk elemen sepele seperti Button). Untuk efek tekan terapkan `active:translate-x-[*] active:translate-y-[*] active:shadow-none` dengan transisi sangat cepat (`transition-all duration-75`) agar terasa *snappy* ala Neo-Brutalism.
 
 ---
 
-**Versi:** 2.2.0 – NARA EVENTS Neo-Brutalism Edition
+## 11. Domain Knowledge & Mock Data Standard
+
+Untuk menjaga konsistensi pada saat pembuatan halaman dummy, template, atau contoh di Dokumentasi UI, gunakan data berikut:
+- **Nama Perusahaan**: NARA EVENTS (Berfokus pada teknologi, event organizer modern, *ticketing management*).
+- **Tokoh Utama / Eksekutif**:
+  1. **Nadia Kusuma** (CEO & Founder)
+  2. **Hanif** (Lead Project Engineer)
+- **Konten Acara (Event)**: Gunakan nama-nama acara yang terlihat realistis, formal namun *playful* (Neo-Brutalism), contoh: "Neo-Brutalism Tech Summit 2026", "AI Frontier Conference", "Startup Weekend Jakarta".
+- Selalu gunakan avatar dari parameter DiceBear menggunakan seed nama tersebut (misal: `.../svg?seed=Nadia Kusuma`).
+
+---
+
+**Versi:** 2.3.0 – NARA EVENTS Neo-Brutalism Edition
 **Penjaga:** Tim UI/UX Engineering NARA EVENTS
 **Berlaku sejak:** 2026-05-09

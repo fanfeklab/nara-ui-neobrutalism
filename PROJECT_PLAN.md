@@ -44,7 +44,7 @@ Skema warna dirancang mencolok, membedakan boundary state dengan kuat.
 Semua button dan panel aktif (Clickable Card) wajib memancarkan rasa *tactile mechanics* seperti switch sungguhan:
 
 *   **Shadow Drop Utama:** Shadow menggunakan warna solid hitam, tebal (`8px 8px 0px 0px #000` atau setidaknya `4px 4px 0px 0px #000`), ditujukan tegak menyatu langsung dengan pinggir border sehingga tidak terlihat melayang blur kosong.
-*   **State Di-Tekan (`active`):** Ini poin terpenting. Saat sebuah tombol diklik pengguna. Elemen WAJIB terlihat seakan tenggelam membaur menutupi shadow. Yaitu di translasi sesuai shadow offset (contoh: `active:translate-y-[8px] active:translate-x-[8px]`), dan bersamaan dimatikan bayangannya (`active:shadow-none`).
+*   **State Di-Tekan (`active`):** Ini poin terpenting. Saat sebuah tombol diklik pengguna, elemen WAJIB terlihat seakan tenggelam membaur menutupi shadow. Gunakan translasi Tailwind murni sesuai offset bayangan (contoh: `active:translate-y-[*px] active:translate-x-[*px] active:shadow-none`) dengan durasi transisi yang sangat pendek (`transition-all duration-75`). Hindari `framer-motion` untuk elemen klik dasar agar lebih responsif dan snappty.
 *   **Hover:** `hover` cukup untuk feedback subtle atau mengangkat naik sedikit (memperlebar shadow), dan memunculkan filter brigthness / warna terik.
 
 ### 3. Aturan Resolusi Tipografi Bertingkat (WAJIB DIPATUHI)
@@ -136,12 +136,13 @@ Rencana pembangunan ujung-ke-ujung berskala masif. Checklist ini wajib dipatuhi 
 *Tujuan: Membangun fondasi agar pembuatan halaman selanjutnya sangat cepat.*
 - [ ] Setup React Router & 3 Master Layouts (Public, Dashboard, Portal).
 - [ ] Konfigurasi Design System (Colors, Tipografi Neo-Brutalism, Shadow, Dark/Light mode).
-- [ ] Membangun UI Docs / Component Library Viewer terpusat.
-- [ ] Base Atoms: Typography, Button (varian lengkap), Input, Label, Badge.
+- [ ] Membangun UI Docs / Component Library Viewer terpusat (Dengan sistem **Tabs Preview & Code**, serta Variasi Eksahustif).
+- [ ] Base Atoms: Typography, Button (varian lengkap: icon, social, payment, dll), Input, Label, Badge.
 - [ ] Base Molecules: Input Group, Card Structure, Alerts, Tabs, Breadcrumbs.
 - [ ] Base Organisms: Master Sidebar, Master Header, standard Master DataGrid (Tabel).
 - [ ] Membangun Dev Toolbar (Role Switcher) di ujung layar untuk kemudahan demo per-role.
 - [ ] Setup Framer Motion base animations (untuk transisi halaman standar).
+- [ ] Pipeline Setup: Vercel preparation, GitHub Actions (.github/workflows), dan config tests Playwright/Vitest.
 - [ ] Standard Form Wrapper & Validation display UI.
 - [ ] Standard Dialog/Modal & Drawer (Panel Kanan) component shell.
 
