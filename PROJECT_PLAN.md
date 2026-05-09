@@ -134,17 +134,17 @@ Rencana pembangunan ujung-ke-ujung berskala masif. Checklist ini wajib dipatuhi 
 
 ### STAGE 1: UI Foundation & Dev Tools (± 10 Tasks)
 *Tujuan: Membangun fondasi agar pembuatan halaman selanjutnya sangat cepat.*
-- [ ] Setup React Router & 3 Master Layouts (Public, Dashboard, Portal).
-- [ ] Konfigurasi Design System (Colors, Tipografi Neo-Brutalism, Shadow, Dark/Light mode).
+- [x] Setup React Router & 3 Master Layouts (Public, Dashboard, Portal).
+- [x] Konfigurasi Design System (Colors, Tipografi Neo-Brutalism, Shadow, Dark/Light mode).
 - [x] Membangun UI Docs / Component Library Viewer terpusat (Dengan sistem **Tabs Preview & Code**, serta Variasi Eksahustif).
 - [x] Base Atoms: Typography, Button (varian lengkap: icon, social, payment, dll), Input, Label, Badge.
 - [x] Base Molecules: Input Group, Card Structure, Alerts, Tabs, Breadcrumbs.
-- [ ] Base Organisms: Master Sidebar, Master Header, standard Master DataGrid (Tabel).
-- [ ] Membangun Dev Toolbar (Role Switcher) di ujung layar untuk kemudahan demo per-role.
-- [ ] Setup Framer Motion base animations (untuk transisi halaman standar).
+- [x] Base Organisms: Master Sidebar, Master Header, standard Master DataGrid (Tabel).
+- [x] Membangun Dev Toolbar (Role Switcher) di ujung layar untuk kemudahan demo per-role.
+- [x] Setup Framer Motion base animations (untuk transisi halaman standar).
 - [x] Pipeline Setup: Vercel preparation, GitHub Actions (.github/workflows), dan config tests Playwright/Vitest.
-- [ ] Standard Form Wrapper & Validation display UI.
-- [ ] Standard Dialog/Modal & Drawer (Panel Kanan) component shell.
+- [x] Standard Form Wrapper & Validation display UI.
+- [x] Standard Dialog/Modal & Drawer (Panel Kanan) component shell.
 
 ### STAGE 2: Public Facing Pages (± 15 Tasks)
 *Tujuan: Etalase perusahaan dan entry point pembelian tiket (Role: Guest/Public).*

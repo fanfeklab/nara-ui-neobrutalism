@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { UiDocsSearch } from "@/components/ui-docs/UiDocsSearch";
+import { PageTransition } from "@/components/layout/PageTransition";
 
 const navGroups = [
   {
@@ -40,6 +41,7 @@ const navGroups = [
       { name: "Breadcrumb", href: "/ui-docs/breadcrumb" },
       { name: "Card", href: "/ui-docs/cards" },
       { name: "Calendar", href: "/ui-docs/calendar" },
+      { name: "Form", href: "/ui-docs/form" },
       { name: "Collapsible", href: "/ui-docs/collapsible" },
       { name: "Date Picker", href: "/ui-docs/date-picker" },
       { name: "Table", href: "/ui-docs/table" },
@@ -154,7 +156,9 @@ export default function UiDocsLayout() {
       {/* Main Content */}
       <main className="flex-1 min-w-0 md:h-screen md:overflow-y-auto">
         <div className="p-6 md:p-12 max-w-5xl mx-auto pb-32">
-          <Outlet />
+          <PageTransition key={pathname}>
+            <Outlet />
+          </PageTransition>
         </div>
       </main>
     </div>

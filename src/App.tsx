@@ -61,6 +61,8 @@ import CarouselDoc from "./pages/ui-docs/CarouselDoc";
 import DrawerDoc from "./pages/ui-docs/DrawerDoc";
 import ComboboxDoc from "./pages/ui-docs/ComboboxDoc";
 
+import FormDoc from "./pages/ui-docs/FormDoc";
+
 export default function App() {
   return (
     <>
@@ -89,6 +91,7 @@ export default function App() {
           <Route path="aspect-ratio" element={<AspectRatioDoc />} />
           <Route path="cards" element={<CardDoc />} />
           <Route path="calendar" element={<CalendarDoc />} />
+          <Route path="form" element={<FormDoc />} />
           <Route path="collapsible" element={<CollapsibleDoc />} />
           <Route path="date-picker" element={<DatePickerDoc />} />
           <Route path="table" element={<TableDoc />} />
