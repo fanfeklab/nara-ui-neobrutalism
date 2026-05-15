@@ -8,6 +8,7 @@ import eventsData from "@/data/events.json";
 import servicesData from "@/data/services.json";
 import blogData from "@/data/blog.json";
 import { BRAND } from "@/config/brand.config";
+import { useConfigStore } from "@/store/configStore";
 
 // Map lucide strings to components
 const IconMap: Record<string, React.ElementType> = {
@@ -18,7 +19,8 @@ const IconMap: Record<string, React.ElementType> = {
 
 export default function PublicPage() {
   const { hero_section, value_propositions, cta_banners } = companyData;
-  const upcomingEvents = eventsData.events.upcoming.slice(0, 4);
+  const { eventLayout } = useConfigStore();
+  const upcomingEvents = eventsData.events.upcoming.slice(0, 6);
   const pastEvents = eventsData.events.past.slice(0, 4);
   
   // Flatten categories to get services limit 3-5
@@ -41,7 +43,7 @@ export default function PublicPage() {
             <Zap className="w-4 h-4" /> Standar Baru Event Organizer
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black uppercase tracking-tighter max-w-5xl leading-[0.9] text-foreground mix-blend-difference drop-shadow-[0_4px_0_rgba(0,0,0,1)] dark:drop-shadow-none">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black uppercase tracking-tighter max-w-5xl leading-[0.9] text-foreground">
             {hero_section.headline}
           </h1>
           
@@ -75,43 +77,58 @@ export default function PublicPage() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {upcomingEvents.map((item, index) => (
-              <div key={item.id} className={cn(
-                "group bg-card  border-4 border-black rounded-2xl overflow-hidden shadow-brutal flex flex-col hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] transition-all h-full",
-                index === 0 ? "md:col-span-2 lg:col-span-2 lg:row-span-2" : "md:col-span-1 lg:col-span-1"
-              )}>
-                <div className={cn(
-                  "relative w-full border-b-4 border-black overflow-hidden bg-muted",
-                  index === 0 ? "aspect-video md:aspect-[2/1] lg:aspect-auto lg:h-[55%]" : "aspect-[3/2] lg:aspect-auto lg:h-48 shrink-0"
-                )}>
-                  <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute top-4 left-4 bg-secondary text-white font-display font-black text-xs md:text-sm uppercase px-3 py-1 border-2 border-black rounded-lg shadow-brutal-sm">
-                    {item.category}
-                  </div>
-                  {item.ticketing.available && (
-                    <div className="absolute top-4 right-4 bg-primary text-black font-body font-bold text-xs uppercase px-2 py-1 border-2 border-black rounded-lg">
-                      Tiket Tersedia
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {upcomingEvents.map((item, index) => {
+              const isHeroOnMobile = eventLayout === 'hero-list' && index === 0;
+              const isListOnMobile = eventLayout === 'hero-list' && index > 0;
+              // On desktop (md/lg), everything acts as a normal card, regardless of being hero-list.
+              
+              return (
+                <div key={item.id} className="col-span-1">
+                  <div className={cn(
+                    "group bg-card border-4 border-black rounded-2xl overflow-hidden shadow-brutal transition-all flex relative",
+                    isListOnMobile ? "flex-row h-32 md:flex-col md:h-full hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000]" : "flex-col h-full hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000]"
+                  )}>
+                    <div className={cn(
+                      "relative border-black overflow-hidden bg-muted shrink-0",
+                      isListOnMobile ? "w-32 border-r-4 md:w-full md:border-r-0 md:border-b-4 md:aspect-[4/3] lg:aspect-[3/2]" : "w-full aspect-video md:aspect-[4/3] lg:aspect-[3/2] border-b-4"
+                    )}>
+                      <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                      <div className={cn("absolute top-3 left-3 md:top-4 md:left-4 bg-secondary text-white font-display font-black text-[10px] md:text-xs uppercase px-2 py-1 md:px-3 md:py-1 border-2 border-black rounded-lg shadow-brutal-sm", isListOnMobile && "hidden md:block")}>
+                        {item.category}
+                      </div>
+                      {item.ticketing.available && (
+                        <div className={cn("absolute top-3 right-3 md:top-4 md:right-4 bg-primary text-black font-body font-bold text-[10px] md:text-xs uppercase px-2 py-1 border-2 border-black rounded-lg", isListOnMobile && "hidden md:block")}>
+                          Tersedia
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
-                <div className={cn("flex flex-col flex-1", index === 0 ? "p-6 md:p-8 gap-4" : "p-5 md:p-6")}>
-                  <h3 className={cn("font-display font-black uppercase tracking-tighter leading-tight", index === 0 ? "text-3xl md:text-4xl lg:text-5xl" : "text-xl md:text-2xl mb-2")}>{item.title}</h3>
-                  <div className="flex flex-col sm:flex-row flex-wrap sm:items-center gap-4 font-body text-xs md:text-sm font-bold text-muted-foreground mb-2">
-                    <span className="flex items-center gap-2"><Calendar className="w-4 h-4 text-foreground shrink-0" /> {item.date_readable}</span>
-                    <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-foreground shrink-0" /> {item.location}</span>
+                    <div className={cn(
+                      "flex flex-col flex-1",
+                      isListOnMobile ? "p-3 md:p-6" : "p-5 md:p-6"
+                    )}>
+                      <h3 className={cn("font-display font-black uppercase tracking-tighter leading-tight line-clamp-2", isListOnMobile ? "text-lg md:text-2xl mb-1 md:mb-2" : "text-2xl mb-2")}>
+                        <Link to={item.slug} className="hover:text-accent outline-none before:absolute before:inset-0">
+                           {item.title}
+                        </Link>
+                      </h3>
+                      <div className={cn("flex flex-col sm:flex-row flex-wrap sm:items-center gap-2 md:gap-4 font-body text-xs md:text-sm font-bold text-muted-foreground mb-2", isListOnMobile && "mb-0 md:mb-2 text-[10px]")}>
+                        <span className={cn("flex items-center gap-1.5", isListOnMobile && "hidden md:flex")}><Calendar className="w-3 h-3 md:w-4 md:h-4 text-foreground shrink-0" /> {item.date_readable}</span>
+                        <span className={cn("flex items-center gap-1.5")}><MapPin className="w-3 h-3 md:w-4 md:h-4 text-foreground shrink-0" /> {item.location}</span>
+                      </div>
+                      <p className={cn("font-body text-sm font-medium line-clamp-2 md:line-clamp-3 text-muted-foreground hidden md:block", !isListOnMobile && "block")}>
+                        {item.excerpt}
+                      </p>
+                      <div className={cn("mt-auto pt-4 hidden md:block", !isListOnMobile && "block")}>
+                        <Button asChild size="default" variant="outline" className="w-full rounded-xl font-bold uppercase relative z-10 pointer-events-none">
+                          <span>Lihat Detail</span>
+                        </Button>
+                      </div>
+                    </div>
                   </div>
-                  <p className={cn("font-body text-sm font-medium line-clamp-3 text-muted-foreground", index === 0 && "md:text-base mt-2 mb-4 md:line-clamp-none")}>
-                    {item.excerpt}
-                  </p>
-                  <div className="mt-auto pt-4">
-                    <Button asChild size={index === 0 ? "lg" : "default"} variant={index === 0 ? "solid" : "outline"} className={cn("w-full rounded-xl font-bold uppercase", index === 0 && "bg-black text-white hover:bg-primary hover:text-black border-2 border-black shadow-brutal text-lg")}>
-                      <Link to={item.slug}>Lihat Detail</Link>
-                    </Button>
-                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -121,7 +138,7 @@ export default function PublicPage() {
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tighter mb-4 text-black">
-              MENGAPA <span className="text-card drop-shadow-[2px_2px_0_#000]">{BRAND.name}?</span>
+              MENGAPA <span className="text-white drop-shadow-[2px_2px_0_#000]">{BRAND.name}?</span>
             </h2>
           </div>
 
@@ -133,10 +150,10 @@ export default function PublicPage() {
                   <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mb-6 shadow-brutal-sm group-hover:bg-secondary transition-colors group-hover:rotate-6">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="font-display font-black uppercase tracking-tight mb-3 text-black text-2xl">
+                  <h3 className="font-display font-black uppercase tracking-tight mb-3 text-card-foreground text-2xl">
                     {vp.title}
                   </h3>
-                  <p className="font-body text-gray-700 font-medium text-lg">
+                  <p className="font-body text-card-foreground/80 font-medium text-lg">
                     {vp.description}
                   </p>
                 </div>
@@ -179,14 +196,14 @@ export default function PublicPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="w-full py-24 bg-card text-card-foreground text-white border-b-2 border-black relative">
+      <section className="w-full py-24 bg-card text-card-foreground border-b-2 border-black relative">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6 text-center md:text-left">
             <div>
-              <h2 className="text-4xl font-display font-black uppercase tracking-tighter text-white">LAYANAN <span className="text-primary">KAMI</span></h2>
-              <p className="font-body text-gray-300 font-medium mt-2">Apapun peran lo, kami punya solusinya.</p>
+              <h2 className="text-4xl font-display font-black uppercase tracking-tighter">LAYANAN <span className="text-primary drop-shadow-[1px_1px_0_#000]">KAMI</span></h2>
+              <p className="font-body text-muted-foreground font-medium mt-2">Apapun peran lo, kami punya solusinya.</p>
             </div>
-            <Button variant="outline" asChild className="rounded-xl font-bold uppercase text-black bg-card hover:bg-primary hover:text-black">
+            <Button variant="outline" asChild className="rounded-xl font-bold uppercase transition-all shadow-brutal-sm">
                <Link to="/services">Lihat Semua Layanan <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
            </div>
@@ -250,15 +267,15 @@ export default function PublicPage() {
       </section>
       
       {/* Dynamic CTA Banner */}
-      <section className="w-full py-32 bg-secondary text-white relative overflow-hidden" style={{ backgroundColor: cta_banners.collaboration.background_color, color: cta_banners.collaboration.text_color }}>
+      <section className="w-full py-32 relative overflow-hidden" style={{ backgroundColor: cta_banners.collaboration.background_color, color: cta_banners.collaboration.text_color }}>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-5xl md:text-6xl font-display font-black uppercase tracking-tighter mb-6 drop-shadow-[4px_4px_0_#000]">
+          <h2 className="text-5xl md:text-6xl font-display font-black uppercase tracking-tighter mb-6">
             {cta_banners.collaboration.title}
           </h2>
           <p className="text-xl font-body max-w-2xl mx-auto mb-10 font-medium opacity-90 text-inherit">
             {cta_banners.collaboration.description}
           </p>
-          <Button asChild size="lg" className="bg-black text-white hover:bg-card hover:text-black border-2 border-white shadow-brutal h-16 px-10 text-lg rounded-2xl hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+          <Button asChild size="lg" className="bg-black text-white hover:bg-white hover:text-black border-2 border-black shadow-brutal h-16 px-10 text-lg rounded-2xl hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
             <Link to={cta_banners.collaboration.button_action}>{cta_banners.collaboration.button_text}</Link>
           </Button>
         </div>

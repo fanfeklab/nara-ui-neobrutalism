@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Wrench, X, Beaker, SunMoon, Navigation } from "lucide-react";
+import { Wrench, X, Beaker, SunMoon, Navigation, LayoutTemplate } from "lucide-react";
 import { useTheme } from "./theme-provider";
 import { Link } from "react-router-dom";
+import { useConfigStore } from "@/store/configStore";
 
 export function DxTool() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const { eventLayout, setEventLayout } = useConfigStore();
 
   return (
     <>
@@ -62,6 +64,25 @@ export function DxTool() {
                 >
                   Sys
                 </button>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <h4 className="font-bold uppercase text-xs flex items-center gap-1">
+                <LayoutTemplate className="w-4 h-4" /> Layout Settings
+              </h4>
+              <div className="flex flex-col gap-2">
+                 <label className="text-xs font-bold font-mono flex justify-between items-center transition-colors">
+                    Events Section
+                    <select 
+                       value={eventLayout}
+                       onChange={(e) => setEventLayout(e.target.value as any)}
+                       className="bg-background text-foreground border-2 border-black rounded shadow-brutal-sm outline-none font-body font-bold text-[10px] uppercase tracking-tight cursor-pointer px-2 py-1 max-w-[120px]"
+                    >
+                      <option value="hero-list">Hero & List</option>
+                      <option value="grid">Grid Only</option>
+                    </select>
+                 </label>
               </div>
             </div>
 

@@ -40,7 +40,7 @@ export function PublicLayout() {
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="font-display font-black text-xl md:text-2xl uppercase tracking-tighter hover:skew-x-[-10deg] hover:scale-105 transition-transform origin-left cursor-pointer inline-block duration-200" style={{ color: brand.colors.primary }}>
+            <span className="font-display font-black text-xl md:text-2xl uppercase tracking-tighter hover:skew-x-[-10deg] hover:scale-105 transition-transform origin-left cursor-pointer inline-block duration-200 text-foreground dark:text-primary">
               {brand.name}
             </span>
           </Link>
@@ -117,7 +117,7 @@ export function PublicLayout() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex items-center justify-between mb-8">
-            <span className="font-display font-black text-2xl uppercase tracking-tighter" style={{ color: brand.colors.primary }}>
+            <span className="font-display font-black text-2xl uppercase tracking-tighter text-foreground dark:text-primary">
               {brand.name}
             </span>
             <button 
@@ -174,7 +174,7 @@ export function PublicLayout() {
             
             {/* Company Info */}
             <div className="space-y-6">
-              <span className="font-display font-black text-3xl uppercase tracking-tighter inline-block" style={{ color: brand.colors.primary }}>
+              <span className="font-display font-black text-3xl uppercase tracking-tighter inline-block text-foreground dark:text-primary">
                 {brand.name}
               </span>
               <p className="font-body text-muted-foreground font-medium">
