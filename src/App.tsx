@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import InvoicePage from "./pages/dashboard/InvoicePage";
 import KanbanPage from "./pages/dashboard/KanbanPage";
 import CalendarPage from "./pages/dashboard/CalendarPage";
+import BlankPage from "./pages/dashboard/BlankPage";
 import { DxTool } from "./components/DxTool";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -13,7 +14,6 @@ import UiDocsLayout from "./layouts/UiDocsLayout";
 import { PublicLayout } from "./layouts/PublicLayout";
 
 // UI Docs Pages
-// ... (imports remain)
 import IntroDoc from "./pages/ui-docs/IntroDoc";
 import DecorationsDoc from "./pages/ui-docs/DecorationsDoc";
 import TypographyDoc from "./pages/ui-docs/TypographyDoc";
@@ -86,6 +86,12 @@ import EventDetailPage from "./pages/public/EventDetailPage";
 import CheckoutPage from "./pages/public/CheckoutPage";
 import PricingPage from "./pages/public/PricingPage";
 
+// Additional Pages
+import LoginPage from "./pages/auth/LoginPage";
+import RegisterPage from "./pages/auth/RegisterPage";
+import NotFoundPage from "./pages/error/NotFoundPage";
+import MaintenancePage from "./pages/error/MaintenancePage";
+
 export default function App() {
   return (
     <ThemeProvider>
@@ -113,10 +119,15 @@ export default function App() {
           <Route path="/checkout/:event_id" element={<CheckoutPage />} />
         </Route>
 
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/maintenance" element={<MaintenancePage />} />
+
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/invoices" element={<InvoicePage />} />
         <Route path="/dashboard/kanban" element={<KanbanPage />} />
         <Route path="/dashboard/calendar" element={<CalendarPage />} />
+        <Route path="/dashboard/blank" element={<BlankPage />} />
 
         {/* UI Documentation Routes */}
         <Route path="/ui-docs" element={<UiDocsLayout />}>
@@ -180,6 +191,9 @@ export default function App() {
           {/* Fallback for unknown ui-docs routes */}
           <Route path="*" element={<Navigate to="/ui-docs" replace />} />
         </Route>
+        
+        {/* Global Fallback for 404 */}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <DxTool />
       <Toaster />

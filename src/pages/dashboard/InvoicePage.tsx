@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { Button } from "@/components/ui/button";
@@ -10,10 +11,29 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Download, Plus, Search, Filter } from "lucide-react";
+import { Download, Plus, Search, Filter, MoreHorizontal, FileText, Send, Trash2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
-const invoices = [
+const initialInvoices = [
   {
     id: "INV-2026-001",
     client: "TechCorp Indonesia",
@@ -59,6 +79,48 @@ const invoices = [
 ];
 
 export default function InvoicePage() {
+  const [invoices, setInvoices] = useState(initialInvoices);
+  const [isNewInvoiceOpen, setIsNewInvoiceOpen] = useState(false);
+  const [clientName, setClientName] = useState("");
+  const [amount, setAmount] = useState("");
+
+  const handleCreateInvoice = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!clientName || !amount) {
+      toast.error("Please fill all fields");
+      return;
+    }
+    
+    setInvoices([
+      {
+        id: `INV-2026-0${invoices.length + 1}`,
+        client: clientName,
+        date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }),
+        amount: `Rp ${Number(amount).toLocaleString('id-ID')}`,
+        status: "Draft"
+      },
+      ...invoices
+    ]);
+
+    toast.success("Invoice created successfully!");
+    setIsNewInvoiceOpen(false);
+    setClientName("");
+    setAmount("");
+  };
+
+  const handleDelete = (id: string) => {
+    setInvoices(invoices.filter(inv => inv.id !== id));
+    toast.success(`Invoice ${id} deleted.`);
+  };
+
+  const handleExport = () => {
+    toast.promise(new Promise((resolve) => setTimeout(resolve, 1500)), {
+      loading: 'Exporting invoices...',
+      success: 'Invoices exported successfully!',
+      error: 'Failed to export invoices.',
+    });
+  };
+
   return (
     <DashboardLayout>
       <PageTransition>
@@ -75,17 +137,58 @@ export default function InvoicePage() {
             </div>
             <div className="flex items-center gap-3">
               <Button
+                onClick={handleExport}
                 variant="outline"
                 className="font-bold border-2 border-black shadow-brutal-sm hidden md:flex"
               >
                 <Download className="w-4 h-4 mr-2" /> Export
               </Button>
-              <Button
-                variant="solid"
-                className="font-bold border-2 border-black shadow-brutal flex"
-              >
-                <Plus className="w-4 h-4 mr-2" /> Create Invoice
-              </Button>
+              <Dialog open={isNewInvoiceOpen} onOpenChange={setIsNewInvoiceOpen}>
+                <DialogTrigger asChild>
+                  <Button
+                    variant="solid"
+                    className="font-bold border-2 border-black shadow-brutal flex"
+                  >
+                    <Plus className="w-4 h-4 mr-2" /> Create Invoice
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[425px]">
+                  <DialogHeader>
+                    <DialogTitle>Create Invoice</DialogTitle>
+                  </DialogHeader>
+                  <form onSubmit={handleCreateInvoice} className="space-y-4 py-4">
+                    <div className="space-y-2">
+                       <Label htmlFor="client">Client Name</Label>
+                       <Input 
+                          id="client" 
+                          value={clientName} 
+                          onChange={e => setClientName(e.target.value)} 
+                          placeholder="e.g. TechCorp" 
+                          className="border-2 border-black" 
+                          required 
+                        />
+                    </div>
+                    <div className="space-y-2">
+                       <Label htmlFor="amount">Amount (Rp)</Label>
+                       <Input 
+                          id="amount" 
+                          type="number" 
+                          value={amount} 
+                          onChange={e => setAmount(e.target.value)} 
+                          placeholder="5000000" 
+                          className="border-2 border-black" 
+                          required 
+                        />
+                    </div>
+                    <DialogFooter>
+                       <DialogClose asChild>
+                          <Button type="button" variant="outline" className="border-2 border-black">Cancel</Button>
+                       </DialogClose>
+                       <Button type="submit" variant="solid" className="border-2 border-black shadow-brutal-sm">Save as Draft</Button>
+                    </DialogFooter>
+                  </form>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
 
@@ -168,13 +271,22 @@ export default function InvoicePage() {
                       </Badge>
                     </TableCell>
                     <TableCell className="text-right">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="font-bold underline underline-offset-4 decoration-2"
-                      >
-                        View
-                      </Button>
+                       <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                             <Button variant="ghost" className="h-8 w-8 p-0">
+                               <span className="sr-only">Open menu</span>
+                               <MoreHorizontal className="h-4 w-4" />
+                             </Button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent align="end" className="border-2 border-black">
+                             <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                             <DropdownMenuSeparator className="bg-black border-black h-0.5" />
+                             <DropdownMenuItem onClick={() => toast.info(`Viewing ${inv.id}`)} className="font-bold cursor-pointer"><FileText className="w-4 h-4 mr-2" /> View Details</DropdownMenuItem>
+                             <DropdownMenuItem onClick={() => toast.success(`Reminder sent for ${inv.id}`)} className="font-bold cursor-pointer"><Send className="w-4 h-4 mr-2" /> Send Reminder</DropdownMenuItem>
+                             <DropdownMenuSeparator className="bg-black border-black h-0.5" />
+                             <DropdownMenuItem onClick={() => handleDelete(inv.id)} className="font-bold cursor-pointer text-destructive focus:bg-destructive focus:text-white"><Trash2 className="w-4 h-4 mr-2" /> Delete</DropdownMenuItem>
+                          </DropdownMenuContent>
+                       </DropdownMenu>
                     </TableCell>
                   </TableRow>
                 ))}

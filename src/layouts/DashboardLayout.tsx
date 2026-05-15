@@ -111,6 +111,12 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
                   Jadwal
                 </Link>
                 <Link
+                  to="/dashboard/blank"
+                  className="block text-muted-foreground/80 hover:text-foreground font-mono text-sm py-1 transition-colors"
+                >
+                  Blank Starter
+                </Link>
+                <Link
                   to="#"
                   className="block text-muted-foreground/80 hover:text-foreground font-mono text-sm py-1 transition-colors"
                 >

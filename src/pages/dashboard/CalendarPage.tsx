@@ -3,11 +3,30 @@ import { PageTransition } from "@/components/layout/PageTransition";
 import { Button } from "@/components/ui/button";
 import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import { toast } from "sonner";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function CalendarPage() {
   const [date, setDate] = useState<Date | undefined>(new Date());
+  
+  const handleCreateEvent = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast.success("Event successfully created!", {
+      description: "It has been added to your calendar."
+    });
+  };
 
   return (
     <DashboardLayout>
@@ -24,12 +43,45 @@ export default function CalendarPage() {
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <Button
-                variant="solid"
-                className="font-bold border-2 border-black shadow-brutal flex"
-              >
-                <Plus className="w-4 h-4 mr-2" /> New Event
-              </Button>
+              <Dialog>
+                 <DialogTrigger asChild>
+                    <Button
+                      variant="solid"
+                      className="font-bold border-2 border-black shadow-brutal flex"
+                    >
+                      <Plus className="w-4 h-4 mr-2" /> New Event
+                    </Button>
+                 </DialogTrigger>
+                 <DialogContent className="sm:max-w-[425px]">
+                    <DialogHeader>
+                      <DialogTitle>Create New Event</DialogTitle>
+                    </DialogHeader>
+                    <form onSubmit={handleCreateEvent} className="space-y-4 py-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="event-name">Event Name</Label>
+                        <Input id="event-name" required placeholder="e.g. Strategy Meeting" className="border-2 border-black" />
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                           <Label htmlFor="date">Date</Label>
+                           <Input id="date" type="date" required className="border-2 border-black" />
+                        </div>
+                        <div className="space-y-2">
+                           <Label htmlFor="time">Time</Label>
+                           <Input id="time" type="time" required className="border-2 border-black" />
+                        </div>
+                      </div>
+                      <DialogFooter>
+                        <DialogClose asChild>
+                           <Button type="button" variant="outline" className="border-2 border-black">Cancel</Button>
+                        </DialogClose>
+                        <DialogClose asChild>
+                           <Button type="submit" variant="solid" className="border-2 border-black shadow-brutal-sm">Save Event</Button>
+                        </DialogClose>
+                      </DialogFooter>
+                    </form>
+                 </DialogContent>
+              </Dialog>
             </div>
           </div>
 
@@ -133,6 +185,7 @@ export default function CalendarPage() {
                     based on your preferred library like big-react-calendar.
                   </p>
                   <Button
+                    onClick={() => toast.info("Component library integration coming soon!")}
                     variant="outline"
                     className="border-2 border-black shadow-brutal-sm font-bold bg-white"
                   >
