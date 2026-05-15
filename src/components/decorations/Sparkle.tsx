@@ -27,7 +27,7 @@ export function Sparkle({
           "animate-[spin_4s_linear_infinite]": animate === "spin",
           "animate-pulse": animate === "pulse",
         },
-        className
+        className,
       )}
       {...props}
     >

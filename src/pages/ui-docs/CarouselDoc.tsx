@@ -33,7 +33,9 @@ export default function CarouselDoc() {
                 <div className="p-1">
                   <Card className="rounded-2xl">
                     <CardContent className="flex aspect-square items-center justify-center p-6 bg-primary rounded-xl border-y-0">
-                      <span className="text-4xl font-black font-display">{index + 1}</span>
+                      <span className="text-4xl font-black font-display">
+                        {index + 1}
+                      </span>
                     </CardContent>
                   </Card>
                 </div>

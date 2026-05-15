@@ -72,7 +72,8 @@ export default function ComboboxDoc() {
             >
               <span className="flex-1 truncate text-left">
                 {value
-                  ? frameworks.find((framework) => framework.value === value)?.label
+                  ? frameworks.find((framework) => framework.value === value)
+                      ?.label
                   : "Select framework..."}
               </span>
               <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
@@ -97,7 +98,9 @@ export default function ComboboxDoc() {
                       <Check
                         className={cn(
                           "ml-auto h-4 w-4",
-                          value === framework.value ? "opacity-100" : "opacity-0"
+                          value === framework.value
+                            ? "opacity-100"
+                            : "opacity-0",
                         )}
                       />
                     </CommandItem>

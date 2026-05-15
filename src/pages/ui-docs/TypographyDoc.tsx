@@ -9,7 +9,8 @@ export default function TypographyDoc() {
           Typography
         </h1>
         <p className="text-xl text-muted-foreground font-body">
-          Styles for headings, paragraphs, lists...etc. Neo-Brutalism requires stark contrast and distinct scales.
+          Styles for headings, paragraphs, lists...etc. Neo-Brutalism requires
+          stark contrast and distinct scales.
         </p>
       </div>
 
@@ -34,11 +35,19 @@ export default function TypographyDoc() {
         align="start"
       >
         <div className="space-y-4 w-full">
-          <Typography variant="p">The quick brown fox jumps over the lazy dog.</Typography>
-          <Typography variant="lead">A slightly larger lead paragraph for emphasis.</Typography>
+          <Typography variant="p">
+            The quick brown fox jumps over the lazy dog.
+          </Typography>
+          <Typography variant="lead">
+            A slightly larger lead paragraph for emphasis.
+          </Typography>
           <Typography variant="large">Large semibold text</Typography>
-          <Typography variant="small">Small text for captions or fine print</Typography>
-          <Typography variant="muted">Muted text that takes a backseat</Typography>
+          <Typography variant="small">
+            Small text for captions or fine print
+          </Typography>
+          <Typography variant="muted">
+            Muted text that takes a backseat
+          </Typography>
         </div>
       </ComponentPreview>
 
@@ -50,10 +59,15 @@ export default function TypographyDoc() {
       >
         <div className="space-y-6 w-full">
           <Typography variant="blockquote">
-            "Design is not just what it looks like and feels like. Design is how it works."
+            "Design is not just what it looks like and feels like. Design is how
+            it works."
           </Typography>
           <Typography variant="p">
-            Run <Typography variant="code" as="span">npm install</Typography> to begin.
+            Run{" "}
+            <Typography variant="code" as="span">
+              npm install
+            </Typography>{" "}
+            to begin.
           </Typography>
         </div>
       </ComponentPreview>

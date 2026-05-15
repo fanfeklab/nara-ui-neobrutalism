@@ -15,7 +15,8 @@ export default function SelectDoc() {
           Select
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          Displays a list of options for the user to pick from—triggered by a button.
+          Displays a list of options for the user to pick from—triggered by a
+          button.
         </p>
       </div>
 

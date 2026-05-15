@@ -37,13 +37,17 @@ export default function ResizableDoc() {
             <ResizablePanelGroup direction="vertical">
               <ResizablePanel defaultSize={25}>
                 <div className="flex h-full items-center justify-center p-6 bg-card">
-                  <span className="font-bold uppercase tracking-tight">Two</span>
+                  <span className="font-bold uppercase tracking-tight">
+                    Two
+                  </span>
                 </div>
               </ResizablePanel>
               <ResizableHandle />
               <ResizablePanel defaultSize={75}>
                 <div className="flex h-full items-center justify-center p-6 bg-[#f3f4f6]">
-                  <span className="font-bold uppercase tracking-tight">Three</span>
+                  <span className="font-bold uppercase tracking-tight">
+                    Three
+                  </span>
                 </div>
               </ResizablePanel>
             </ResizablePanelGroup>

@@ -6,7 +6,7 @@ import {
   SheetTitle,
   SheetTrigger,
   SheetFooter,
-  SheetClose
+  SheetClose,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,12 +21,15 @@ export default function SheetDoc() {
           Sheet
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          Extends the Dialog component to display content that complements the main viewport.
+          Extends the Dialog component to display content that complements the
+          main viewport.
         </p>
       </div>
 
       <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Examples</h2>
+        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">
+          Examples
+        </h2>
         <div className="flex gap-4 flex-wrap">
           <Sheet>
             <SheetTrigger asChild>
@@ -36,7 +39,8 @@ export default function SheetDoc() {
               <SheetHeader>
                 <SheetTitle>Edit profile</SheetTitle>
                 <SheetDescription>
-                  Make changes to your profile here. Click save when you're done.
+                  Make changes to your profile here. Click save when you're
+                  done.
                 </SheetDescription>
               </SheetHeader>
               <div className="grid gap-4 py-4">
@@ -44,13 +48,21 @@ export default function SheetDoc() {
                   <Label htmlFor="name" className="text-right">
                     Name
                   </Label>
-                  <Input id="name" defaultValue="Pedro Duarte" className="col-span-3" />
+                  <Input
+                    id="name"
+                    defaultValue="Pedro Duarte"
+                    className="col-span-3"
+                  />
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4">
                   <Label htmlFor="username" className="text-right">
                     Username
                   </Label>
-                  <Input id="username" defaultValue="@peduarte" className="col-span-3" />
+                  <Input
+                    id="username"
+                    defaultValue="@peduarte"
+                    className="col-span-3"
+                  />
                 </div>
               </div>
               <SheetFooter>

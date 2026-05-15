@@ -14,7 +14,8 @@ export default function FileUploadDoc() {
           File Upload
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          Drag and drop file upload component with visual feedback and pure Neo-Brutalism styling.
+          Drag and drop file upload component with visual feedback and pure
+          Neo-Brutalism styling.
         </p>
       </div>
 
@@ -37,7 +38,9 @@ export default function FileUploadDoc() {
         code={`import { Input } from "@/components/ui/input"\nimport { Label } from "@/components/ui/label"\n\nexport function StandardInputFile() {\n  return (\n    <div className="grid w-full max-w-sm items-center gap-1.5">\n      <Label htmlFor="picture">Picture</Label>\n      <Input id="picture" type="file" />\n    </div>\n  )\n}`}
       >
         <div className="grid w-full max-w-sm items-center gap-2">
-          <Label htmlFor="picture" className="font-display font-bold">Picture</Label>
+          <Label htmlFor="picture" className="font-display font-bold">
+            Picture
+          </Label>
           <Input id="picture" type="file" />
         </div>
       </ComponentPreview>

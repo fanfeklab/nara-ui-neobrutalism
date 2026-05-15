@@ -10,7 +10,8 @@ export default function ButtonDoc() {
           Buttons
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          Primary interactive elements designed with solid shadows and high contrast hover states.
+          Primary interactive elements designed with solid shadows and high
+          contrast hover states.
         </p>
       </div>
 

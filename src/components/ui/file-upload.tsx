@@ -1,54 +1,63 @@
-import * as React from "react"
-import { UploadCloud, File, X } from "lucide-react"
+import * as React from "react";
+import { UploadCloud, File, X } from "lucide-react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export interface FileUploadProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  onFileSelect?: (file: File | null) => void
-  label?: string
-  description?: string
+  onFileSelect?: (file: File | null) => void;
+  label?: string;
+  description?: string;
 }
 
 const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
-  ({ className, onFileSelect, label = "Upload a file", description = "Drag and drop or click to browse", ...props }, ref) => {
-    const [dragActive, setDragActive] = React.useState(false)
-    const [selectedFile, setSelectedFile] = React.useState<File | null>(null)
+  (
+    {
+      className,
+      onFileSelect,
+      label = "Upload a file",
+      description = "Drag and drop or click to browse",
+      ...props
+    },
+    ref,
+  ) => {
+    const [dragActive, setDragActive] = React.useState(false);
+    const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
 
     const handleDrag = (e: React.DragEvent) => {
-      e.preventDefault()
-      e.stopPropagation()
+      e.preventDefault();
+      e.stopPropagation();
       if (e.type === "dragenter" || e.type === "dragover") {
-        setDragActive(true)
+        setDragActive(true);
       } else if (e.type === "dragleave") {
-        setDragActive(false)
+        setDragActive(false);
       }
-    }
+    };
 
     const handleDrop = (e: React.DragEvent) => {
-      e.preventDefault()
-      e.stopPropagation()
-      setDragActive(false)
+      e.preventDefault();
+      e.stopPropagation();
+      setDragActive(false);
       if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-        handleFile(e.dataTransfer.files[0])
+        handleFile(e.dataTransfer.files[0]);
       }
-    }
+    };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      e.preventDefault()
+      e.preventDefault();
       if (e.target.files && e.target.files[0]) {
-        handleFile(e.target.files[0])
+        handleFile(e.target.files[0]);
       }
-    }
+    };
 
     const handleFile = (file: File) => {
-      setSelectedFile(file)
-      onFileSelect?.(file)
-    }
+      setSelectedFile(file);
+      onFileSelect?.(file);
+    };
 
     const clearFile = () => {
-      setSelectedFile(null)
-      onFileSelect?.(null)
-    }
+      setSelectedFile(null);
+      onFileSelect?.(null);
+    };
 
     return (
       <div className={className}>
@@ -56,7 +65,7 @@ const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
           <div
             className={cn(
               "relative flex flex-col items-center justify-center w-full h-48 border-2 border-black border-dashed rounded-xl bg-card dark:bg-black transition-colors overflow-hidden group cursor-pointer",
-              dragActive ? "border-primary bg-primary/10" : "hover:bg-muted"
+              dragActive ? "border-primary bg-primary/10" : "hover:bg-muted",
             )}
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
@@ -75,7 +84,10 @@ const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
                 <UploadCloud className="w-6 h-6 text-black" strokeWidth={2.5} />
               </div>
               <p className="mb-2 text-sm font-bold text-foreground font-display">
-                <span className="font-bold underline decoration-2 underline-offset-4">Click to upload</span> or drag and drop
+                <span className="font-bold underline decoration-2 underline-offset-4">
+                  Click to upload
+                </span>{" "}
+                or drag and drop
               </p>
               <p className="text-xs text-muted-foreground font-body">
                 {description}
@@ -89,8 +101,12 @@ const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
                 <File className="w-6 h-6" />
               </div>
               <div className="flex w-full flex-col truncate">
-                <p className="text-sm font-bold truncate max-w-[200px] sm:max-w-xs">{selectedFile.name}</p>
-                <p className="text-xs text-muted-foreground">{(selectedFile.size / 1024 / 1024).toFixed(2)} MB</p>
+                <p className="text-sm font-bold truncate max-w-[200px] sm:max-w-xs">
+                  {selectedFile.name}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
+                </p>
               </div>
             </div>
             <button
@@ -102,9 +118,9 @@ const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
           </div>
         )}
       </div>
-    )
-  }
-)
-FileUpload.displayName = "FileUpload"
+    );
+  },
+);
+FileUpload.displayName = "FileUpload";
 
-export { FileUpload }
+export { FileUpload };

@@ -27,7 +27,8 @@ export default function SortableListDoc() {
           Sortable List
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          Drag and drop list sorting, similar to WordPress menu builder. Built with @dnd-kit.
+          Drag and drop list sorting, similar to WordPress menu builder. Built
+          with @dnd-kit.
         </p>
       </div>
 
@@ -41,9 +42,15 @@ export default function SortableListDoc() {
             items={items}
             onItemsChange={setItems}
             renderItem={(item, isDragging) => (
-              <Card className={`p-4 transition-colors flex justify-between items-center bg-card ${isDragging ? 'shadow-none translate-x-[2px] translate-y-[2px] border-primary' : ''}`}>
-                <div className="font-display font-bold text-lg">{item.title}</div>
-                <div className="font-body text-sm text-muted-foreground">{item.url}</div>
+              <Card
+                className={`p-4 transition-colors flex justify-between items-center bg-card ${isDragging ? "shadow-none translate-x-[2px] translate-y-[2px] border-primary" : ""}`}
+              >
+                <div className="font-display font-bold text-lg">
+                  {item.title}
+                </div>
+                <div className="font-body text-sm text-muted-foreground">
+                  {item.url}
+                </div>
               </Card>
             )}
           />

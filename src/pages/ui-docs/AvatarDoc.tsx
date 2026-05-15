@@ -1,4 +1,11 @@
-import { Avatar, AvatarImage, AvatarFallback, AvatarBadge, AvatarGroup, AvatarGroupCount } from "@/components/ui/avatar";
+import {
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+  AvatarBadge,
+  AvatarGroup,
+  AvatarGroupCount,
+} from "@/components/ui/avatar";
 import { ComponentPreview } from "@/components/ui/component-preview";
 import { BRAND } from "@/config/brand.config";
 
@@ -24,12 +31,12 @@ export default function AvatarDoc() {
             <AvatarImage src="https://api.dicebear.com/7.x/notionists/svg?seed=Hanif" />
             <AvatarFallback>HA</AvatarFallback>
           </Avatar>
-          
+
           <Avatar>
             <AvatarImage src="https://api.dicebear.com/7.x/notionists/svg?seed=Nadia Kirana" />
             <AvatarFallback>NA</AvatarFallback>
           </Avatar>
-          
+
           <Avatar size="lg">
             <AvatarImage src="https://api.dicebear.com/7.x/notionists/svg?seed=Budi" />
             <AvatarFallback>BU</AvatarFallback>
@@ -87,9 +94,11 @@ export default function AvatarDoc() {
           <Avatar>
             <AvatarFallback>NA</AvatarFallback>
           </Avatar>
-          
+
           <Avatar size="lg">
-            <AvatarFallback className="bg-primary text-black">US</AvatarFallback>
+            <AvatarFallback className="bg-primary text-black">
+              US
+            </AvatarFallback>
           </Avatar>
         </div>
       </ComponentPreview>

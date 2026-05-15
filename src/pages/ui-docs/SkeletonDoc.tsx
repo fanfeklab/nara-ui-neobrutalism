@@ -13,7 +13,9 @@ export default function SkeletonDoc() {
       </div>
 
       <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Examples</h2>
+        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">
+          Examples
+        </h2>
         <div className="flex items-center space-x-4 max-w-[300px]">
           <Skeleton className="h-12 w-12 rounded-full" />
           <div className="space-y-2 flex-1">

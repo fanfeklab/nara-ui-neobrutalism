@@ -1,4 +1,11 @@
-import { Calculator, Calendar, CreditCard, Settings, Smile, User } from "lucide-react";
+import {
+  Calculator,
+  Calendar,
+  CreditCard,
+  Settings,
+  Smile,
+  User,
+} from "lucide-react";
 import {
   Command,
   CommandEmpty,
@@ -31,7 +38,10 @@ export default function CommandDoc() {
       >
         <div className="w-full max-w-sm border-2 border-black rounded-xl shadow-brutal overflow-hidden">
           <Command>
-            <CommandInput placeholder="Type a command or search..." className="font-body" />
+            <CommandInput
+              placeholder="Type a command or search..."
+              className="font-body"
+            />
             <CommandList>
               <CommandEmpty>No results found.</CommandEmpty>
               <CommandGroup heading="Suggestions">

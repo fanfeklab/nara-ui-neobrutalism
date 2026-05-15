@@ -4,20 +4,20 @@ export const BRAND = {
     name: "Nadia Kusuma",
     firstName: "Nadia",
     role: "CEO & Founder",
-    avatarSeed: "Nadia Kusuma"
+    avatarSeed: "Nadia Kusuma",
   },
   engineer: {
     name: "Hanif S",
     firstName: "Hanif",
     role: "Lead Project Engineer",
-    avatarSeed: "Hanif S"
+    avatarSeed: "Hanif S",
   },
   roles: {
     admin: "Admin",
-    user: "User"
+    user: "User",
   },
   tagline: "Presisi Tanpa Kompromi",
   defaults: {
-    avatarService: "https://api.dicebear.com/7.x/notionists/svg?seed="
-  }
+    avatarService: "https://api.dicebear.com/7.x/notionists/svg?seed=",
+  },
 };

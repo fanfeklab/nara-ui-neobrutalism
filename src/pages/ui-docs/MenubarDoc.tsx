@@ -17,7 +17,8 @@ export default function MenubarDoc() {
           Menubar
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.
+          A visually persistent menu common in desktop applications that
+          provides quick access to a consistent set of commands.
         </p>
       </div>
 
@@ -39,9 +40,7 @@ export default function MenubarDoc() {
               </MenubarItem>
               <MenubarItem disabled>New Incognito Window</MenubarItem>
               <MenubarSeparator className="bg-black" />
-              <MenubarItem>
-                Share
-              </MenubarItem>
+              <MenubarItem>Share</MenubarItem>
               <MenubarSeparator className="bg-black" />
               <MenubarItem>
                 Print... <MenubarShortcut>⌘P</MenubarShortcut>

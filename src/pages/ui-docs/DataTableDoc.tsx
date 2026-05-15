@@ -134,7 +134,9 @@ export const columns: ColumnDef<Payment>[] = [
         currency: "USD",
       }).format(amount);
 
-      return <div className="text-right font-medium font-mono">{formatted}</div>;
+      return (
+        <div className="text-right font-medium font-mono">{formatted}</div>
+      );
     },
   },
   {
@@ -220,7 +222,9 @@ export function DataTableDemo() {
                     key={column.id}
                     className="capitalize"
                     checked={column.getIsVisible()}
-                    onCheckedChange={(value) => column.toggleVisibility(!!value)}
+                    onCheckedChange={(value) =>
+                      column.toggleVisibility(!!value)
+                    }
                   >
                     {column.id}
                   </DropdownMenuCheckboxItem>
@@ -241,7 +245,7 @@ export function DataTableDemo() {
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                     </TableHead>
                   );
@@ -260,7 +264,7 @@ export function DataTableDemo() {
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext()
+                        cell.getContext(),
                       )}
                     </TableCell>
                   ))}
@@ -315,7 +319,8 @@ export default function DataTableDoc() {
           Data Table
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          Powerful table components with sorting, filtering, and pagination built using TanStack React Table.
+          Powerful table components with sorting, filtering, and pagination
+          built using TanStack React Table.
         </p>
       </div>
 

@@ -23,7 +23,7 @@ export default function TextareaDoc() {
           <Textarea placeholder="Type your message here." />
         </div>
       </ComponentPreview>
-      
+
       <ComponentPreview
         title="With Label"
         description="Textarea combined with a Label."

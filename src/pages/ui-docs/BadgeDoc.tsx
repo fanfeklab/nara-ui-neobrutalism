@@ -37,9 +37,7 @@ export default function BadgeDoc() {
             <Check className="mr-1 h-3 w-3" />
             Completed
           </Badge>
-          <Badge variant="secondary">
-            v2.3.0
-          </Badge>
+          <Badge variant="secondary">v2.3.0</Badge>
         </div>
       </ComponentPreview>
     </div>

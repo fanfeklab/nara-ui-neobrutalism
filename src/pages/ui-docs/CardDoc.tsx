@@ -1,4 +1,11 @@
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -25,7 +32,9 @@ export default function CardDoc() {
         <Card className="w-[350px]">
           <CardHeader>
             <CardTitle>Event Registration</CardTitle>
-            <CardDescription>Register for our upcoming Neo-Brutalism tech meetup.</CardDescription>
+            <CardDescription>
+              Register for our upcoming Neo-Brutalism tech meetup.
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
@@ -34,7 +43,9 @@ export default function CardDoc() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button variant="solid" className="w-full">Register Now</Button>
+            <Button variant="solid" className="w-full">
+              Register Now
+            </Button>
           </CardFooter>
         </Card>
       </ComponentPreview>
@@ -47,13 +58,22 @@ export default function CardDoc() {
         <Card className="w-[350px] bg-primary text-primary-foreground">
           <CardHeader className="border-black">
             <CardTitle>Sales Stats</CardTitle>
-            <CardDescription className="text-black/80">Monthly ticket sales</CardDescription>
+            <CardDescription className="text-black/80">
+              Monthly ticket sales
+            </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-5xl font-mono font-black tracking-tighter text-black">1,240 <span className="text-xl">qty</span></p>
+            <p className="text-5xl font-mono font-black tracking-tighter text-black">
+              1,240 <span className="text-xl">qty</span>
+            </p>
           </CardContent>
           <CardFooter className="justify-end">
-            <Button variant="solid" className="bg-card hover:bg-card text-card-foreground border-black">View Report</Button>
+            <Button
+              variant="solid"
+              className="bg-card hover:bg-card text-card-foreground border-black"
+            >
+              View Report
+            </Button>
           </CardFooter>
         </Card>
       </ComponentPreview>

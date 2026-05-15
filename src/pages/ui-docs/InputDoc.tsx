@@ -12,7 +12,8 @@ export default function InputDoc() {
           Input
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          Displays a form input field or a component that looks like an input field.
+          Displays a form input field or a component that looks like an input
+          field.
         </p>
       </div>
 
@@ -46,7 +47,7 @@ export default function InputDoc() {
           <Input type="email" id="email" placeholder="email@naraevents.com" />
         </div>
       </ComponentPreview>
-      
+
       <ComponentPreview
         title="File"
         description="Input field for uploading files."

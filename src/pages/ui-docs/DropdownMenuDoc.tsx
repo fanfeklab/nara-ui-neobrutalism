@@ -10,7 +10,7 @@ import {
   DropdownMenuSub,
   DropdownMenuSubTrigger,
   DropdownMenuPortal,
-  DropdownMenuSubContent
+  DropdownMenuSubContent,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 
@@ -22,12 +22,15 @@ export default function DropdownMenuDoc() {
           Dropdown Menu
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          Displays a menu to the user—such as a set of actions or functions—triggered by a button.
+          Displays a menu to the user—such as a set of actions or
+          functions—triggered by a button.
         </p>
       </div>
 
       <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Examples</h2>
+        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">
+          Examples
+        </h2>
         <div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>

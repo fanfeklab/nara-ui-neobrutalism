@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react"
+import React, { useMemo, useState } from "react";
 import {
   DndContext,
   closestCenter,
@@ -9,29 +9,29 @@ import {
   useSensors,
   DragOverlay,
   defaultDropAnimationSideEffects,
-} from "@dnd-kit/core"
+} from "@dnd-kit/core";
 import {
   arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
   useSortable,
-} from "@dnd-kit/sortable"
-import { CSS } from "@dnd-kit/utilities"
-import { GripVertical } from "lucide-react"
+} from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
+import { GripVertical } from "lucide-react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export interface SortableListItem {
-  id: string
-  [key: string]: any
+  id: string;
+  [key: string]: any;
 }
 
 interface SortableListProps<T extends SortableListItem> {
-  items: T[]
-  onItemsChange: (items: T[]) => void
-  renderItem: (item: T, isDragging: boolean) => React.ReactNode
-  className?: string
+  items: T[];
+  onItemsChange: (items: T[]) => void;
+  renderItem: (item: T, isDragging: boolean) => React.ReactNode;
+  className?: string;
 }
 
 export function SortableList<T extends SortableListItem>({
@@ -40,7 +40,7 @@ export function SortableList<T extends SortableListItem>({
   renderItem,
   className,
 }: SortableListProps<T>) {
-  const [activeId, setActiveId] = useState<string | null>(null)
+  const [activeId, setActiveId] = useState<string | null>(null);
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -56,32 +56,32 @@ export function SortableList<T extends SortableListItem>({
     }),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
-    })
-  )
+    }),
+  );
 
   const handleDragStart = (event: any) => {
-    setActiveId(event.active.id as string)
-  }
+    setActiveId(event.active.id as string);
+  };
 
   const handleDragEnd = (event: any) => {
-    const { active, over } = event
+    const { active, over } = event;
 
     if (over && active.id !== over.id) {
-      const oldIndex = items.findIndex((item) => item.id === active.id)
-      const newIndex = items.findIndex((item) => item.id === over.id)
-      onItemsChange(arrayMove(items, oldIndex, newIndex))
+      const oldIndex = items.findIndex((item) => item.id === active.id);
+      const newIndex = items.findIndex((item) => item.id === over.id);
+      onItemsChange(arrayMove(items, oldIndex, newIndex));
     }
-    setActiveId(null)
-  }
+    setActiveId(null);
+  };
 
   const handleDragCancel = () => {
-    setActiveId(null)
-  }
+    setActiveId(null);
+  };
 
   const activeItem = useMemo(
     () => items.find((item) => item.id === activeId),
-    [activeId, items]
-  )
+    [activeId, items],
+  );
 
   const dropAnimation = {
     sideEffects: defaultDropAnimationSideEffects({
@@ -91,7 +91,7 @@ export function SortableList<T extends SortableListItem>({
         },
       },
     }),
-  }
+  };
 
   return (
     <DndContext
@@ -118,13 +118,13 @@ export function SortableList<T extends SortableListItem>({
         ) : null}
       </DragOverlay>
     </DndContext>
-  )
+  );
 }
 
 interface SortableItemProps {
-  id: string
-  key?: React.Key
-  children: React.ReactNode
+  id: string;
+  key?: React.Key;
+  children: React.ReactNode;
 }
 
 function SortableItem({ id, children }: SortableItemProps) {
@@ -135,21 +135,18 @@ function SortableItem({ id, children }: SortableItemProps) {
     transform,
     transition,
     isDragging,
-  } = useSortable({ id })
+  } = useSortable({ id });
 
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
-  }
+  };
 
   return (
     <div
       ref={setNodeRef}
       style={style}
-      className={cn(
-        "relative",
-        isDragging && "opacity-0 invisible"
-      )}
+      className={cn("relative", isDragging && "opacity-0 invisible")}
     >
       <div
         {...attributes}
@@ -158,9 +155,7 @@ function SortableItem({ id, children }: SortableItemProps) {
       >
         <GripVertical className="h-5 w-5" />
       </div>
-      <div className="pl-10 relative">
-        {children}
-      </div>
+      <div className="pl-10 relative">{children}</div>
     </div>
-  )
+  );
 }

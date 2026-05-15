@@ -22,11 +22,7 @@ export default function CalendarDoc() {
         code={`import { useState } from "react"\nimport { Calendar } from "@/components/ui/calendar"\n\nexport function CalendarDemo() {\n  const [date, setDate] = useState<Date | undefined>(new Date())\n\n  return (\n    <Calendar\n      mode="single"\n      selected={date}\n      onSelect={setDate}\n    />\n  )\n}`}
         align="center"
       >
-        <Calendar
-          mode="single"
-          selected={date}
-          onSelect={setDate}
-        />
+        <Calendar mode="single" selected={date} onSelect={setDate} />
       </ComponentPreview>
     </div>
   );

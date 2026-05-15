@@ -36,8 +36,12 @@ export default function DrawerDoc() {
           <DrawerContent className="border-t-2 border-black rounded-t-2xl">
             <div className="mx-auto w-full max-w-sm">
               <DrawerHeader>
-                <DrawerTitle className="font-display font-black uppercase">Are you absolutely sure?</DrawerTitle>
-                <DrawerDescription className="font-body">This action cannot be undone.</DrawerDescription>
+                <DrawerTitle className="font-display font-black uppercase">
+                  Are you absolutely sure?
+                </DrawerTitle>
+                <DrawerDescription className="font-body">
+                  This action cannot be undone.
+                </DrawerDescription>
               </DrawerHeader>
               <DrawerFooter>
                 <Button>Submit</Button>

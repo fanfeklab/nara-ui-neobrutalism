@@ -1,6 +1,9 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import PublicPage from "./pages/PublicPage";
 import Dashboard from "./pages/Dashboard";
+import InvoicePage from "./pages/dashboard/InvoicePage";
+import KanbanPage from "./pages/dashboard/KanbanPage";
+import CalendarPage from "./pages/dashboard/CalendarPage";
 import { DxTool } from "./components/DxTool";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -81,6 +84,7 @@ import BlogDetailPage from "./pages/public/BlogDetailPage";
 import EventsPage from "./pages/public/EventsPage";
 import EventDetailPage from "./pages/public/EventDetailPage";
 import CheckoutPage from "./pages/public/CheckoutPage";
+import PricingPage from "./pages/public/PricingPage";
 
 export default function App() {
   return (
@@ -90,10 +94,17 @@ export default function App() {
           <Route path="/" element={<PublicPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/services/:category/:slug" element={<ServiceDetailPage />} />
-          <Route path="/portfolio" element={<Navigate to="/events?status=past" replace />} />
+          <Route
+            path="/services/:category/:slug"
+            element={<ServiceDetailPage />}
+          />
+          <Route
+            path="/portfolio"
+            element={<Navigate to="/events?status=past" replace />}
+          />
           <Route path="/clients" element={<ClientsPage />} />
           <Route path="/faq" element={<FaqPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
@@ -101,9 +112,12 @@ export default function App() {
           <Route path="/events/:slug" element={<EventDetailPage />} />
           <Route path="/checkout/:event_id" element={<CheckoutPage />} />
         </Route>
-        
+
         <Route path="/dashboard" element={<Dashboard />} />
-        
+        <Route path="/dashboard/invoices" element={<InvoicePage />} />
+        <Route path="/dashboard/kanban" element={<KanbanPage />} />
+        <Route path="/dashboard/calendar" element={<CalendarPage />} />
+
         {/* UI Documentation Routes */}
         <Route path="/ui-docs" element={<UiDocsLayout />}>
           <Route index element={<IntroDoc />} />

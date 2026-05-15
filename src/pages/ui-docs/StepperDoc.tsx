@@ -13,22 +13,31 @@ function StepperDef({ currentStep }: { currentStep: number }) {
         const isActive = currentStep === index + 1;
 
         return (
-          <div key={step} className="flex flex-col items-center relative flex-1">
+          <div
+            key={step}
+            className="flex flex-col items-center relative flex-1"
+          >
             <div
               className={`flex h-10 w-10 items-center justify-center rounded-full border-2 border-black font-bold shadow-brutal-sm transition-colors z-10 ${
                 isCompleted
                   ? "bg-success text-black"
                   : isActive
-                  ? "bg-primary text-black"
-                  : "bg-muted text-muted-foreground"
+                    ? "bg-primary text-black"
+                    : "bg-muted text-muted-foreground"
               }`}
             >
-              {isCompleted ? <Check className="h-5 w-5" strokeWidth={3} /> : index + 1}
+              {isCompleted ? (
+                <Check className="h-5 w-5" strokeWidth={3} />
+              ) : (
+                index + 1
+              )}
             </div>
-            
+
             <span
               className={`mt-2 flex text-sm font-bold uppercase tracking-tight ${
-                isActive || isCompleted ? "text-foreground" : "text-muted-foreground"
+                isActive || isCompleted
+                  ? "text-foreground"
+                  : "text-muted-foreground"
               }`}
             >
               {step}
@@ -38,7 +47,9 @@ function StepperDef({ currentStep }: { currentStep: number }) {
             {index < steps.length - 1 && (
               <div
                 className={`absolute top-5 left-1/2 -z-10 h-1 w-full -translate-y-1/2 ${
-                  isCompleted ? "bg-black" : "bg-muted border-y-2 border-transparent"
+                  isCompleted
+                    ? "bg-black"
+                    : "bg-muted border-y-2 border-transparent"
                 }`}
               />
             )}

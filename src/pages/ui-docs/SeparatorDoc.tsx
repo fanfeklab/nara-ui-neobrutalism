@@ -13,11 +13,15 @@ export default function SeparatorDoc() {
       </div>
 
       <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Examples</h2>
+        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">
+          Examples
+        </h2>
         <div className="space-y-4">
           <div>
             <div className="space-y-1">
-              <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
+              <h4 className="text-sm font-medium leading-none">
+                Radix Primitives
+              </h4>
               <p className="text-sm text-muted-foreground">
                 An open-source UI component library.
               </p>

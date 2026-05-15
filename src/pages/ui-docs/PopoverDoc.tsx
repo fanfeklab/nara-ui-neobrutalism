@@ -20,7 +20,9 @@ export default function PopoverDoc() {
       </div>
 
       <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Examples</h2>
+        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">
+          Examples
+        </h2>
         <div>
           <Popover>
             <PopoverTrigger asChild>
@@ -29,7 +31,9 @@ export default function PopoverDoc() {
             <PopoverContent className="w-80">
               <div className="grid gap-4">
                 <div className="space-y-2">
-                  <h4 className="font-display font-bold leading-none">Dimensions</h4>
+                  <h4 className="font-display font-bold leading-none">
+                    Dimensions
+                  </h4>
                   <p className="font-body text-sm text-muted-foreground">
                     Set the dimensions for the layer.
                   </p>

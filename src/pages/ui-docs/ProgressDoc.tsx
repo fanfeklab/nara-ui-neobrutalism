@@ -9,7 +9,8 @@ export default function ProgressDoc() {
           Progress
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+          Displays an indicator showing the completion progress of a task,
+          typically displayed as a progress bar.
         </p>
       </div>
 

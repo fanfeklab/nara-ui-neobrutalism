@@ -1,5 +1,12 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -14,7 +21,8 @@ export default function TabsDoc() {
           Tabs
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          A set of layered sections of content—known as tab panels—that are displayed one at a time.
+          A set of layered sections of content—known as tab panels—that are
+          displayed one at a time.
         </p>
       </div>
 
@@ -33,7 +41,8 @@ export default function TabsDoc() {
               <CardHeader>
                 <CardTitle>Account</CardTitle>
                 <CardDescription>
-                  Make changes to your account here. Click save when you're done.
+                  Make changes to your account here. Click save when you're
+                  done.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-2">

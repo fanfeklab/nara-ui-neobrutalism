@@ -22,12 +22,15 @@ export default function ContextMenuDoc() {
           Context Menu
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          Displays a menu to the user—such as a set of actions or functions—triggered by a right-click.
+          Displays a menu to the user—such as a set of actions or
+          functions—triggered by a right-click.
         </p>
       </div>
 
       <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Examples</h2>
+        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">
+          Examples
+        </h2>
         <div>
           <ContextMenu>
             <ContextMenuTrigger className="flex h-[150px] w-full items-center justify-center rounded-2xl border-2 border-black border-dashed font-body text-sm shadow-brutal-sm">
@@ -73,7 +76,9 @@ export default function ContextMenuDoc() {
                 <ContextMenuRadioItem value="pedro">
                   Pedro Duarte
                 </ContextMenuRadioItem>
-                <ContextMenuRadioItem value="colm">Colm Tuite</ContextMenuRadioItem>
+                <ContextMenuRadioItem value="colm">
+                  Colm Tuite
+                </ContextMenuRadioItem>
               </ContextMenuRadioGroup>
             </ContextMenuContent>
           </ContextMenu>

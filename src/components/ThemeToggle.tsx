@@ -16,7 +16,7 @@ export function ThemeToggle() {
       variant="outline"
       size="icon"
       onClick={cycleTheme}
-      className="bg-card hover:bg-muted font-bold rounded-xl h-10 w-10 md:h-12 md:w-12 shadow-brutal-sm text-foreground"
+      className="md:h-12 md:w-12 shadow-brutal-sm"
       aria-label="Toggle theme"
     >
       {theme === "light" && <Sun className="h-[1.2rem] w-[1.2rem]" />}

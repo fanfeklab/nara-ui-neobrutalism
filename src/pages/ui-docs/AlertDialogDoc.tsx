@@ -21,7 +21,8 @@ export default function AlertDialogDoc() {
           Alert Dialog
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          A modal dialog that interrupts the user with important content and expects a response.
+          A modal dialog that interrupts the user with important content and
+          expects a response.
         </p>
       </div>
 
@@ -47,7 +48,9 @@ export default function AlertDialogDoc() {
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction className="bg-destructive text-white hover:bg-destructive/90 hover:text-white">Delete Permanently</AlertDialogAction>
+              <AlertDialogAction className="bg-destructive text-white hover:bg-destructive/90 hover:text-white">
+                Delete Permanently
+              </AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
@@ -60,20 +63,27 @@ export default function AlertDialogDoc() {
       >
         <AlertDialog>
           <AlertDialogTrigger asChild>
-            <Button className="bg-success text-white hover:bg-success/90">Complete Payment</Button>
+            <Button className="bg-success text-white hover:bg-success/90">
+              Complete Payment
+            </Button>
           </AlertDialogTrigger>
           <AlertDialogContent className="border-t-8 border-t-success">
             <AlertDialogHeader>
               <div className="flex items-center gap-3 mb-2 text-success">
                 <CheckCircle2 className="w-8 h-8 animate-bounce" />
-                <AlertDialogTitle className="text-2xl">Payment Successful!</AlertDialogTitle>
+                <AlertDialogTitle className="text-2xl">
+                  Payment Successful!
+                </AlertDialogTitle>
               </div>
               <AlertDialogDescription>
-                Your payment of $120.00 has been processed successfully. You will receive an email confirmation shortly.
+                Your payment of $120.00 has been processed successfully. You
+                will receive an email confirmation shortly.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
-              <AlertDialogAction className="w-full sm:w-auto bg-success text-white hover:bg-success/90 hover:text-white">Done</AlertDialogAction>
+              <AlertDialogAction className="w-full sm:w-auto bg-success text-white hover:bg-success/90 hover:text-white">
+                Done
+              </AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
@@ -86,21 +96,28 @@ export default function AlertDialogDoc() {
       >
         <AlertDialog>
           <AlertDialogTrigger asChild>
-            <Button className="bg-warning text-black hover:bg-warning/90">Change Visibility</Button>
+            <Button className="bg-warning text-black hover:bg-warning/90">
+              Change Visibility
+            </Button>
           </AlertDialogTrigger>
           <AlertDialogContent className="border-t-8 border-t-warning">
             <AlertDialogHeader>
               <div className="flex items-center gap-3 mb-2 text-warning-foreground">
                 <AlertTriangle className="w-8 h-8 animate-ping duration-1000" />
-                <AlertDialogTitle className="text-2xl">Make Project Public?</AlertDialogTitle>
+                <AlertDialogTitle className="text-2xl">
+                  Make Project Public?
+                </AlertDialogTitle>
               </div>
               <AlertDialogDescription>
-                This will make your project visible to anyone on the internet. Sensitive data might be exposed.
+                This will make your project visible to anyone on the internet.
+                Sensitive data might be exposed.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel>Keep Private</AlertDialogCancel>
-              <AlertDialogAction className="bg-warning text-black hover:bg-warning/90 hover:text-black">Yes, Make Public</AlertDialogAction>
+              <AlertDialogAction className="bg-warning text-black hover:bg-warning/90 hover:text-black">
+                Yes, Make Public
+              </AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
@@ -113,20 +130,27 @@ export default function AlertDialogDoc() {
       >
         <AlertDialog>
           <AlertDialogTrigger asChild>
-            <Button variant="outline" className="text-destructive">Simulate Error</Button>
+            <Button variant="outline" className="text-destructive">
+              Simulate Error
+            </Button>
           </AlertDialogTrigger>
           <AlertDialogContent className="border-t-8 border-t-destructive">
             <AlertDialogHeader>
               <div className="flex items-center gap-3 mb-2 text-destructive">
                 <XCircle className="w-8 h-8 animate-[spin_3s_linear_infinite]" />
-                <AlertDialogTitle className="text-2xl">Connection Failed</AlertDialogTitle>
+                <AlertDialogTitle className="text-2xl">
+                  Connection Failed
+                </AlertDialogTitle>
               </div>
               <AlertDialogDescription className="text-foreground font-medium">
-                We couldn't connect to the server to save your changes. Please check your internet connection and try again.
+                We couldn't connect to the server to save your changes. Please
+                check your internet connection and try again.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
-              <AlertDialogAction className="bg-destructive text-white hover:bg-destructive/90 hover:text-white">Retry Connection</AlertDialogAction>
+              <AlertDialogAction className="bg-destructive text-white hover:bg-destructive/90 hover:text-white">
+                Retry Connection
+              </AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>

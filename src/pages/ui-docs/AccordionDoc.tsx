@@ -13,12 +13,15 @@ export default function AccordionDoc() {
           Accordion
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          A vertically stacked set of interactive headings that each reveal a section of content.
+          A vertically stacked set of interactive headings that each reveal a
+          section of content.
         </p>
       </div>
 
       <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Examples</h2>
+        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">
+          Examples
+        </h2>
         <div className="max-w-[500px]">
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">

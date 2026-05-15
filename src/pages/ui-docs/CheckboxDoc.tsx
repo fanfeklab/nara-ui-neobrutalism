@@ -10,7 +10,8 @@ export default function CheckboxDoc() {
           Checkbox
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          A control that allows the user to toggle between checked and not checked.
+          A control that allows the user to toggle between checked and not
+          checked.
         </p>
       </div>
 
@@ -35,11 +36,15 @@ export default function CheckboxDoc() {
         <div className="flex flex-col gap-4 items-center">
           <div className="flex items-center space-x-3">
             <Checkbox id="disabled-check" disabled />
-            <Label htmlFor="disabled-check" className="opacity-50">Disabled checkbox</Label>
+            <Label htmlFor="disabled-check" className="opacity-50">
+              Disabled checkbox
+            </Label>
           </div>
           <div className="flex items-center space-x-3">
             <Checkbox id="disabled-checked" disabled checked />
-            <Label htmlFor="disabled-checked" className="opacity-50">Disabled checked</Label>
+            <Label htmlFor="disabled-checked" className="opacity-50">
+              Disabled checked
+            </Label>
           </div>
         </div>
       </ComponentPreview>

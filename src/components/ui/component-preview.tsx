@@ -16,29 +16,40 @@ export function ComponentPreview({
   description,
   code,
   children,
-  align = "center"
+  align = "center",
 }: ComponentPreviewProps) {
   return (
     <div className="space-y-4 mb-12">
       <div>
-        <h3 className="text-xl font-display font-black tracking-tight uppercase mb-1 drop-shadow-sm">{title}</h3>
-        {description && <p className="text-muted-foreground font-body text-sm mb-4">{description}</p>}
+        <h3 className="text-xl font-display font-black tracking-tight uppercase mb-1 drop-shadow-sm">
+          {title}
+        </h3>
+        {description && (
+          <p className="text-muted-foreground font-body text-sm mb-4">
+            {description}
+          </p>
+        )}
       </div>
-      
+
       <Tabs defaultValue="preview" className="w-full">
         <TabsList className="mb-4">
           <TabsTrigger value="preview">Preview</TabsTrigger>
           <TabsTrigger value="code">Code</TabsTrigger>
         </TabsList>
-        <TabsContent value="preview" className="focus-visible:outline-none mt-2">
-          <div className={cn(
-            "rounded-2xl border-2 border-black bg-card p-6 md:p-12 shadow-brutal flex w-full",
-            align === "center" ? "items-center justify-center" : "",
-            align === "start" ? "items-start justify-start" : "",
-            align === "end" ? "items-end justify-end" : ""
-          )}>
+        <TabsContent
+          value="preview"
+          className="focus-visible:outline-none mt-2"
+        >
+          <div
+            className={cn(
+              "rounded-2xl border-2 border-black bg-card p-6 md:p-12 shadow-brutal flex w-full",
+              align === "center" ? "items-center justify-center" : "",
+              align === "start" ? "items-start justify-start" : "",
+              align === "end" ? "items-end justify-end" : "",
+            )}
+          >
             <div className="w-full max-w-full overflow-x-auto pb-4 px-2 pt-2 flex flex-col items-center justify-center gap-4">
-               {children}
+              {children}
             </div>
           </div>
         </TabsContent>

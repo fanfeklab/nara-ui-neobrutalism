@@ -14,12 +14,15 @@ export default function TooltipDoc() {
           Tooltip
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
+          A popup that displays information related to an element when the
+          element receives keyboard focus or the mouse hovers over it.
         </p>
       </div>
 
       <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Examples</h2>
+        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">
+          Examples
+        </h2>
         <div className="flex gap-4">
           <TooltipProvider>
             <Tooltip>

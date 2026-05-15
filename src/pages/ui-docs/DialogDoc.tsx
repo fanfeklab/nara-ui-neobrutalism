@@ -22,7 +22,8 @@ export default function DialogDoc() {
           Dialog (Modal)
         </h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl">
-          A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.
+          A window overlaid on either the primary window or another dialog
+          window, rendering the content underneath inert.
         </p>
       </div>
 
@@ -44,7 +45,10 @@ export default function DialogDoc() {
             </DialogHeader>
             <div className="grid gap-4 py-4">
               <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="name" className="text-right font-display font-medium">
+                <Label
+                  htmlFor="name"
+                  className="text-right font-display font-medium"
+                >
                   Name
                 </Label>
                 <Input
@@ -54,7 +58,10 @@ export default function DialogDoc() {
                 />
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="username" className="text-right font-display font-medium">
+                <Label
+                  htmlFor="username"
+                  className="text-right font-display font-medium"
+                >
                   Username
                 </Label>
                 <Input
@@ -85,13 +92,21 @@ export default function DialogDoc() {
           </DialogTrigger>
           <DialogContent className="sm:max-w-[600px] p-0 border-2 border-black overflow-hidden bg-card">
             <div className="aspect-video w-full border-b-2 border-black bg-muted relative">
-               <img src="https://picsum.photos/seed/naraevents/800/400" alt="Event Poster" className="object-cover w-full h-full" />
+              <img
+                src="https://picsum.photos/seed/naraevents/800/400"
+                alt="Event Poster"
+                className="object-cover w-full h-full"
+              />
             </div>
             <div className="p-6">
               <DialogHeader>
-                <DialogTitle className="text-2xl">Neo-Brutalism Tech Summit 2026</DialogTitle>
+                <DialogTitle className="text-2xl">
+                  Neo-Brutalism Tech Summit 2026
+                </DialogTitle>
                 <DialogDescription className="text-base">
-                  Join us for the biggest design and engineering conference of the year. Experience hands-on workshops, amazing talks, and networking.
+                  Join us for the biggest design and engineering conference of
+                  the year. Experience hands-on workshops, amazing talks, and
+                  networking.
                 </DialogDescription>
               </DialogHeader>
               <DialogFooter className="mt-6">
@@ -104,7 +119,7 @@ export default function DialogDoc() {
           </DialogContent>
         </Dialog>
       </ComponentPreview>
-      
+
       <ComponentPreview
         title="Text Heavy Context"
         description="A modal designed to present heavy text information, like terms of service or privacy policy."
@@ -117,26 +132,41 @@ export default function DialogDoc() {
           <DialogContent className="sm:max-w-[600px]">
             <DialogHeader>
               <DialogTitle className="text-2xl">Terms of Service</DialogTitle>
-              <DialogDescription>
-                Last updated: May 9, 2026
-              </DialogDescription>
+              <DialogDescription>Last updated: May 9, 2026</DialogDescription>
             </DialogHeader>
             <div className="py-4 h-64 overflow-y-auto pr-4 font-body text-sm space-y-4 border-y-2 border-black/10 my-2">
               <p>
-                <strong>1. Acceptance of Terms</strong><br/>
-                By accessing and using this service, you accept and agree to be bound by the terms and provision of this agreement.
+                <strong>1. Acceptance of Terms</strong>
+                <br />
+                By accessing and using this service, you accept and agree to be
+                bound by the terms and provision of this agreement.
               </p>
               <p>
-                <strong>2. User License</strong><br/>
-                Permission is granted to temporarily download one copy of the materials (information or software) on {BRAND.name}'s website for personal, non-commercial transitory viewing only.
+                <strong>2. User License</strong>
+                <br />
+                Permission is granted to temporarily download one copy of the
+                materials (information or software) on {BRAND.name}'s website
+                for personal, non-commercial transitory viewing only.
               </p>
               <p>
-                <strong>3. Disclaimer</strong><br/>
-                The materials on {BRAND.name}'s website are provided on an 'as is' basis. {BRAND.name} makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+                <strong>3. Disclaimer</strong>
+                <br />
+                The materials on {BRAND.name}'s website are provided on an 'as
+                is' basis. {BRAND.name} makes no warranties, expressed or
+                implied, and hereby disclaims and negates all other warranties
+                including, without limitation, implied warranties or conditions
+                of merchantability, fitness for a particular purpose, or
+                non-infringement of intellectual property or other violation of
+                rights.
               </p>
-               <p>
-                <strong>4. Limitations</strong><br/>
-                In no event shall {BRAND.name} or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on {BRAND.name}'s website.
+              <p>
+                <strong>4. Limitations</strong>
+                <br />
+                In no event shall {BRAND.name} or its suppliers be liable for
+                any damages (including, without limitation, damages for loss of
+                data or profit, or due to business interruption) arising out of
+                the use or inability to use the materials on {BRAND.name}'s
+                website.
               </p>
             </div>
             <DialogFooter>

@@ -1,4 +1,12 @@
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 export default function TableDoc() {
   return (
@@ -13,7 +21,9 @@ export default function TableDoc() {
       </div>
 
       <div className="p-6 sm:p-8 border-2 border-black bg-background border-dashed rounded-2xl">
-        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Example</h2>
+        <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">
+          Example
+        </h2>
         <div className="w-full">
           <Table>
             <TableCaption>A list of your recent invoices.</TableCaption>
@@ -27,22 +37,34 @@ export default function TableDoc() {
             </TableHeader>
             <TableBody>
               <TableRow>
-                <TableCell className="font-medium font-mono text-xs">INV001</TableCell>
+                <TableCell className="font-medium font-mono text-xs">
+                  INV001
+                </TableCell>
                 <TableCell>Paid</TableCell>
                 <TableCell>Credit Card</TableCell>
-                <TableCell className="text-right font-mono font-bold">$250.00</TableCell>
+                <TableCell className="text-right font-mono font-bold">
+                  $250.00
+                </TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium font-mono text-xs">INV002</TableCell>
+                <TableCell className="font-medium font-mono text-xs">
+                  INV002
+                </TableCell>
                 <TableCell>Pending</TableCell>
                 <TableCell>PayPal</TableCell>
-                <TableCell className="text-right font-mono font-bold">$150.00</TableCell>
+                <TableCell className="text-right font-mono font-bold">
+                  $150.00
+                </TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium font-mono text-xs">INV003</TableCell>
+                <TableCell className="font-medium font-mono text-xs">
+                  INV003
+                </TableCell>
                 <TableCell>Unpaid</TableCell>
                 <TableCell>Bank Transfer</TableCell>
-                <TableCell className="text-right font-mono font-bold">$350.00</TableCell>
+                <TableCell className="text-right font-mono font-bold">
+                  $350.00
+                </TableCell>
               </TableRow>
             </TableBody>
           </Table>
