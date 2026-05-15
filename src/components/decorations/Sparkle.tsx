@@ -10,7 +10,7 @@ interface SparkleProps extends React.SVGProps<SVGSVGElement> {
 
 export function Sparkle({
   size = 48,
-  color = "#ccff00",
+  color = "var(--color-primary)",
   className,
   animate = "spin",
   ...props

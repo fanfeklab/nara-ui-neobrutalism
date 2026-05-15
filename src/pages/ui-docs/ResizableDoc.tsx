@@ -25,10 +25,10 @@ export default function ResizableDoc() {
       >
         <ResizablePanelGroup
           direction="horizontal"
-          className="max-w-md rounded-xl border-2 border-black md:min-w-[450px] shadow-brutal mx-auto bg-white"
+          className="max-w-md rounded-xl border-2 border-black md:min-w-[450px] shadow-brutal mx-auto bg-card"
         >
           <ResizablePanel defaultSize={50}>
-            <div className="flex h-[200px] items-center justify-center p-6 bg-[#FDFBD4]">
+            <div className="flex h-[200px] items-center justify-center p-6 bg-background">
               <span className="font-bold uppercase tracking-tight">One</span>
             </div>
           </ResizablePanel>
@@ -36,7 +36,7 @@ export default function ResizableDoc() {
           <ResizablePanel defaultSize={50}>
             <ResizablePanelGroup direction="vertical">
               <ResizablePanel defaultSize={25}>
-                <div className="flex h-full items-center justify-center p-6 bg-white">
+                <div className="flex h-full items-center justify-center p-6 bg-card">
                   <span className="font-bold uppercase tracking-tight">Two</span>
                 </div>
               </ResizablePanel>

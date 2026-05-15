@@ -5,81 +5,8 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { UiDocsSearch } from "@/components/ui-docs/UiDocsSearch";
 import { PageTransition } from "@/components/layout/PageTransition";
-
-const navGroups = [
-  {
-    title: "Getting Started",
-    links: [
-      { name: "Introduction", href: "/ui-docs" },
-      { name: "Decorations", href: "/ui-docs/decorations" },
-    ],
-  },
-  {
-    title: "Atoms",
-    links: [
-      { name: "Typography", href: "/ui-docs/typography" },
-      { name: "Buttons", href: "/ui-docs/buttons" },
-      { name: "Combobox", href: "/ui-docs/combobox" },
-      { name: "Badges", href: "/ui-docs/badges" },
-      { name: "Avatars", href: "/ui-docs/avatars" },
-      { name: "Input", href: "/ui-docs/inputs" },
-      { name: "Label", href: "/ui-docs/labels" },
-      { name: "Checkbox", href: "/ui-docs/checkbox" },
-      { name: "Switch", href: "/ui-docs/switch" },
-      { name: "Slider", href: "/ui-docs/slider" },
-      { name: "Progress", href: "/ui-docs/progress" },
-      { name: "Textarea", href: "/ui-docs/textarea" },
-      { name: "Radio", href: "/ui-docs/radio-group" },
-      { name: "Toggle", href: "/ui-docs/toggle" },
-      { name: "Aspect Ratio", href: "/ui-docs/aspect-ratio" },
-    ],
-  },
-  {
-    title: "Molecules",
-    links: [
-      { name: "Alert", href: "/ui-docs/alert" },
-      { name: "Breadcrumb", href: "/ui-docs/breadcrumb" },
-      { name: "Card", href: "/ui-docs/cards" },
-      { name: "Calendar", href: "/ui-docs/calendar" },
-      { name: "Form", href: "/ui-docs/form" },
-      { name: "Collapsible", href: "/ui-docs/collapsible" },
-      { name: "Date Picker", href: "/ui-docs/date-picker" },
-      { name: "Table", href: "/ui-docs/table" },
-      { name: "Data Table", href: "/ui-docs/data-table" },
-      { name: "Chart", href: "/ui-docs/chart" },
-      { name: "Stepper", href: "/ui-docs/stepper" },
-      { name: "Tabs", href: "/ui-docs/tabs" },
-      { name: "Hover Card", href: "/ui-docs/hover-card" },
-      { name: "Popover", href: "/ui-docs/popover" },
-      { name: "Select", href: "/ui-docs/select" },
-      { name: "Scroll Area", href: "/ui-docs/scroll-area" },
-      { name: "Separator", href: "/ui-docs/separator" },
-      { name: "Skeleton", href: "/ui-docs/skeleton" },
-      { name: "Tooltip", href: "/ui-docs/tooltip" },
-    ],
-  },
-  {
-    title: "Organisms",
-    links: [
-      { name: "Accordion", href: "/ui-docs/accordion" },
-      { name: "Carousel", href: "/ui-docs/carousel" },
-      { name: "Drawer", href: "/ui-docs/drawer" },
-      { name: "Alert Dialog", href: "/ui-docs/alert-dialog" },
-      { name: "Context Menu", href: "/ui-docs/context-menu" },
-      { name: "Dialog", href: "/ui-docs/dialog" },
-      { name: "File Upload", href: "/ui-docs/file-upload" },
-      { name: "Input OTP", href: "/ui-docs/input-otp" },
-      { name: "Command", href: "/ui-docs/command" },
-      { name: "Pagination", href: "/ui-docs/pagination" },
-      { name: "Navigation Menu", href: "/ui-docs/navigation-menu" },
-      { name: "Sortable List", href: "/ui-docs/sortable-list" },
-      { name: "Menubar", href: "/ui-docs/menubar" },
-      { name: "Resizable", href: "/ui-docs/resizable" },
-      { name: "Sheet", href: "/ui-docs/sheet" },
-      { name: "Sonner", href: "/ui-docs/sonner" },
-    ],
-  },
-];
+import { docsNavGroups } from "@/config/docs.config";
+import { BRAND } from "@/config/brand.config";
 
 export default function UiDocsLayout() {
   const { pathname } = useLocation();
@@ -89,7 +16,7 @@ export default function UiDocsLayout() {
     <div className="min-h-screen bg-background bg-grid text-foreground flex flex-col md:flex-row">
       {/* Mobile Header */}
       <div className="md:hidden flex items-center justify-between p-4 border-b-2 border-border bg-card z-20">
-        <h1 className="font-display font-black text-xl uppercase tracking-tighter">NARA UI Kit</h1>
+        <h1 className="font-display font-black text-xl uppercase tracking-tighter">{BRAND.name} UI Kit</h1>
         <Button variant="outline" size="sm" onClick={() => setSidebarOpen(true)}>
           <Menu className="w-5 h-5" />
         </Button>
@@ -110,7 +37,7 @@ export default function UiDocsLayout() {
       )}>
         <div className="p-6 border-b-2 border-border flex justify-between items-center bg-primary text-primary-foreground">
           <div>
-            <h1 className="font-display font-black text-2xl uppercase tracking-tighter">NARA EVENTS</h1>
+            <h1 className="font-display font-black text-2xl uppercase tracking-tighter">{BRAND.name}</h1>
             <p className="font-body text-xs font-bold uppercase">Neo-Brutalism UI</p>
           </div>
           <button className="md:hidden" onClick={() => setSidebarOpen(false)}>
@@ -119,8 +46,8 @@ export default function UiDocsLayout() {
         </div>
 
         <div className="flex-1 overflow-y-auto p-6 space-y-8">
-          <UiDocsSearch navGroups={navGroups} />
-          {navGroups.map((group) => (
+          <UiDocsSearch navGroups={docsNavGroups} />
+          {docsNavGroups.map((group) => (
             <div key={group.title}>
               <h4 className="font-display font-bold uppercase tracking-tight mb-3 text-muted-foreground">{group.title}</h4>
               <ul className="space-y-1">

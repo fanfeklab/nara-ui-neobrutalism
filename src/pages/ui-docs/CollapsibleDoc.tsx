@@ -45,14 +45,14 @@ export default function CollapsibleDoc() {
               </Button>
             </CollapsibleTrigger>
           </div>
-          <div className="rounded-lg border-2 border-black font-mono px-4 py-3 text-sm font-bold bg-[#FDFBD4]">
+          <div className="rounded-lg border-2 border-black font-mono px-4 py-3 text-sm font-bold bg-background">
             @radix-ui/primitives
           </div>
           <CollapsibleContent className="space-y-2">
-            <div className="rounded-lg border-2 border-black font-mono px-4 py-3 text-sm font-bold bg-[#FDFBD4]">
+            <div className="rounded-lg border-2 border-black font-mono px-4 py-3 text-sm font-bold bg-background">
               @radix-ui/colors
             </div>
-            <div className="rounded-lg border-2 border-black font-mono px-4 py-3 text-sm font-bold bg-[#FDFBD4]">
+            <div className="rounded-lg border-2 border-black font-mono px-4 py-3 text-sm font-bold bg-background">
               @stitches/react
             </div>
           </CollapsibleContent>

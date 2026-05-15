@@ -1,100 +1,85 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Quote } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Handshake, MessageSquare } from "lucide-react";
+import staticData from "@/data/static-company.json";
 
 export default function ClientsPage() {
-  const testimonials = [
-    {
-      text: "Nara Events tidak hanya mengeksekusi acara, mereka merekayasa ulang seluruh harapan kami. Tingkat konversi di event kemarin naik hingga 300%.",
-      author: "Aditya Pratama",
-      role: "VP Marketing, Titan Tech",
-      avatarSeed: "Aditya"
-    },
-    {
-      text: "Pertama kali dalam 5 tahun, sistem tiket kami tidak crash di detik pertama rilis. Mesin antrian mereka adalah monster.",
-      author: "Diana Siregar",
-      role: "Festival Director, WeAreLive",
-      avatarSeed: "DianaS"
-    },
-    {
-      text: "Estetika panggung yang mereka buat benar-benar alien. Cara mereka menata pencahayaan dengan struktur industrial sungguh gila.",
-      author: "Faisal Rahman",
-      role: "CEO, Startup Media Hub",
-      avatarSeed: "FaisalR"
-    }
-  ];
+  const { our_clients, testimonials } = staticData.static_pages;
 
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen bg-background text-foreground">
+      
       {/* Header */}
-      <section className="bg-background w-full py-24 border-b-2 border-black text-center px-4">
-        <h1 className="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6 relative">
-          DIPERCAYA OLEH <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ccff00] to-[#8a2be2] stroke-black" style={{ WebkitTextStroke: '2px black' }}>PARA TITAN</span>
-        </h1>
-        <p className="font-body text-xl max-w-2xl mx-auto text-muted-foreground font-medium">
-          Deretan merek dan institusi paling dominan di industri yang telah menyerahkan operasional lapangannya kepada Nara Events.
-        </p>
+      <section className="w-full py-20 bg-card text-card-foreground text-white border-b-2 border-black relative overflow-hidden">
+        {/* Background Grid Pattern */}
+        <div 
+          className="absolute inset-0 z-0 opacity-[0.05]"
+          style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}
+         />
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <h1 className="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6">
+            KLIEN & <span className="text-primary">MITRA</span>
+          </h1>
+          <p className="text-xl font-body font-medium text-gray-300">
+            Daftar merek dan institusi yang telah membuktikan standar presisi operasional kami.
+          </p>
+        </div>
       </section>
 
-      {/* Grid of Logos */}
-      <section className="w-full py-24 bg-card border-b-2 border-black">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-             {['BCA', 'GOJEK', 'TELKOMSEL', 'TOKOPEDIA', 'SAMSUNG', 'BINTANG', 'MANDIRI', 'TRAVELOKA', 'SHOPEE', 'NISSAN', 'HYUNDAI', 'DANA'].map((brand, i) => (
-                <div key={i} className="bg-white dark:bg-[#112240] aspect-video border-2 border-black rounded-2xl flex items-center justify-center p-6 shadow-brutal-sm hover:translate-x-1 hover:-translate-y-1 hover:shadow-brutal transition-all cursor-crosshair">
-                   <span className="font-display font-black text-2xl md:text-3xl uppercase tracking-tighter text-black dark:text-white opacity-40 hover:opacity-100 transition-opacity">
-                     {brand}
-                   </span>
-                </div>
-             ))}
-          </div>
-        </div>
+      {/* Clients Logo Grid */}
+      <section className="w-full py-16 bg-card border-b-2 border-black">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center gap-4 mb-12 border-b-4 border-black pb-4 inline-flex">
+               <Handshake className="w-10 h-10 text-secondary" />
+               <h2 className="text-3xl md:text-4xl font-display font-black uppercase tracking-tighter">ALIANSI STRATEGIS</h2>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+               {our_clients.map((client, index) => (
+                  <div key={index} className="aspect-[3/2] bg-card border-4 border-black rounded-2xl shadow-brutal flex items-center justify-center p-8 group hover:-translate-y-2 hover:bg-primary transition-colors">
+                     {/* For mockup purposes, we show text. In real app, we use client.logo image */}
+                     <span className="font-display font-black text-xl md:text-2xl uppercase tracking-widest text-gray-400 group-hover:text-black transition-colors text-center">
+                       {client.name}
+                     </span>
+                  </div>
+               ))}
+            </div>
+         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="w-full py-24 bg-[#FDFBD4] dark:bg-[#0a192f] border-b-2 border-black">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-             <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tighter mb-4">
-               CATATAN <span className="text-[#ff5500]">PERANG</span>
-             </h2>
-             <p className="font-body text-lg font-bold uppercase text-muted-foreground">Apa yang mereka ucapkan setelah asap menghilang.</p>
-          </div>
+      <section className="w-full py-24 bg-background ">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+               <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tighter mb-4 flex items-center justify-center gap-4">
+                 <MessageSquare className="w-10 h-10 text-accent p-1 border-2 border-black rounded shadow-brutal-sm bg-card" /> DEKLARASI KEPUASAN
+               </h2>
+               <p className="font-body text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
+                 Dengarkan langsung dari mereka yang telah merasakan presisi operasional kami.
+               </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {testimonials.map((t, i) => (
-              <div key={i} className={cn("bg-white dark:bg-card border-4 border-black p-8 rounded-2xl shadow-brutal relative hover:-translate-y-2 transition-transform flex flex-col items-start",
-                 i === 0 ? "md:col-span-2 lg:col-span-2" :
-                 i === 2 ? "md:col-span-2 lg:col-span-3" :
-                 "md:col-span-1 lg:col-span-1"
-              )}>
-                 <Quote className="absolute top-6 right-6 w-12 h-12 text-[#ccff00] opacity-50" />
-                 <p className={cn("font-body font-medium mb-8 flex-1 relative z-10", i !== 1 ? "text-xl md:text-2xl" : "text-lg")}>"{t.text}"</p>
-                 <div className="flex items-center gap-4 mt-auto pt-6 border-t-2 border-black w-full">
-                    <img 
-                      src={`https://api.dicebear.com/7.x/notionists/svg?seed=${t.avatarSeed}`} 
-                      alt="" 
-                      className="w-12 h-12 bg-muted rounded-full border-2 border-black" 
-                    />
-                    <div>
-                      <p className="font-display font-black uppercase tracking-tight leading-none">{t.author}</p>
-                      <p className="font-body text-xs font-bold text-muted-foreground mt-1">{t.role}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               {testimonials.map(item => (
+                 <div key={item.id} className="bg-card  border-4 border-black rounded-2xl p-8 shadow-brutal flex flex-col relative group">
+                    <div className="absolute -top-6 -left-6 text-6xl text-primary drop-shadow-[2px_2px_0_#000] z-0 font-display font-black opacity-80 group-hover:rotate-12 transition-transform">"</div>
+                    <p className="font-body text-lg font-bold italic mb-8 relative z-10 text-foreground">
+                       "{item.quote}"
+                    </p>
+                    <div className="mt-auto border-t-2 border-black pt-4 flex items-center gap-4">
+                       <span className="w-12 h-12 rounded-full border-2 border-black overflow-hidden bg-muted flex items-center justify-center font-display font-black text-xl uppercase shrink-0">
+                         {item.name.charAt(0)}
+                       </span>
+                       <div className="flex flex-col">
+                          <span className="font-display font-black uppercase text-sm leading-tight text-foreground">{item.name}</span>
+                          <span className="font-body text-xs font-bold text-muted-foreground uppercase">{item.role}</span>
+                       </div>
                     </div>
                  </div>
-              </div>
-            ))}
-          </div>
-        </div>
+               ))}
+            </div>
+         </div>
       </section>
-      
-      {/* Call to invite */}
-      <section className="w-full py-24 text-center bg-background">
-         <h2 className="text-4xl font-display font-black uppercase mb-8">TAMBAHKAN LOGO ANDA DI SINI.</h2>
-         <Button asChild size="lg" className="rounded-2xl border-2 border-black shadow-brutal h-14 px-8 text-lg hover:bg-[#8a2be2] hover:text-white transition-all">
-            <Link to="/contact">INISIASI KONTRAK SEKARANG</Link>
-         </Button>
-      </section>
+
     </div>
-  );
+  )
 }

@@ -54,7 +54,7 @@ export default function ChartDoc() {
       <ComponentPreview
         title="Bar Chart"
         description="A brutalist bar chart with solid colors and thick borders."
-        code={`import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";\n\nconst data = [\n  { name: "Jan", total: Math.floor(Math.random() * 5000) + 1000 },\n  // ...\n]\n\nexport function BarChartDemo() {\n  return (\n    <ResponsiveContainer width="100%" height={350}>\n      <BarChart data={data}>\n        <CartesianGrid strokeDasharray="3 3" stroke="#000000" vertical={false} />\n        <XAxis dataKey="name" stroke="#000000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />\n        <YAxis stroke="#000000" tick={{fontFamily: 'IBM Plex Mono'}} />\n        <Tooltip content={<CustomTooltip />} cursor={{fill: 'rgba(0,0,0,0.1)'}} />\n        <Bar dataKey="uv" fill="#ccff00" stroke="#000000" strokeWidth={2} radius={[4, 4, 0, 0]} />\n        <Bar dataKey="pv" fill="#8a2be2" stroke="#000000" strokeWidth={2} radius={[4, 4, 0, 0]} />\n      </BarChart>\n    </ResponsiveContainer>\n  )\n}`}
+        code={`import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";\n\nconst data = [\n  { name: "Jan", total: Math.floor(Math.random() * 5000) + 1000 },\n  // ...\n]\n\nexport function BarChartDemo() {\n  return (\n    <ResponsiveContainer width="100%" height={350}>\n      <BarChart data={data}>\n        <CartesianGrid strokeDasharray="3 3" stroke="#000000" vertical={false} />\n        <XAxis dataKey="name" stroke="#000000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />\n        <YAxis stroke="#000000" tick={{fontFamily: 'IBM Plex Mono'}} />\n        <Tooltip content={<CustomTooltip />} cursor={{fill: 'rgba(0,0,0,0.1)'}} />\n        <Bar dataKey="uv" fill="var(--color-primary)" stroke="#000000" strokeWidth={2} radius={[4, 4, 0, 0]} />\n        <Bar dataKey="pv" fill="var(--color-secondary)" stroke="#000000" strokeWidth={2} radius={[4, 4, 0, 0]} />\n      </BarChart>\n    </ResponsiveContainer>\n  )\n}`}
       >
         <div className="w-full h-[350px] p-4 bg-muted border-2 border-black rounded-xl">
           <ResponsiveContainer width="100%" height="100%">
@@ -63,8 +63,8 @@ export default function ChartDoc() {
               <XAxis dataKey="name" stroke="#000000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />
               <YAxis stroke="#000000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />
               <Tooltip content={<CustomTooltip />} cursor={{fill: 'rgba(0,0,0,0.1)'}} />
-              <Bar dataKey="uv" fill="#ccff00" stroke="#000000" strokeWidth={2} radius={[4, 4, 0, 0]} />
-              <Bar dataKey="pv" fill="#8a2be2" stroke="#000000" strokeWidth={2} radius={[4, 4, 0, 0]} />
+              <Bar dataKey="uv" fill="var(--color-primary)" stroke="#000000" strokeWidth={2} radius={[4, 4, 0, 0]} />
+              <Bar dataKey="pv" fill="var(--color-secondary)" stroke="#000000" strokeWidth={2} radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -73,7 +73,7 @@ export default function ChartDoc() {
       <ComponentPreview
         title="Line Chart"
         description="Line chart with solid stroke and sharp custom dots."
-        code={`import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";\n\nexport function LineChartDemo() {\n  return (\n    <ResponsiveContainer width="100%" height={350}>\n      <LineChart data={data}>\n        <CartesianGrid strokeDasharray="3 3" stroke="#000" vertical={false} opacity={0.3} />\n        <XAxis dataKey="name" stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />\n        <YAxis stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />\n        <Tooltip content={<CustomTooltip />} />\n        <Line type="monotone" dataKey="uv" stroke="#ff5500" strokeWidth={4} activeDot={{ r: 8, stroke: '#000', strokeWidth: 2 }} dot={{ r: 4, stroke: '#000', strokeWidth: 2, fill: '#fff'}} />\n      </LineChart>\n    </ResponsiveContainer>\n  )\n}`}
+        code={`import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";\n\nexport function LineChartDemo() {\n  return (\n    <ResponsiveContainer width="100%" height={350}>\n      <LineChart data={data}>\n        <CartesianGrid strokeDasharray="3 3" stroke="#000" vertical={false} opacity={0.3} />\n        <XAxis dataKey="name" stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />\n        <YAxis stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />\n        <Tooltip content={<CustomTooltip />} />\n        <Line type="monotone" dataKey="uv" stroke="var(--color-accent)" strokeWidth={4} activeDot={{ r: 8, stroke: '#000', strokeWidth: 2 }} dot={{ r: 4, stroke: '#000', strokeWidth: 2, fill: '#fff'}} />\n      </LineChart>\n    </ResponsiveContainer>\n  )\n}`}
       >
         <div className="w-full h-[350px] p-4 bg-muted border-2 border-black rounded-xl">
           <ResponsiveContainer width="100%" height="100%">
@@ -82,7 +82,7 @@ export default function ChartDoc() {
               <XAxis dataKey="name" stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />
               <YAxis stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />
               <Tooltip content={<CustomTooltip />} />
-              <Line type="monotone" dataKey="uv" stroke="#ff5500" strokeWidth={4} activeDot={{ r: 8, stroke: '#000', strokeWidth: 2 }} dot={{ r: 4, stroke: '#000', strokeWidth: 2, fill: '#fff'}} />
+              <Line type="monotone" dataKey="uv" stroke="var(--color-accent)" strokeWidth={4} activeDot={{ r: 8, stroke: '#000', strokeWidth: 2 }} dot={{ r: 4, stroke: '#000', strokeWidth: 2, fill: '#fff'}} />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -91,7 +91,7 @@ export default function ChartDoc() {
       <ComponentPreview
         title="Area Chart"
         description="Area chart for visual mass, great for volume tracking."
-        code={`import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";\n\nexport function AreaChartDemo() {\n  return (\n    <ResponsiveContainer width="100%" height={350}>\n      <AreaChart data={data}>\n        <CartesianGrid strokeDasharray="3 3" stroke="#000" vertical={false} opacity={0.3} />\n        <XAxis dataKey="name" stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />\n        <YAxis stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />\n        <Tooltip content={<CustomTooltip />} />\n        <Area type="step" dataKey="uv" stroke="#000" strokeWidth={2} fill="#ccff00" />\n      </AreaChart>\n    </ResponsiveContainer>\n  )\n}`}
+        code={`import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";\n\nexport function AreaChartDemo() {\n  return (\n    <ResponsiveContainer width="100%" height={350}>\n      <AreaChart data={data}>\n        <CartesianGrid strokeDasharray="3 3" stroke="#000" vertical={false} opacity={0.3} />\n        <XAxis dataKey="name" stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />\n        <YAxis stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />\n        <Tooltip content={<CustomTooltip />} />\n        <Area type="step" dataKey="uv" stroke="#000" strokeWidth={2} fill="var(--color-primary)" />\n      </AreaChart>\n    </ResponsiveContainer>\n  )\n}`}
       >
         <div className="w-full h-[350px] p-4 bg-muted border-2 border-black rounded-xl">
           <ResponsiveContainer width="100%" height="100%">
@@ -100,7 +100,7 @@ export default function ChartDoc() {
               <XAxis dataKey="name" stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />
               <YAxis stroke="#000" tick={{fontFamily: 'IBM Plex Mono', fontWeight: 'bold'}} />
               <Tooltip content={<CustomTooltip />} />
-              <Area type="step" dataKey="uv" stroke="#000" strokeWidth={2} fill="#ccff00" />
+              <Area type="step" dataKey="uv" stroke="#000" strokeWidth={2} fill="var(--color-primary)" />
             </AreaChart>
           </ResponsiveContainer>
         </div>

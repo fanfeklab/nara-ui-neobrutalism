@@ -19,7 +19,7 @@ function StepperDef({ currentStep }: { currentStep: number }) {
                 isCompleted
                   ? "bg-success text-black"
                   : isActive
-                  ? "bg-[#ccff00] text-black"
+                  ? "bg-primary text-black"
                   : "bg-muted text-muted-foreground"
               }`}
             >

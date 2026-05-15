@@ -9,7 +9,7 @@ interface AbstractBlobProps extends React.SVGProps<SVGSVGElement> {
 }
 
 export function AbstractBlob({
-  color = "#8a2be2",
+  color = "var(--color-secondary)",
   className,
   variant = 1,
   animate = "float",

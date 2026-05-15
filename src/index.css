@@ -117,6 +117,9 @@
 @utility shadow-brutal-lg {
   box-shadow: 8px 8px 0px 0px #000000;
 }
+@utility shadow-brutal-active {
+  box-shadow: 0px 0px 0px 0px #000000;
+}
 
 @layer base {
   * {

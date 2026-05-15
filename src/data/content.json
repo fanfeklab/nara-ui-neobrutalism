@@ -1,0 +1,165 @@
+{
+  "company": {
+    "name": "NARA EVENTS",
+    "tagline": "Orkestra Pengalaman Tanpa Batas",
+    "manifesto": "Kami tidak hanya membuat acara. Kami merekayasa memori melalui presisi logistik dan estetika radikal. Industri hiburan butuh disiplin, dan kami adalah komandannya."
+  },
+  "services": [
+    {
+      "id": "client-1",
+      "category": "client",
+      "title": "End-to-End Orchestration",
+      "desc": "Manajemen penuh dari fase ideasi hingga bongkar panggung. Kami menangani risiko sehingga Anda bisa menikmati hasil.",
+      "icon": "Target"
+    },
+    {
+      "id": "client-2",
+      "category": "client",
+      "title": "Branding & Production House",
+      "desc": "Pembuatan konten visual, promo, dan dokumentasi sinematik yang memperkuat identitas brand acara Anda.",
+      "icon": "Laptop"
+    },
+    {
+      "id": "sponsor-1",
+      "category": "sponsor",
+      "title": "Brand Activation Lab",
+      "desc": "Integrasi brand sponsor ke dalam flow acara yang organik, bukan sekadar tempel logo di spanduk.",
+      "icon": "Zap"
+    },
+    {
+      "id": "sponsor-2",
+      "category": "sponsor",
+      "title": "Data-Driven Insights",
+      "desc": "Laporan demografi dan engagement penonton yang akurat setelah acara selesai untuk ROI yang terukur.",
+      "icon": "Target"
+    },
+    {
+      "id": "vendor-1",
+      "category": "vendor",
+      "title": "Transparansi Termin",
+      "desc": "Sistem pembayaran dan kontrak yang transparan. Vendor adalah mitra strategis, bukan sekadar pelaksana.",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "team-1",
+      "category": "team",
+      "title": "Agile Command Center",
+      "desc": "Budaya kerja cepat dan efisien dengan standar operasional militer untuk eksekusi lapangan tanpa cela.",
+      "icon": "Users"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "p-1",
+      "title": "Neo-Brutalism Tech Summit",
+      "category": "Workshop",
+      "type": "Promoter",
+      "year": "2026",
+      "summary": "Konferensi teknologi terbesar dengan panggung modular 360 derajat.",
+      "image": "https://picsum.photos/seed/p1/800/600"
+    },
+    {
+      "id": "p-2",
+      "title": "Underground Synth Rave",
+      "category": "Konser",
+      "type": "Promoter",
+      "year": "2026",
+      "summary": "Eksperimen audio visual di gudang tua Pelabuhan Tanjung Priok.",
+      "image": "https://picsum.photos/seed/p2/800/600"
+    },
+    {
+      "id": "p-3",
+      "title": "Startup Pitch Battle Vol.4",
+      "category": "PH / Production",
+      "type": "Client Order",
+      "year": "2025",
+      "summary": "Siaran langsung kompetisi startup tingkat regional dengan 12 kamera.",
+      "image": "https://picsum.photos/seed/p3/800/600"
+    },
+    {
+      "id": "p-4",
+      "title": "AI Frontier Conference",
+      "category": "Workshop",
+      "type": "Client Order",
+      "year": "2025",
+      "summary": "Workshop intensif implementasi AI untuk pimpinan korporasi energi.",
+      "image": "https://picsum.photos/seed/p4/800/600"
+    },
+    {
+      "id": "p-5",
+      "title": "Cloud Engineering Boot Camp",
+      "category": "Mini Course",
+      "type": "Promoter",
+      "year": "2024",
+      "summary": "Kursus kilat 3 hari untuk sertifikasi arsitektur cloud tingkat lanjut.",
+      "image": "https://picsum.photos/seed/p5/800/600"
+    },
+    {
+      "id": "p-6",
+      "title": "Digital Marketing Masterclass",
+      "category": "Mini Course",
+      "type": "Client Order",
+      "year": "2024",
+      "summary": "Pelatihan konversi trafik masif untuk 500 owner bisnis retail.",
+      "image": "https://picsum.photos/seed/p6/800/600"
+    }
+  ],
+  "blog": [
+    {
+      "id": "art-1",
+      "title": "Rekayasa Massa: Mengelola 50.000 Detak Jantung",
+      "category": "Logistik",
+      "date": "09 Mei 2026",
+      "excerpt": "Bagaimana kami memastikan keamanan dan alur massa tanpa mengorbankan pengalaman festival.",
+      "author": "Nadia Kusuma"
+    },
+    {
+      "id": "art-2",
+      "title": "Kenapa Neo-Brutalism? Estetika Melawan Arus",
+      "category": "Desain",
+      "date": "07 Mei 2026",
+      "excerpt": "Menjelajahi alasan Nara Events memilih visual kasar dan jujur di dunia yang terlalu terpoles.",
+      "author": "Hanif"
+    },
+    {
+      "id": "art-3",
+      "title": "Masa Depan Tiket: Anti-Calo Tingkat Dewa",
+      "category": "Teknologi",
+      "date": "05 Mei 2026",
+      "excerpt": "Mengimplementasikan enkripsi unik pada sistem tiket in-house kami.",
+      "author": "Budi Santoso"
+    },
+    {
+      "id": "art-4",
+      "title": "Production House vs Event Organizer",
+      "category": "Produksi",
+      "date": "01 Mei 2026",
+      "excerpt": "Pentingnya memiliki tim produksi internal untuk kecepatan revisi dan kualitas aset.",
+      "author": "Nadia Kusuma"
+    },
+    {
+      "id": "art-5",
+      "title": "Membangun Sponsor yang 'Hidup'",
+      "category": "Sponsorship",
+      "date": "28 April 2026",
+      "excerpt": "Trik mengaktifkan brand sponsor agar disukai penonton, bukan sekadar dilihat.",
+      "author": "Hanif"
+    },
+    {
+      "id": "art-6",
+      "title": "Mini Course: Bisnis Baru Pendapatan Acara",
+      "category": "Bisnis",
+      "date": "20 April 2026",
+      "excerpt": "Kenapa edukasi singkat menjadi pilar baru dalam ekosistem Nara Events.",
+      "author": "Budi Santoso"
+    }
+  ],
+  "gallery": [
+    { "id": "g-1", "title": "Main Stage Grid", "image": "https://picsum.photos/seed/g1/1200/800" },
+    { "id": "g-2", "title": "Crew at Work", "image": "https://picsum.photos/seed/g2/1200/800" },
+    { "id": "g-3", "title": "Crowd Pulse", "image": "https://picsum.photos/seed/g3/1200/800" },
+    { "id": "g-4", "title": "Lighting Rig", "image": "https://picsum.photos/seed/g4/1200/800" },
+    { "id": "g-5", "title": "Sound Engineering", "image": "https://picsum.photos/seed/g5/1200/800" },
+    { "id": "g-6", "title": "Visual Command", "image": "https://picsum.photos/seed/g6/1200/800" }
+  ]
+}

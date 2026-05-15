@@ -41,7 +41,7 @@ export default function SortableListDoc() {
             items={items}
             onItemsChange={setItems}
             renderItem={(item, isDragging) => (
-              <Card className={`p-4 transition-colors flex justify-between items-center bg-card ${isDragging ? 'shadow-none translate-x-[2px] translate-y-[2px] border-[#ccff00]' : ''}`}>
+              <Card className={`p-4 transition-colors flex justify-between items-center bg-card ${isDragging ? 'shadow-none translate-x-[2px] translate-y-[2px] border-primary' : ''}`}>
                 <div className="font-display font-bold text-lg">{item.title}</div>
                 <div className="font-body text-sm text-muted-foreground">{item.url}</div>
               </Card>

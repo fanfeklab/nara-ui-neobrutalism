@@ -1,0 +1,394 @@
+{
+  "events": {
+    "upcoming": [
+      {
+        "id": "ev-up-001",
+        "title": "Neo-Brutalism Tech Summit 2026",
+        "slug": "/events/neo-brutalism-tech-summit-2026",
+        "category": "Konferensi",
+        "type": "Promotor",
+        "date": "2026-08-24",
+        "date_readable": "24 - 26 Agustus 2026",
+        "location": "JCC Senayan, Jakarta",
+        "price": 750000,
+        "price_readable": "Mulai Rp 500.000",
+        "status": "upcoming",
+        "excerpt": "Konferensi teknologi tanpa basa-basi. 50+ pembicara internasional, 5 jalur bersamaan, panggung presentasi startup, dan pusat jejaring berbasis AI. Buat lo yang pengen tau masa depan tech — wajib datang.",
+        "thumbnail": "https://picsum.photos/seed/tech-summit-2026/600/400",
+        "capacity": 5000,
+        "tickets_available": 3580,
+        "tags": ["teknologi", "konferensi", "startup", "AI", "networking"],
+        "ticketing": {
+          "available": true,
+          "allowed_buyers": "public",
+          "max_tickets_per_nik": 5,
+          "ticket_types": [
+            {
+              "id": "tt-001",
+              "name": "Early Bird",
+              "base_price": 500000,
+              "available_until": "2026-07-24",
+              "quota": 1000,
+              "sold": 820,
+              "has_seat_assignment": false
+            },
+            {
+              "id": "tt-002",
+              "name": "Regular",
+              "base_price": 750000,
+              "quota": 3000,
+              "sold": 1200,
+              "has_seat_assignment": false
+            },
+            {
+              "id": "tt-003",
+              "name": "VIP",
+              "base_price": 2000000,
+              "quota": 500,
+              "sold": 340,
+              "has_seat_assignment": true,
+              "sections": [
+                { "id": "sec-a", "name": "VIP Front Row", "price": 2500000, "seats": 20, "seats_available": 5 },
+                { "id": "sec-b", "name": "VIP Center", "price": 2250000, "seats": 30, "seats_available": 12 },
+                { "id": "sec-c", "name": "VIP Wing", "price": 2000000, "seats": 50, "seats_available": 35 }
+              ]
+            }
+          ]
+        },
+        "body_html": "<h2>Konferensi Teknologi Paling Gila Tahun Ini</h2><p>Gak pake panel membosankan. Gak pake presentasi template. Neo-Brutalism Tech Summit hadir buat lo yang pengen tau masa depan teknologi — langsung dari praktisi, bukan teoritisi.</p><h2>Kenapa Lo Harus Datang?</h2><ul><li><strong>50+ Pembicara:</strong> Dari Singapura, Malaysia, Indonesia. Semuanya pernah bikin produk beneran — bukan cuma jago ngomong.</li><li><strong>5 Jalur Paralel:</strong> AI & Machine Learning, SaaS Scaling, Tech Infrastructure, Startup Funding, Tech for Social Impact. Lo pilih sendiri.</li><li><strong>Panggung Pitch Startup:</strong> Startup-stage buat lo yang lagi nyari investor atau sekedar pengen liat siapa calon unicorn berikutnya.</li><li><strong>Networking Berbasis AI:</strong> Sistem kita yang nyocokin lo sama orang-orang yang emang relevan — gak perlu awkward.</li><li><strong>Live Coding & Hands-On:</strong> Bawa laptop, pulang bawa solusi. Semua sesi diterjemahin real-time.</li></ul><h2>Yang Lo Dapetin</h2><ul><li>Akses penuh 3 hari ke semua sesi dan workshop</li><li>Networking dinner (VIP only)</li><li>Rekaman semua sesi</li><li>Sertifikat digital buat LinkedIn</li></ul>"
+      },
+      {
+        "id": "ev-up-002",
+        "title": "Suara Timur Festival 2026",
+        "slug": "/events/suara-timur-festival-2026",
+        "category": "Festival Musik",
+        "type": "Promotor",
+        "date": "2026-07-15",
+        "date_readable": "15 - 16 Juli 2026",
+        "location": "Alun-Alun Malang, Jawa Timur",
+        "price": 150000,
+        "price_readable": "Mulai Rp 100.000",
+        "status": "upcoming",
+        "excerpt": "Festival musik indie terbesar di Jawa Timur balik lagi. 40+ artis lokal, 5 sponsor utama, stan kuliner sepuasnya, dan vibes yang gak bisa lo dapet di mana pun. Early bird udah dibuka — jangan sampe kehabisan.",
+        "thumbnail": "https://picsum.photos/seed/suara-timur-2026/600/400",
+        "capacity": 15000,
+        "tickets_available": 12800,
+        "tags": ["musik", "festival", "indie", "Malang", "outdoor"],
+        "ticketing": {
+          "available": true,
+          "allowed_buyers": "public",
+          "max_tickets_per_nik": 5,
+          "ticket_types": [
+            {
+              "id": "tt-004",
+              "name": "Early Bird",
+              "base_price": 100000,
+              "available_until": "2026-06-15",
+              "quota": 3000,
+              "sold": 2800,
+              "has_seat_assignment": false
+            },
+            {
+              "id": "tt-005",
+              "name": "Regular",
+              "base_price": 150000,
+              "quota": 10000,
+              "sold": 3400,
+              "has_seat_assignment": false
+            },
+            {
+              "id": "tt-006",
+              "name": "VIP",
+              "base_price": 500000,
+              "quota": 2000,
+              "sold": 900,
+              "has_seat_assignment": true,
+              "sections": [
+                { "id": "sec-d", "name": "VIP Stage View", "price": 500000, "seats": 500, "seats_available": 120 },
+                { "id": "sec-e", "name": "VIP Lounge", "price": 650000, "seats": 300, "seats_available": 80 }
+              ]
+            }
+          ]
+        },
+        "body_html": "<h2>Dua Hari Musik, Satu Kenangan Gila</h2><p>Suara Timur balik ke Alun-Alun Malang dengan lineup yang lebih gede, stage yang lebih brutal, dan crowd yang lebih solid. Lo yang tahun lalu gak kebagian tiket — ini kesempatan lo.</p><h2>Apa Yang Bikin Festival Ini Beda?</h2><ul><li><strong>40+ Artis Lokal:</strong> Dari indie rock sampe electronic — semua genre ada. Lo bisa nemuin band favorit lo atau nemuin band baru yang bakal lo follow abis ini.</li><li><strong>Dua Panggung:</strong> Main stage buat headliner, second stage buat hidden gems. Lo atur sendiri flow lo.</li><li><strong>Stan Kuliner:</strong> 10+ pilihan makanan lokal. Gak perlu keluar venue buat nyari makan.</li><li><strong>Merchandise Eksklusif:</strong> Kolaborasi sama seniman lokal — lo bisa bawa pulang kenangan dalam bentuk fisik.</li></ul><h2>Tiket Lo, Pengalaman Lo</h2><ul><li>Early bird cuma Rp 100K — harga segitu buat dua hari? Gila.</li><li>VIP dapet lounge eksklusif, toilet terpisah, dan view panggung paling depan.</li><li>Semua tiket bisa beli pakai BNPL — lo nyicil, lo tetep masuk.</li></ul>"
+      },
+      {
+        "id": "ev-up-003",
+        "title": "Digital Marketing Bootcamp Batch 8",
+        "slug": "/events/digital-marketing-bootcamp-8-2026",
+        "category": "Bootcamp",
+        "type": "Promotor",
+        "date": "2026-06-10",
+        "date_readable": "10 - 14 Juni 2026",
+        "location": "NARA Studio, Malang",
+        "price": 3500000,
+        "price_readable": "Rp 3.500.000",
+        "status": "upcoming",
+        "excerpt": "Bootcamp intensif 5 hari buat lo yang pengen jago digital marketing. Social media, paid ads, analytics, copywriting — semua diajarin langsung sama praktisi. Batch sebelumnya 100% keterima kerja dalam 90 hari.",
+        "thumbnail": "https://picsum.photos/seed/bootcamp-8-2026/600/400",
+        "capacity": 40,
+        "tickets_available": 28,
+        "tags": ["digital marketing", "bootcamp", "pelatihan", "social media", "job guarantee"],
+        "ticketing": {
+          "available": true,
+          "allowed_buyers": "member_only",
+          "max_tickets_per_nik": 1,
+          "ticket_types": [
+            {
+              "id": "tt-007",
+              "name": "Regular",
+              "base_price": 3500000,
+              "quota": 30,
+              "sold": 12,
+              "has_seat_assignment": false
+            },
+            {
+              "id": "tt-008",
+              "name": "Bundling 2 Pax",
+              "base_price": 6500000,
+              "quota": 10,
+              "sold": 3,
+              "has_seat_assignment": false
+            }
+          ]
+        },
+        "body_html": "<h2>Dari Nol Sampe Expert — Cuma 5 Hari</h2><p>Ini bukan bootcamp abal-abal yang cuma ngasih teori doang. Lo bakal langsung praktik: handle akun sosmed brand beneran, setup kampanye iklan, analisis data, dan bikin strategi konten yang siap lo pake di kerjaan.</p><h2>Yang Lo Pelajari</h2><ul><li><strong>Social Media Strategy:</strong> Instagram, TikTok, LinkedIn — lo bakal ngerti algoritma dan cara bikin konten yang perform.</li><li><strong>Paid Ads:</strong> Facebook Ads, Google Ads, TikTok Ads. Dari setup sampe optimasi budget.</li><li><strong>Analytics & Measurement:</strong> Google Analytics, UTM tracking, dashboard building. Biar lo bisa buktiin bahwa campaign lo berhasil.</li><li><strong>Copywriting:</strong> Sales copy, engagement copy, email marketing. Biar kata-kata lo jualan.</li><li><strong>Live Project:</strong> Lo bakal handle brand beneran selama bootcamp. Portfolio lo bukan fiktif — ini real.</li></ul><h2>Kenapa Bootcamp Ini?</h2><ul><li>12 mentor dari Astra Digital, Mandiri Tech, Sociomile, dan brand ternama lainnya.</li><li>100% job placement rate untuk batch sebelumnya. Lo lulus, lo kerja.</li><li>Akses jaringan alumni seumur hidup — lo gak sendirian setelah lulus.</li></ul>"
+      },
+      {
+        "id": "ev-up-004",
+        "title": "Malang Innovation Week 2026",
+        "slug": "/events/malang-innovation-week-2026",
+        "category": "Pameran",
+        "type": "Client Order",
+        "date": "2026-09-01",
+        "date_readable": "1 - 5 September 2026",
+        "location": "Multi-Venue, Kota Malang",
+        "price": 0,
+        "price_readable": "Gratis",
+        "status": "upcoming",
+        "excerpt": "Pameran inovasi 5 hari untuk showcase startup & UMKM Kota Malang. 50+ stan, 20+ aktivitas, 15.000 pengunjung. Gratis — tinggal daftar, datang, eksplorasi.",
+        "thumbnail": "https://picsum.photos/seed/innovation-week-2026/600/400",
+        "capacity": 15000,
+        "tickets_available": 15000,
+        "tags": ["pameran", "UMKM", "inovasi", "startup", "Malang"],
+        "ticketing": {
+          "available": true,
+          "allowed_buyers": "public",
+          "max_tickets_per_nik": 10,
+          "ticket_types": [
+            {
+              "id": "tt-009",
+              "name": "Gratis",
+              "base_price": 0,
+              "quota": 15000,
+              "sold": 3200,
+              "has_seat_assignment": false
+            }
+          ]
+        },
+        "body_html": "<h2>Inovasi Malang Dalam Satu Tempat</h2><p>Pemerintah Kota Malang percayain NARA buat ngelola pameran inovasi 5 hari. 50+ stan dari startup, UMKM, institusi pendidikan, dan lembaga pemerintah. Lo bisa liat langsung apa yang lagi dibangun di kota ini.</p><h2>Apa Yang Bisa Lo Lakuin?</h2><ul><li><strong>Eksplorasi Startup & UMKM:</strong> 50+ stan yang nampilin produk dan layanan inovatif. Ada yang udah jadi, ada yang masih prototipe.</li><li><strong>Lokakarya Gratis:</strong> 15+ sesi tentang digital marketing, e-commerce, cybersecurity buat UMKM — semuanya gratis.</li><li><strong>Panel Diskusi:</strong> Pejabat kota, founder startup, dan akademisi ngobrol bareng tentang masa depan inovasi di Malang.</li><li><strong>Jejaring Langsung:</strong> Ketemu langsung sama pemilik UMKM, founder startup, dan investor yang hadir.</li></ul><h2>Gratis — Tapi Gak Murahan</h2><p>Meskipun gratis, eksekusi tetep profesional. Semua stan dikurasi, semua sesi punya materi yang jelas, dan lo bakal dapet pengalaman pameran yang gak kalah sama event berbayar.</p>"
+      },
+      {
+        "id": "ev-up-005",
+        "title": "Design Thinking for Social Enterprise 2026",
+        "slug": "/events/design-thinking-social-enterprise-2026",
+        "category": "Workshop",
+        "type": "Promotor",
+        "date": "2026-10-12",
+        "date_readable": "12 - 13 Oktober 2026",
+        "location": "Creative Hub Malang",
+        "price": 1500000,
+        "price_readable": "Rp 1.500.000",
+        "status": "upcoming",
+        "excerpt": "Lokakarya 2 hari buat social entrepreneur. Belajar design thinking, bangun prototipe, dan presentasiin langsung ke panel impact investor. Lo bawa ide — kami bantu lo eksekusi.",
+        "thumbnail": "https://picsum.photos/seed/design-thinking-2026/600/400",
+        "capacity": 150,
+        "tickets_available": 112,
+        "tags": ["design thinking", "social enterprise", "workshop", "impact investor"],
+        "ticketing": {
+          "available": true,
+          "allowed_buyers": "public",
+          "max_tickets_per_nik": 2,
+          "ticket_types": [
+            {
+              "id": "tt-010",
+              "name": "Early Bird",
+              "base_price": 1000000,
+              "available_until": "2026-09-12",
+              "quota": 50,
+              "sold": 38,
+              "has_seat_assignment": false
+            },
+            {
+              "id": "tt-011",
+              "name": "Regular",
+              "base_price": 1500000,
+              "quota": 100,
+              "sold": 22,
+              "has_seat_assignment": false
+            }
+          ]
+        },
+        "body_html": "<h2>Ide Lo Punya Dampak — Kita Bantu Wujudkan</h2><p>Workshop 2 hari yang menggabungkan metodologi design thinking dengan social impact. Lo bakal diajak mikir dari empati, definisi masalah, ideasi, sampe prototipe yang bisa lo presentasiin langsung ke investor.</p><h2>Apa Yang Bakal Lo Lakuin?</h2><ul><li><strong>Empathy Research:</strong> Lo belajar gimana caranya ngerti masalah user lo secara mendalam — bukan cuma asumsi.</li><li><strong>Problem Definition:</strong> Lo belajar ngerumuskan masalah yang tepat. Karena solusi yang bagus dimulai dari pertanyaan yang tepat.</li><li><strong>Ideation Sprint:</strong> Lo dan tim lo bakal ngeliatin banyak ide dalam waktu singkat. Gak ada yang terlalu gila — semua diterima dulu.</li><li><strong>Prototyping:</strong> Lo bangun prototipe yang bisa diuji — bukan cuma PowerPoint.</li><li><strong>Investor Pitch:</strong> Di hari terakhir, lo presentasiin langsung ke 3 impact investor. Bukan simulasi — ini beneran.</li></ul><h2>Kenalan Lo Setelah Workshop</h2><ul><li>Masuk komunitas alumni social enterprise NARA</li><li>Mentoring lanjutan 3 bulan</li><li>Jejaring rutin tiap kuartal</li></ul>"
+      },
+      {
+        "id": "ev-up-006",
+        "title": "Craft & Code Design Workshop 2026",
+        "slug": "/events/craft-code-design-workshop-2026",
+        "category": "Workshop",
+        "type": "Promotor",
+        "date": "2026-11-05",
+        "date_readable": "5 - 7 November 2026",
+        "location": "NARA Studio, Malang",
+        "price": 2500000,
+        "price_readable": "Rp 2.500.000",
+        "status": "upcoming",
+        "excerpt": "Tiga hari intensive workshop buat UI/UX designer. Proyek nyata dengan brand partner, bimbingan mentor, dan peluang bangun portofolio profesional. Jago design — langsung kerja.",
+        "thumbnail": "https://picsum.photos/seed/craft-code-2026/600/400",
+        "capacity": 60,
+        "tickets_available": 44,
+        "tags": ["design", "UI/UX", "workshop", "portofolio", "brand partner"],
+        "ticketing": {
+          "available": true,
+          "allowed_buyers": "public",
+          "max_tickets_per_nik": 2,
+          "ticket_types": [
+            {
+              "id": "tt-012",
+              "name": "Regular",
+              "base_price": 2500000,
+              "quota": 40,
+              "sold": 16,
+              "has_seat_assignment": false
+            },
+            {
+              "id": "tt-013",
+              "name": "Bundle 2 Pax",
+              "base_price": 4500000,
+              "quota": 20,
+              "sold": 5,
+              "has_seat_assignment": false
+            }
+          ]
+        },
+        "body_html": "<h2>Skill Design Lo Naik Level — Cuma 3 Hari</h2><p>Workshop buat graphic designer & UI/UX designer yang pengen level-up skill dan portofolio. Lo gak cuma belajar — lo bakal ngerjain proyek beneran buat brand partner kita.</p><h2>Yang Lo Pelajari</h2><ul><li><strong>Design Principle:</strong> Tipografi, warna, layout, grid — dasar yang bikin desain lo profesional.</li><li><strong>UI/UX Workflow:</strong> Dari wireframe sampe prototype interaktif. Tools-nya Figma, jadi gak perlu install apa-apa.</li><li><strong>Real Brand Project:</strong> Lo bakal design 5 aset buat brand beneran — bukan tugas fiktif.</li><li><strong>Peer Critique:</strong> Lo dapet feedback dari sesama peserta dan mentor. Biar lo tau blind spot lo.</li><li><strong>Portfolio Building:</strong> Di hari terakhir, lo punya 3-5 item portfolio baru yang siap lo pamerin.</li></ul><h2>Yang Udah Ikut</h2><p>Batch sebelumnya: 40 dari 60 peserta publish portfolio di platform NARA. 3 peserta langsung di-hire oleh mentor atau brand partner. Lo bisa jadi yang berikutnya.</p>"
+      }
+    ],
+    "past": [
+      {
+        "id": "ev-pa-001",
+        "title": "Rekayasa Konser: Dewa 19 Revolution",
+        "slug": "/events/dewa-19-revolution-2025",
+        "category": "Konser",
+        "type": "Client Order",
+        "date": "2025-12-12",
+        "date_readable": "12 Desember 2025",
+        "location": "GBK Stadium, Jakarta",
+        "price": 0,
+        "price_readable": "Client Order",
+        "status": "past",
+        "excerpt": "Manajemen teknis dan produksi visual untuk tur stadion Dewa 19. 200 kru, peralatan produksi 4K, siaran langsung multi-platform, dan 75.000 penonton. NARA di balik layar.",
+        "thumbnail": "https://picsum.photos/seed/dewa-19-2025/600/400",
+        "capacity": 75000,
+        "attendance": 72000,
+        "tags": ["konser", "produksi", "Dewa 19", "GBK", "4K"],
+        "body_html": "<h2>Di Balik Layar Konser Legendaris</h2><p>NARA dipercaya sebagai production partner untuk tur stadion Dewa 19. Tugas kami: memastikan 75.000 penonton dapet pengalaman visual dan audio terbaik — dari mana pun mereka duduk.</p><h2>Apa Yang Kami Kerjakan?</h2><ul><li><strong>200 Kru Profesional:</strong> Dari sound engineer, lighting designer, sampe stage manager — semua diatur oleh NARA.</li><li><strong>Produksi 4K Multi-Kamera:</strong> 5 kamera 4K sekaligus. Angle panggung, crowd, drone — semua tercover.</li><li><strong>Live Streaming ke 3 Platform:</strong> YouTube, Instagram, TikTok Live — jutaan penonton online ikut ngerasain vibes-nya.</li><li><strong>Film Dokumenter 30 Menit:</strong> Pasca-konser, kami produksi film dokumenter yang dipake buat promo tur berikutnya.</li></ul><h2>Hasilnya?</h2><p>75.000 tiket sold out dalam 2 jam. Siaran langsung ditonton 5+ juta kali. Dan Dewa 19 balik lagi ke NARA buat konser berikutnya.</p>"
+      },
+      {
+        "id": "ev-pa-002",
+        "title": "Indofood Corporate Summit 2025",
+        "slug": "/events/indofood-corporate-summit-2025",
+        "category": "Acara Korporat",
+        "type": "Client Order",
+        "date": "2025-08-05",
+        "date_readable": "5 Agustus 2025",
+        "location": "Aston Priority Simatupang, Jakarta",
+        "price": 0,
+        "price_readable": "Internal Event",
+        "status": "past",
+        "excerpt": "Town hall & strategic alignment untuk 3.000 karyawan Indofood. Siaran langsung ke 50 kantor regional, dasbor keterlibatan real-time untuk eksekutif. Semua mulus.",
+        "thumbnail": "https://picsum.photos/seed/indofood-summit-2025/600/400",
+        "capacity": 3000,
+        "attendance": 2850,
+        "tags": ["korporat", "Indofood", "town hall", "siaran langsung"],
+        "body_html": "<h2>3.000 Karyawan, 50 Kantor Regional, Satu Acara.</h2><p>Indofood butuh town hall tahunan yang bisa nyatuin semua karyawan — baik yang di venue maupun yang di kantor regional. NARA yang urus semuanya.</p><h2>Yang Kami Kerjakan</h2><ul><li><strong>Siaran Langsung Multi-Region:</strong> 50 kantor regional nonton live. Ada Q&A real-time yang bisa diakses semua peserta.</li><li><strong>Dasbor Keterlibatan:</strong> Eksekutif bisa liat live sentiment analysis — karyawan happy atau bosen? Langsung ketauan.</li><li><strong>Voting Interaktif:</strong> 12 sesi dengan interactive voting. Karyawan punya suara — dan suara mereka langsung tampil di layar.</li><li><strong>Produksi AV Profesional:</strong> Panggung, lighting, sound — semua standar broadcast.</li></ul><h2>Feedback Indofood?</h2><p>\"Eksekusi paling mulus dalam sejarah town hall kami. NARA ngerti apa yang dibutuhin perusahaan besar.\"</p>"
+      },
+      {
+        "id": "ev-pa-003",
+        "title": "Bank Mandiri Leadership Summit 2025",
+        "slug": "/events/bank-mandiri-leadership-summit-2025",
+        "category": "Acara Korporat",
+        "type": "Client Order",
+        "date": "2025-05-20",
+        "date_readable": "20 - 21 Mei 2025",
+        "location": "Multi-City: Jakarta, Bandung, Surabaya, Medan, Makassar",
+        "price": 0,
+        "price_readable": "Internal Event",
+        "status": "past",
+        "excerpt": "Pertemuan pimpinan tahunan untuk 800 top manager Bank Mandiri. Eksekusi di 5 kota secara bersamaan, 20 kru, siaran langsung ke 5.000+ peserta jarak jauh.",
+        "thumbnail": "https://picsum.photos/seed/mandiri-summit-2025/600/400",
+        "capacity": 800,
+        "attendance": 765,
+        "tags": ["korporat", "Bank Mandiri", "leadership", "multi-city"],
+        "body_html": "<h2>5 Kota, 1 Waktu, 0 Kesalahan.</h2><p>Bank Mandiri butuh leadership summit yang bisa nyatuin 800 top manager dari 5 kota berbeda. NARA handle semuanya — dari Jakarta sampe Makassar.</p><h2>Tantangannya?</h2><ul><li><strong>Sinkronisasi Konten:</strong> Semua kota harus dapet materi yang sama di waktu yang sama. Delay? Gak boleh.</li><li><strong>20 Kru Profesional:</strong> 4 kru per kota. Semua terlatih, semua tau jobdesc-nya.</li><li><strong>Siaran Langsung:</strong> HQ Jakarta live ke 5.000+ peserta remote. Dengan Q&A interaktif dan polling real-time.</li><li><strong>Dasbor Eksekutif:</strong> Board of Directors bisa mantau engagement di semua kota — langsung dari iPad mereka.</li></ul><h2>Hasilnya?</h2><p>87% learning objective tercapai. 96% peserta puas. Bank Mandiri repeat order buat tahun depan.</p>"
+      },
+      {
+        "id": "ev-pa-004",
+        "title": "Telkomsel Dealer Meeting & Incentive Trip 2025",
+        "slug": "/events/telkomsel-dealer-meeting-2025",
+        "category": "Program Insentif",
+        "type": "Client Order",
+        "date": "2025-06-10",
+        "date_readable": "10 - 12 Juni 2025",
+        "location": "Lombok, NTB",
+        "price": 0,
+        "price_readable": "Internal Event",
+        "status": "past",
+        "excerpt": "Program insentif 3 hari untuk 500 dealer terbaik Telkomsel. Produksi video 4K, 25 kru, liputan harian media sosial, dan film dokumenter 30 menit pasca-acara.",
+        "thumbnail": "https://picsum.photos/seed/telkomsel-trip-2025/600/400",
+        "capacity": 500,
+        "attendance": 500,
+        "tags": ["insentif", "Telkomsel", "Lombok", "produksi", "dokumenter"],
+        "body_html": "<h2>500 Dealer, 3 Hari di Lombok, 0 Yang Tertinggal.</h2><p>Telkomsel pengen reward dealer terbaik mereka dengan trip ke Lombok. Tugas NARA: bikin acara ini jadi pengalaman yang gak terlupakan — dan mendokumentasikannya.</p><h2>Yang Kami Kerjakan</h2><ul><li><strong>Logistik 500 Orang:</strong> Charter flight Jakarta-Lombok, 3 flight untuk 500 orang. Transfer, hotel, meal — semua diatur.</li><li><strong>Produksi Video 4K:</strong> 3 kamera 4K, drone, 25 kru produksi. Setiap momen penting tercapture.</li><li><strong>Konten Harian:</strong> 50+ post sosial media selama acara. Behind-the-scenes, testimoni dealer, highlight activity.</li><li><strong>Film Dokumenter 30 Menit:</strong> Pasca-acara, kami produksi film yang dipake Telkomsel buat internal communication dan promo tahun depan.</li></ul><h2>Hasilnya?</h2><p>96% dealer satisfaction. 100% attendance rate. Film dokumenter ditonton 50.000+ kali di internal Telkomsel. Repeat order confirmed.</p>"
+      },
+      {
+        "id": "ev-pa-005",
+        "title": "SME Digitalization Fair 2025",
+        "slug": "/events/sme-digitalization-fair-2025",
+        "category": "Pameran",
+        "type": "Client Order",
+        "date": "2025-03-15",
+        "date_readable": "15 - 17 Maret 2025",
+        "location": "Bandung Convention Hall, Bandung",
+        "price": 0,
+        "price_readable": "Gratis",
+        "status": "past",
+        "excerpt": "Pameran digitalisasi UMKM 3 hari untuk Pemerintah Kota Bandung. 50+ stan, 8.000+ pengunjung, 15+ lokakarya, dan 200+ kemitraan terdokumentasi.",
+        "thumbnail": "https://picsum.photos/seed/sme-fair-2025/600/400",
+        "capacity": 8000,
+        "attendance": 8200,
+        "tags": ["UMKM", "digitalisasi", "Bandung", "pameran", "pemerintah"],
+        "body_html": "<h2>Bantu UMKM Go Digital — Dalam 3 Hari.</h2><p>Pemerintah Kota Bandung pengen dorong UMKM lokal buat go digital. NARA ditunjuk sebagai execution partner buat bikin pameran yang gak cuma rame — tapi juga impactful.</p><h2>Yang Kami Kerjakan</h2><ul><li><strong>50+ Stan Vendor:</strong> Technology provider, UMKM showcase, dan government service — semua dikurasi.</li><li><strong>15+ Lokakarya:</strong> Digital marketing, e-commerce, cybersecurity untuk UMKM — semua gratis.</li><li><strong>AI-Powered Matching:</strong> UMKM bisa ketemu langsung sama tech provider yang cocok — difasilitasi sistem.</li><li><strong>Media Coverage:</strong> 15 publikasi, 2 TV coverage, dan social media campaign yang bikin acara ini trending.</li></ul><h2>Hasilnya?</h2><p>8.200 pengunjung hadir. 200+ kemitraan UMKM-provider terdokumentasi. Laporan dampak yang jadi acuan pemerintah untuk program serupa di kota lain.</p>"
+      },
+      {
+        "id": "ev-pa-006",
+        "title": "Digital Marketing Bootcamp Batch 7",
+        "slug": "/events/digital-marketing-bootcamp-7-2025",
+        "category": "Bootcamp",
+        "type": "Promotor",
+        "date": "2025-08-15",
+        "date_readable": "15 - 19 Agustus 2025",
+        "location": "NARA Studio, Malang",
+        "price": 3500000,
+        "price_readable": "Rp 3.500.000",
+        "status": "past",
+        "excerpt": "Bootcamp intensif 5 hari untuk 40 fresh graduate. 12 mentor dari Astra Digital, Mandiri Tech, dan Sociomile. 100% job placement rate tercapai dalam 90 hari.",
+        "thumbnail": "https://picsum.photos/seed/bootcamp-7-2025/600/400",
+        "capacity": 40,
+        "attendance": 40,
+        "tags": ["digital marketing", "bootcamp", "job placement", "alumni"],
+        "body_html": "<h2>Batch yang Bikin Sejarah.</h2><p>Batch 7 adalah batch pertama yang achieve 100% job placement rate dalam 90 hari. Semua 40 peserta dapet kerja — di agency, startup, atau perusahaan besar.</p><h2>Kenapa Batch Ini Spesial?</h2><ul><li><strong>12 Mentor Top:</strong> Astra Digital, Mandiri Tech, Sociomile, Brantech Indonesia, Digit Labs — semua ngirim mentor terbaik mereka.</li><li><strong>Live Project Real:</strong> Peserta handle campaign beneran untuk brand partner. Portfolio mereka bukan fiktif.</li><li><strong>Job Matching:</strong> NARA yang jembatanin peserta dengan hiring partner. Gak cuma ajarin — kami sampe antar kerja.</li></ul><h2>Apa Kata Alumni?</h2><p>\"Gue lulusan IT, gak ngerti marketing. 5 hari di NARA bikin gue dapet kerjaan sebagai digital marketer di agency top. Gila.\"</p>"
+      }
+    ]
+  }
+}

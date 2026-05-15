@@ -20,7 +20,7 @@ export default function ScrollAreaDoc() {
       <div className="p-6 sm:p-8 border-2 border-black bg-card shadow-brutal rounded-2xl">
         <h2 className="text-2xl font-display font-bold mb-6 border-b-2 border-black pb-2">Examples</h2>
         <div>
-          <ScrollArea className="h-72 w-48 rounded-xl border-2 border-black bg-white shadow-brutal-sm">
+          <ScrollArea className="h-72 w-48 rounded-xl border-2 border-black bg-card shadow-brutal-sm">
             <div className="p-4">
               <h4 className="mb-4 font-display font-bold leading-none uppercase tracking-tighter">Tags</h4>
               {tags.map((tag) => (

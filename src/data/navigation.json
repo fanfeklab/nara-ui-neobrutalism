@@ -1,0 +1,71 @@
+{
+  "main_navigation": [
+    {
+      "label": "Beranda",
+      "url": "/"
+    },
+    {
+      "label": "Acara",
+      "url": "/events",
+      "children": [
+        { "label": "Acara Mendatang", "url": "/events?status=upcoming" },
+        { "label": "Kalender Acara", "url": "/events/calendar" },
+        { "label": "Acara Berlalu", "url": "/events?status=past" }
+      ]
+    },
+    {
+      "label": "Perusahaan",
+      "url": "#",
+      "children": [
+        { "label": "Tentang Kami", "url": "/about" },
+        { "label": "Layanan Kami", "url": "/services" },
+        { "label": "Klien & Mitra", "url": "/clients" }
+      ]
+    },
+    {
+      "label": "Wawasan",
+      "url": "/blog"
+    }
+  ],
+  "footer_navigation": [
+    {
+      "group": "Layanan",
+      "links": [
+        { "label": "Untuk Klien", "url": "/services/client-corporate" },
+        { "label": "Untuk Sponsor", "url": "/services/sponsor-brand" },
+        { "label": "Untuk Vendor", "url": "/services/vendor-partner" },
+        { "label": "Untuk Peserta", "url": "/services/participant" }
+      ]
+    },
+    {
+      "group": "Perusahaan",
+      "links": [
+        { "label": "Tentang Kami", "url": "/about" },
+        { "label": "Tim Kami", "url": "/team" },
+        { "label": "Klien & Mitra", "url": "/clients" },
+        { "label": "Kontak", "url": "/contact" }
+      ]
+    },
+    {
+      "group": "Sumber Daya",
+      "links": [
+        { "label": "Blog & Wawasan", "url": "/blog" },
+        { "label": "FAQ", "url": "/faq" },
+        { "label": "Acara Mendatang", "url": "/events?status=upcoming" },
+        { "label": "Kalender Acara", "url": "/events/calendar" }
+      ]
+    },
+    {
+      "group": "Legal",
+      "links": [
+        { "label": "Privasi", "url": "/privacy" },
+        { "label": "Syarat & Ketentuan", "url": "/terms" },
+        { "label": "Perjanjian Vendor", "url": "/vendor-agreement" }
+      ]
+    }
+  ],
+  "cta_button": {
+    "label": "Gas! Konsultasi Gratis",
+    "url": "/consultation"
+  }
+}

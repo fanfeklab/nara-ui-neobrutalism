@@ -45,7 +45,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
           info: "group-[.toaster]:!bg-info group-[.toaster]:!text-white [&>div>svg]:!text-white group-[.toast]:[&_[data-title]]:!text-white group-[.toast]:[&_[data-description]]:!text-white/90 group-[.toaster]:!border-black",
           warning: "group-[.toaster]:!bg-warning group-[.toaster]:!text-black [&>div>svg]:!text-black group-[.toast]:[&_[data-title]]:!text-black group-[.toast]:[&_[data-description]]:!text-black/90 group-[.toaster]:!border-black",
           actionButton:
-            "group-[.toast]:bg-[#ccff00] group-[.toast]:text-black group-[.toast]:border-2 group-[.toast]:border-black group-[.toast]:font-bold group-[.toast]:shadow-brutal-sm hover:group-[.toast]:translate-x-[2px] hover:group-[.toast]:translate-y-[2px] hover:group-[.toast]:shadow-none transition-all",
+            "group-[.toast]:bg-primary group-[.toast]:text-black group-[.toast]:border-2 group-[.toast]:border-black group-[.toast]:font-bold group-[.toast]:shadow-brutal-sm hover:group-[.toast]:translate-x-[2px] hover:group-[.toast]:translate-y-[2px] hover:group-[.toast]:shadow-none transition-all",
           cancelButton:
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground group-[.toast]:border-2 group-[.toast]:border-black group-[.toast]:font-bold",
         },

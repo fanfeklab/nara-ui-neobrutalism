@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { ComponentPreview } from "@/components/ui/component-preview";
+import { BRAND } from "@/config/brand.config";
 
 export default function DialogDoc() {
   return (
@@ -127,15 +128,15 @@ export default function DialogDoc() {
               </p>
               <p>
                 <strong>2. User License</strong><br/>
-                Permission is granted to temporarily download one copy of the materials (information or software) on NARA EVENTS's website for personal, non-commercial transitory viewing only.
+                Permission is granted to temporarily download one copy of the materials (information or software) on {BRAND.name}'s website for personal, non-commercial transitory viewing only.
               </p>
               <p>
                 <strong>3. Disclaimer</strong><br/>
-                The materials on NARA EVENTS's website are provided on an 'as is' basis. NARA EVENTS makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+                The materials on {BRAND.name}'s website are provided on an 'as is' basis. {BRAND.name} makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
               </p>
                <p>
                 <strong>4. Limitations</strong><br/>
-                In no event shall NARA EVENTS or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on NARA EVENTS's website.
+                In no event shall {BRAND.name} or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on {BRAND.name}'s website.
               </p>
             </div>
             <DialogFooter>

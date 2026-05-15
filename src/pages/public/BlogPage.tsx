@@ -1,122 +1,151 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import { ArrowRight, Tag, Calendar, User, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import blogData from "@/data/blog.json";
+import { useMemo } from "react";
 
 export default function BlogPage() {
-  const posts = [
-    {
-      id: "post-1",
-      title: "Cara Nara Events Mengendalikan 50.000 Penonton Tanpa Kepanikan",
-      category: "STUDI KASUS",
-      date: "09 MEI 2026",
-      excerpt: "Membongkar metodologi pengendalian kerumunan, barikade labirin, dan psikologi tata cahaya yang mencegah kepanikan massal pada festival terbaru kami.",
-      image: "https://picsum.photos/seed/nara_b1/800/500"
-    },
-    {
-      id: "post-2",
-      title: "Matematika Kasar di Balik Tiket Sold Out dalam 3 Menit",
-      category: "TEKNOLOGI",
-      date: "02 MEI 2026",
-      excerpt: "Bagaimana algoritma antrian in-house kami menangkal 100 ribu bot calo simultan sekaligus menjaga server tetap berjalan sejuk.",
-      image: "https://picsum.photos/seed/nara_b2/800/500"
-    },
-    {
-      id: "post-3",
-      title: "Estetika Neo-Brutalism dalam Tata Panggung Modern",
-      category: "DESAIN VISUAL",
-      date: "24 APR 2026",
-      excerpt: "Mengapa kami memecat semua desainer 'aman' kami dan beralih ke struktur asimetris, besi mentah, dan kontras warna yang agresif.",
-      image: "https://picsum.photos/seed/nara_b3/800/500"
-    },
-    {
-      id: "post-4",
-      title: "Rapat Koordinasi: Dokumen Rahasia Penyelamatan Acara yang Hampir Batal",
-      category: "BEHIND THE SCENES",
-      date: "15 APR 2026",
-      excerpt: "Hujan badai, vendor lari, dan generator terbakar 4 jam sebelum gerbang dibuka. Begini cara kami memperbaiki semuanya tepat waktu.",
-      image: "https://picsum.photos/seed/nara_b4/800/500"
-    }
-  ];
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categoryFilter = searchParams.get("category") || "all";
+
+  const allBlogs = blogData.blog_articles;
+
+  const filteredBlogs = useMemo(() => {
+    if (categoryFilter === "all") return allBlogs;
+    return allBlogs.filter((b: any) => b.category === categoryFilter);
+  }, [categoryFilter, allBlogs]);
+
+  const categories = useMemo(() => {
+    const cats = new Set<string>();
+    allBlogs.forEach((b: any) => cats.add(b.category));
+    return Array.from(cats);
+  }, [allBlogs]);
+
+  const featuredBlog = filteredBlogs[0]; // Assuming first is featured for dummy logic
+  const restBlogs = filteredBlogs.slice(1);
 
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen bg-background">
       {/* Header */}
-      <section className="bg-black text-white w-full py-24 border-b-2 border-black text-center px-4 relative">
-        {/* Subtle grid pattern for dark header */}
-        <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: 'linear-gradient(#444 1px, transparent 1px), linear-gradient(90deg, #444 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-        <div className="relative z-10">
-          <h1 className="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter mb-4">
-             PANGKALAN <span className="text-[#06b6d4]">DATA</span>
+      <section className="w-full py-20 bg-background  border-b-2 border-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6 relative inline-block text-foreground">
+            WAWASAN <span className="text-accent drop-shadow-[2px_2px_0_#000] dark:drop-shadow-none bg-black px-4 ml-2 border-4 border-black dark:border-white rounded-xl">LOKASI</span>
           </h1>
-          <p className="font-body text-xl max-w-2xl mx-auto text-gray-400 font-medium">
-             Transmisi tulisan, pembedahan operasional, dan log teknis langsung dari para komandan lapangan.
+          <p className="text-xl font-body max-w-2xl text-muted-foreground font-medium">
+            Insight, opini, dan teknik dari markas pusat operasi.
           </p>
         </div>
       </section>
 
-      {/* Featured / Hero Blog */}
-      <section className="w-full py-16 bg-card border-b-2 border-black">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <Link to={`/blog/${posts[0].id}`} className="group flex flex-col md:flex-row bg-background border-4 border-black rounded-2xl overflow-hidden shadow-brutal hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] transition-all">
-              <div className="w-full md:w-3/5 border-b-4 md:border-b-0 md:border-r-4 border-black overflow-hidden relative">
-                 <img src={posts[0].image} alt="Featured" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              </div>
-              <div className="w-full md:w-2/5 p-8 md:p-12 flex flex-col justify-center bg-white dark:bg-[#112240]">
-                 <div className="flex gap-4 mb-4">
-                    <span className="bg-[#ccff00] text-black font-body font-bold text-xs uppercase px-2 py-1 border-2 border-black rounded-lg">
-                      {posts[0].category}
-                    </span>
-                    <span className="font-body font-bold text-xs text-muted-foreground pt-1">
-                      {posts[0].date}
-                    </span>
+      {/* Filters */}
+      <section className="w-full py-6 border-b-2 border-black bg-card sticky top-20 z-40">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 overflow-x-auto hide-scrollbars">
+           <Button
+              variant={categoryFilter === "all" ? "solid" : "outline"}
+              size="sm"
+              className="rounded-lg shrink-0 border-2 border-black font-bold uppercase transition-colors"
+              onClick={() => { searchParams.set("category", "all"); setSearchParams(searchParams); }}
+           >
+              Semua Artikel
+           </Button>
+           {categories.map(cat => (
+              <Button
+                 key={cat}
+                 variant={categoryFilter === cat ? "solid" : "outline"}
+                 size="sm"
+                 className="rounded-lg shrink-0 border-2 border-black font-bold uppercase transition-colors"
+                 onClick={() => { searchParams.set("category", cat); setSearchParams(searchParams); }}
+              >
+                 {cat}
+              </Button>
+           ))}
+         </div>
+      </section>
+
+      {/* Blog Grid */}
+      <section className="w-full py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           
+           {filteredBlogs.length === 0 ? (
+             <div className="py-24 text-center border-4 border-black border-dashed rounded-2xl">
+               <h3 className="font-display font-black text-2xl uppercase opacity-50">Tidak ada artikel ditemukan</h3>
+             </div>
+           ) : (
+             <div className="flex flex-col gap-16">
+               
+               {/* Featured Article */}
+               {featuredBlog && (
+                 <Link to={featuredBlog.slug} className="group relative flex flex-col lg:flex-row bg-card border-4 border-black rounded-3xl overflow-hidden shadow-brutal hover:-translate-y-2 transition-transform">
+                    <div className="lg:w-2/3 aspect-video lg:aspect-auto relative bg-muted border-b-4 lg:border-b-0 lg:border-r-4 border-black overflow-hidden shrink-0">
+                       <img src={featuredBlog.thumbnail} alt={featuredBlog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                       <div className="absolute top-4 left-4 bg-primary text-black font-display font-bold text-sm uppercase px-3 py-1 border-2 border-black rounded-lg shadow-brutal-sm">
+                         {featuredBlog.category}
+                       </div>
+                    </div>
+                    <div className="lg:w-1/3 p-8 lg:p-12 flex flex-col justify-center bg-card ">
+                       <div className="flex items-center gap-3 font-body text-xs font-bold text-muted-foreground uppercase mb-4">
+                         <span className="flex items-center gap-1"><Calendar className="w-3 h-3"/> {featuredBlog.date_readable}</span>
+                         <span className="flex items-center gap-1"><Clock className="w-3 h-3"/> {featuredBlog.read_time}</span>
+                       </div>
+                       <h2 className="text-3xl md:text-4xl font-display font-black uppercase tracking-tighter mb-4 leading-tight group-hover:text-primary transition-colors">
+                         {featuredBlog.title}
+                       </h2>
+                       <p className="font-body font-medium text-muted-foreground mb-8 line-clamp-4">
+                         {featuredBlog.excerpt}
+                       </p>
+                       <div className="mt-auto border-t-2 border-black pt-6 flex items-center justify-between">
+                         <div className="flex items-center gap-2">
+                            <span className="w-8 h-8 rounded-full bg-black flex items-center justify-center border-2 border-black">
+                               <User className="w-4 h-4 text-white" />
+                            </span>
+                            <span className="font-body font-bold text-sm uppercase">{featuredBlog.author}</span>
+                         </div>
+                       </div>
+                    </div>
+                 </Link>
+               )}
+
+               {/* Standard Grid */}
+               {restBlogs.length > 0 && (
+                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                   {restBlogs.map((blog: any) => (
+                      <Link key={blog.id} to={blog.slug} className="group flex flex-col bg-card border-4 border-black rounded-2xl overflow-hidden shadow-brutal hover:-translate-y-2 transition-transform h-full">
+                         <div className="aspect-[3/2] border-b-4 border-black relative overflow-hidden bg-muted shrink-0">
+                            <img src={blog.thumbnail} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div className="absolute top-3 left-3 bg-card text-card-foreground font-display font-bold text-xs uppercase px-2 py-1 border-2 border-black rounded-lg shadow-brutal-sm">
+                              {blog.category}
+                            </div>
+                         </div>
+                         <div className="p-6 flex flex-col flex-1">
+                            <h3 className="font-display font-black text-2xl uppercase tracking-tight mb-3 leading-tight group-hover:text-primary transition-colors">
+                              {blog.title}
+                            </h3>
+                            <p className="font-body text-sm font-medium line-clamp-3 text-muted-foreground mb-6">
+                              {blog.excerpt}
+                            </p>
+                            <div className="mt-auto border-t-2 border-dashed border-gray-300 dark:border-gray-700 pt-4 flex flex-col gap-2">
+                               <div className="flex items-center justify-between font-body text-xs font-bold text-muted-foreground uppercase">
+                                 <span>{blog.date_readable}</span>
+                                 <span>{blog.read_time}</span>
+                               </div>
+                               <div className="font-body text-xs font-bold uppercase text-foreground">
+                                 Oleh: {blog.author}
+                               </div>
+                            </div>
+                         </div>
+                      </Link>
+                   ))}
                  </div>
-                 <h2 className="text-3xl lg:text-4xl font-display font-black uppercase tracking-tighter mb-4 leading-tight">
-                    {posts[0].title}
-                 </h2>
-                 <p className="font-body text-muted-foreground font-medium mb-8">
-                    {posts[0].excerpt}
-                 </p>
-                 <Button variant="outline" className="w-fit rounded-xl">BACA SELENGKAPNYA</Button>
-              </div>
-           </Link>
+               )}
+
+             </div>
+           )}
+
         </div>
       </section>
 
-      {/* Grid List */}
-      <section className="w-full py-24 bg-background">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.slice(1).map((post) => (
-                 <Link key={post.id} to={`/blog/${post.id}`} className="group bg-card border-2 border-black rounded-2xl flex flex-col overflow-hidden shadow-[4px_4px_0_0_#000] hover:-translate-y-1 hover:shadow-brutal transition-all">
-                    <div className="aspect-video border-b-2 border-black overflow-hidden">
-                       <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <div className="p-6 flex flex-col flex-1">
-                       <div className="flex justify-between items-center mb-4">
-                          <span className="bg-[#f3f4f6] dark:bg-black text-foreground font-body font-bold text-[10px] uppercase px-2 py-1 border-2 border-black rounded">
-                            {post.category}
-                          </span>
-                          <span className="font-body font-bold text-[10px] text-muted-foreground">
-                            {post.date}
-                          </span>
-                       </div>
-                       <h3 className="font-display font-black text-2xl uppercase tracking-tighter mb-3 leading-tight group-hover:text-[#ff5500] transition-colors">
-                          {post.title}
-                       </h3>
-                       <p className="font-body text-sm text-muted-foreground font-medium flex-1 line-clamp-3">
-                          {post.excerpt}
-                       </p>
-                    </div>
-                 </Link>
-              ))}
-           </div>
-           
-           <div className="mt-16 text-center">
-              <Button variant="solid" size="lg" className="rounded-xl border-2 border-black shadow-brutal-sm font-bold uppercase">
-                Muat Transmisi Lebih Lama
-              </Button>
-           </div>
-        </div>
-      </section>
     </div>
-  );
+  )
 }

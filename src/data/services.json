@@ -1,0 +1,231 @@
+{
+  "services": {
+    "client_features": {
+      "category_name": "Untuk Klien (Event Organizer)",
+      "category_slug": "/services/client-corporate",
+      "category_description": "Lo punya acara, kita yang urus. Dari A sampe Z, beres.",
+      "items": [
+        {
+          "id": "cf-001",
+          "title": "Full Event Orchestration",
+          "slug": "/services/client-corporate/full-orchestration",
+          "tagline": "Dari venue sampe laporan, kita yang atur.",
+          "excerpt": "Lo tinggal duduk manis, kita yang urus semuanya. Mulai dari nyari venue, negosiasi vendor, atur tiket, sampe bikin laporan — satu pintu, satu komando, tanpa drama.",
+          "benefit": "Satu kontak. Semua beres. Lo tinggal review.",
+          "icon": "zap",
+          "thumbnail": "https://picsum.photos/seed/full-orchestration/600/400",
+          "tags": ["event management", "logistik", "orkestrasi", "vendor", "ROI"],
+          "body_html": "<h2>Lo Punya Visi, Kita Yang Eksekusi</h2><p>Gak perlu pusing mikirin ini-itu. Kami yang atur semuanya: dari cari venue paling pas, kurasi vendor yang bener, sampe ngurus perizinan yang ribet. Lo cukup kasih arahan — sisanya kami yang banting tulang.</p><h2>Apa Aja Yang Kita Urus?</h2><ul><li><strong>Venue & Vendor:</strong> Kita seleksi vendor terbaik buat lo. Negosiasi harga? Kita jagokan. Potensi hemat sampe 15%.</li><li><strong>Tiket & Pendaftaran:</strong> Platform tiket kita sendiri. Bisa early bird, flash sale, diskon grup — semua real-time datanya.</li><li><strong>Kru Lapangan:</strong> Aplikasi khusus buat kru biar semua gerak cepat, gak miskom. Update real-time, checklist langsung centang.</li><li><strong>Dasbor Real-Time:</strong> Lo bisa mantau semua metrik penting selama acara berlangsung — dari kehadiran peserta sampe engagement sponsor.</li><li><strong>Laporan Komprehensif:</strong> Abis acara, kita kasih laporan lengkap. Bukan cuma angka, tapi insight yang bisa lo pake buat acara berikutnya.</li></ul><h2>Studi Kasus: Malang Innovation Week 2025</h2><p>Pemkot Malang percayain NARA buat ngelola pameran inovasi 5 hari. 50+ stan, 20+ aktivitas, 15.000 pengunjung. Hasil? 200+ kemitraan UMKM-provider terdokumentasi, 15 liputan media, 2 TV coverage — dan laporan yang jadi acuan pemerintah buat acara tahun depan.</p><blockquote>Nara bikin visi kita jadi nyata. Profesional, detail, dan gak bikin stres.</blockquote>"
+        },
+        {
+          "id": "cf-002",
+          "title": "Event Planner Flex",
+          "slug": "/services/client-corporate/event-planner-flex",
+          "tagline": "Lo udah punya vendor? Kita bantu atur sisanya.",
+          "excerpt": "Lo udah punya vendor langganan atau venue favorit? Gak masalah. Kita masuk buat koordinasi, optimalisasi, dan eksekusi biar semuanya nyambung mulus.",
+          "benefit": "Fleksibel. Hemat. Kualitas gak turun.",
+          "icon": "clipboard-list",
+          "thumbnail": "https://picsum.photos/seed/event-planner-flex/600/400",
+          "tags": ["event planner", "fleksibel", "anggaran", "koordinasi vendor"],
+          "body_html": "<h2>Lo Udah Punya Vendor? Kita Jadi Sutradaranya</h2><p>Gak semua klien mau lepas kendali penuh — dan kita paham itu. Buat lo yang udah punya vendor langganan atau venue favorit, kita masuk sebagai koordinator. Bukan buat ganti, tapi buat nyatuin semua jadi satu orkestra yang pas.</p><h2>Apa Yang Kita Bantu?</h2><ul><li><strong>Koordinasi Multi-Vendor:</strong> Lo gak perlu chat 15 vendor beda-beda. Kita jadi satu kontak yang nyampein semua arahan, ngatur timeline, dan mastiin gak ada yang bentrok.</li><li><strong>Optimalisasi Timeline:</strong> Jadwal lo mungkin udah ada, tapi pasti ada celah. Kita sisir ulang, atur ulang, biar semua vendor punya waktu setup yang cukup.</li><li><strong>Kru Lapangan NARA:</strong> Kru kita yang berpengalaman siap bantu di hari-H. Mereka udah kenyang asam garam event, jadi tau harus ngapain kalau ada kejutan.</li><li><strong>Kontingensi Plan:</strong> Hujan? Vendor telat? Alat rusak? Kita udah siapin plan B, C, sampe D. Lo gak perlu panik.</li><li><strong>Dasbor Pantauan:</strong> Lo bisa mantau progres dari mana aja. Semua vendor update status di satu tempat.</li></ul><h2>Cocok Buat Siapa?</h2><p>Klien yang udah punya vendor favorit dan gak mau ganti. Klien dengan budget ketat tapi tetap pengen quality control. Klien yang mau megang kendali kreatif tapi butuh kepastian eksekusi.</p>"
+        },
+        {
+          "id": "cf-003",
+          "title": "Production House Services",
+          "slug": "/services/client-corporate/production-house",
+          "tagline": "Video, audio, lighting — kualitas sinematik.",
+          "excerpt": "Butuh produksi video 4K, live streaming multi-platform, atau audio kelas festival? Kita punya kru, alat, dan pengalaman buat bikin konten lo keliatan mahal.",
+          "benefit": "Hasil sinematik. Aset reusable. Siap tayang di mana aja.",
+          "icon": "film",
+          "thumbnail": "https://picsum.photos/seed/production-house/600/400",
+          "tags": ["produksi", "video 4K", "siaran langsung", "audio", "lighting"],
+          "body_html": "<h2>Dari Brief Sederhana Jadi Konten Gila</h2><p>Produksi acara bukan cuma soal kamera bagus. Kita ngerti gimana caranya nerjemahin vibe acara lo ke visual yang bikin orang berhenti scroll. Dari konsep awal sampe final export — semua kita handle.</p><h2>Layanan Produksi Kita</h2><ul><li><strong>Video 4K Multi-Kamera:</strong> 3-5 kamera sekaligus, operator berpengalaman, hasil broadcast-quality. Cocok buat live streaming, dokumentasi, atau konten highlight.</li><li><strong>Audio Profesional:</strong> Sound system kelas festival, sound engineer yang ngerti akustik venue, mixing live yang bersih — bikin semua pengisi acara terdengar maksimal.</li><li><strong>Lighting & Tata Panggung:</strong> Lighting designer yang ngerti mood. Dari warm ambient sampe strobe agresif — semua disesuaikan sama karakter acara lo.</li><li><strong>Live Streaming Multi-Platform:</strong> YouTube, Instagram, TikTok — semua platform sekaligus. Grafis overlay, countdown, transisi — lo bisa request.</li><li><strong>Post-Production:</strong> Color grading cinematic, audio mixing, motion graphics. Editor kita gak akan berhenti sebelum hasilnya bikin lo senyum.</li></ul><h2>Studi Kasus: Dewa 19 Revolution</h2><p>Kita handle produksi konser Dewa 19 di GBK Stadium. 200 kru, 5 kamera 4K, live streaming ke 3 platform, 75.000 penonton di venue. Result? Highlight reel yang ditonton jutaan kali dan film dokumenter 30 menit yang dipake buat promo tur berikutnya.</p>"
+        },
+        {
+          "id": "cf-004",
+          "title": "Co-Promotion & Revenue Share",
+          "slug": "/services/client-corporate/co-promotion",
+          "tagline": "Lo punya ide, kita biayain bareng. Hasil dibagi adil.",
+          "excerpt": "Lo pengen bikin acara sendiri tapi gak punya modal penuh? Kita kolaborasi. Lo kasih ide atau venue, kita yang urus sisanya. Untung dibagi transparan, gak pake drama.",
+          "benefit": "Risiko dibagi. Untung dinikmati bareng.",
+          "icon": "handshake",
+          "thumbnail": "https://picsum.photos/seed/co-promotion/600/400",
+          "tags": ["promotor", "bagi hasil", "kolaborasi", "pasif income"],
+          "body_html": "<h2>Lo Punya Ide Cemerlang? Kita Jadiin Kenyataan — Bareng.</h2><p>Banyak orang punya ide event keren tapi gak tau mulai dari mana, atau gak punya modal penuh. Di sinilah Nara masuk. Kita co-invest: lo bawa ide (atau venue, atau network), kita bawa eksekusi dan modal operasional. Hasil? Dibagi transparan sesuai porsi.</p><h2>Kenapa Co-Promotion?</h2><ul><li><strong>Risiko Dibagi:</strong> Lo gak nanggung semua biaya sendiri. Kita sharing modal operasional — venue, vendor, marketing, kru.</li><li><strong>Kita Yang Eksekusi:</strong> Lo gak perlu punya tim event sendiri. Nara yang ngurusin semuanya — dari konsep sampe beres.</li><li><strong>Transparan Penuh:</strong> Dasbor revenue real-time. Lo bisa liat sendiri: berapa tiket terjual, berapa sponsor masuk, berapa biaya operasional. Gak ada yang ditutupin.</li><li><strong>Kita Punya Data:</strong> Nara punya data audiens Malang & sekitarnya. Kita tau apa yang lagi rame, harga tiket yang pas, channel marketing yang efektif.</li></ul><h2>Cocok Buat Siapa?</h2><p>Investor yang pengen passive income dari industri event. Pemilik venue yang pengen optimasi aset. Brand yang pengen bikin event sendiri tanpa bikin tim internal. Kreator konten yang pengen bikin offline experience buat komunitasnya.</p><h2>Studi Kasus: Suara Timur Festival</h2><p>Kita co-promote festival musik indie di Alun-Alun Malang bareng partner lokal. 12.000 tiket sold out 48 jam. 5 sponsor gabung. Revenue? 3x lipat dari target awal. Semua berkat data audiens yang kita punya dan eksekusi yang presisi.</p>"
+        },
+        {
+          "id": "cf-005",
+          "title": "Ticketing & Registration Suite",
+          "slug": "/services/client-corporate/ticketing-suite",
+          "tagline": "Sistem tiket anti calo, data peserta kebuka semua.",
+          "excerpt": "Platform tiket kita sendiri — bukan pihak ketiga. Lo bisa atur harga, kuota, diskon, dan dapetin data lengkap peserta. Siapa mereka, dari mana tau acara lo, dan berapa duit yang rela mereka keluar.",
+          "benefit": "Konversi lebih tinggi. Data lebih kaya. Peserta balik lagi.",
+          "icon": "ticket",
+          "thumbnail": "https://picsum.photos/seed/ticketing-suite/600/400",
+          "tags": ["tiket", "data", "konversi", "early bird", "BNPL", "anti calo"],
+          "body_html": "<h2>Tiket Bukan Cuma Akses Masuk — Itu Data Lo</h2><p>Platform tiket kami bukan cuma alat jualan. Ini adalah senjata intel buat ngerti siapa audiens lo. Dari mana mereka tau acara lo? Channel marketing mana yang paling efektif? Jam berapa mereka biasanya checkout? Semua ada datanya.</p><h2>Fitur Yang Bikin Lo Senyum</h2><ul><li><strong>Multi-Tier Pricing:</strong> Regular, VIP, Early Bird, Student — lo yang tentuin. Semua dalam satu dashboard.</li><li><strong>Anti Calo Built-In:</strong> Batas pembelian per NIK, verifikasi identitas, dan fraud detection — bikin calo kapok.</li><li><strong>BNPL:</strong> Kerja sama dengan Kredivo, Akulaku. Peserta bisa nyicil, lo tetep dapet duit full.</li><li><strong>Diskon & Kode Promo:</strong> Bikin diskon grup, early bird, flash sale — semua dengan urgency timer biar konversi cepet.</li><li><strong>Check-in QR Real-Time:</strong> Peserta tinggal scan, masuk. Lo bisa liat siapa aja yang udah datang, real-time.</li><li><strong>Email Otomatis:</strong> Konfirmasi, pengingat, tiket digital, follow-up pasca-acara — semua otomatis ke email peserta.</li></ul><h2>Data Yang Lo Dapetin</h2><p>Bukan cuma jumlah tiket terjual. Kami kasih: demografi peserta (usia, domisili, pekerjaan), channel marketing mana yang paling convert, jam-jam peak checkout, retention rate buat acara berikutnya, dan banyak lagi.</p>"
+        }
+      ]
+    },
+    "sponsor_benefits": {
+      "category_name": "Untuk Sponsor (Mitra Merek)",
+      "category_slug": "/services/sponsor-brand",
+      "category_description": "Sponsor gak cuma pasang logo. Di Nara, lo bisa liat langsung impact-nya.",
+      "items": [
+        {
+          "id": "sb-001",
+          "title": "Sponsor ROI Dashboard",
+          "slug": "/services/sponsor-brand/roi-dashboard",
+          "tagline": "Lo ngeluarin duit, lo liat langsung hasilnya.",
+          "excerpt": "Portal eksklusif buat sponsor. Liat real-time: berapa orang mampir ke stan lo, berapa yang qualified leads, berapa yang akhirnya jadi customer. Semua transparan, gak pake klaim kosong.",
+          "benefit": "Data real. Bukan sekadar perkiraan.",
+          "icon": "bar-chart-3",
+          "thumbnail": "https://picsum.photos/seed/sponsor-dashboard/600/400",
+          "tags": ["sponsor", "ROI", "dasbor", "metrik", "transparansi"],
+          "body_html": "<h2>Sponsor Bukan Cuma Pasang Banner — Ini Investasi Bisnis</h2><p>Lo udah keluar duit jutaan buat sponsor acara. Wajar banget kalau lo pengen tau: emangnya worth it? Di Nara, kita gak cuma kasih 'perkiraan' — kita kasih data real-time yang lo bisa pake buat rapat sama bos lo.</p><h2>Apa Yang Bisa Lo Liat di Dasbor?</h2><ul><li><strong>Traffic Stan Real-Time:</strong> Berapa orang yang mampir. Bukan cuma jumlah, tapi juga kualitas — kita kategorikan jadi hot, warm, cold.</li><li><strong>Lead Capture Otomatis:</strong> Pengunjung tinggal scan QR, data mereka langsung masuk ke sistem. Nama, email, perusahaan, jabatan — semua tercatat rapi.</li><li><strong>Engagement Depth:</strong> Gak cuma mampir, tapi berapa lama mereka ngobrol? 2 menit? 15 menit? Ini yang bedain lead beneran sama yang cuma lewat.</li><li><strong>Conversion Tracking:</strong> Dari lead yang lo dapet, berapa yang akhirnya jadi pelanggan? Kita track sampe 90 hari pasca-acara.</li><li><strong>Brand Awareness Lift:</strong> Survey sebelum dan sesudah acara buat ngukur siapa yang jadi aware sama brand lo.</li></ul><h2>Bukan Cuma Angka — Tapi Insight</h2><p>Dasbor kita gak cuma nampilin metrik. Kita kasih insight: segmen mana yang paling tertarik sama brand lo? Jam berapa traffic paling tinggi? Tim sales lo mana yang paling jago closing? Semua bisa dipake buat strategi berikutnya.</p>"
+        },
+        {
+          "id": "sb-002",
+          "title": "Sponsor Opportunity Marketplace",
+          "slug": "/services/sponsor-brand/opportunity-marketplace",
+          "tagline": "Cari acara buat sponsor? Tinggal scroll. Tinggal klik.",
+          "excerpt": "Gak perlu nungguin proposal dari EO. Di marketplace kita, lo bisa liat semua acara NARA yang lagi nyari sponsor, lengkap sama data audiensnya. Lo yang tentuin mau yang mana.",
+          "benefit": "Lo yang pegang kendali. Lo yang pilih.",
+          "icon": "shopping-bag",
+          "thumbnail": "https://picsum.photos/seed/sponsor-marketplace/600/400",
+          "tags": ["sponsor", "marketplace", "peluang", "audiens", "transparan"],
+          "body_html": "<h2>Gak Perlu Nunggu — Lo Yang Jalan Duluan</h2><p>Capek nungguin EO ngirim proposal yang isinya template semua? Di NARA, kita balik meja. Lo bisa browsing sendiri acara-acara kita, liat data audiensnya, dan langsung booking slot sponsor — semua dari satu dashboard.</p><h2>Kenapa Marketplace Ini Beda?</h2><ul><li><strong>Data Audiens Transparan:</strong> Setiap acara nampilin demografi audiens: usia, domisili, pekerjaan, income bracket. Lo bisa nilai sendiri apakah audiensnya cocok sama target market lo.</li><li><strong>Track Record:</strong> Kita tampilin data historis: acara serupa sebelumnya, berapa jumlah peserta, berapa engagement sponsor sebelumnya. Lo punya gambaran jelas sebelum invest.</li><li><strong>Harga Transparan:</strong> Gak pake negosiasi alot. Harga tier sponsorship udah tercantum jelas. Lo tinggal pilih: Platinum, Gold, Silver — sesuai budget.</li><li><strong>Satu Klik Booking:</strong> Lo cocok? Tinggal klik booking, kontrak digital langsung terbit. Pembayaran bisa dicicil.</li></ul><h2>Update Real-Time</h2><p>Ada acara baru yang sesuai sama preferensi lo? Kita kabarin duluan. Lo bisa dapet slot eksklusif sebelum acara dibuka ke sponsor lain.</p>"
+        }
+      ]
+    },
+    "vendor_partnership": {
+      "category_name": "Untuk Vendor (Mitra Pasokan & Layanan)",
+      "category_slug": "/services/vendor-partner",
+      "category_description": "Vendor happy, acara lancar. Itu rumus kami.",
+      "items": [
+        {
+          "id": "vp-001",
+          "title": "Vendor Clarity Portal",
+          "slug": "/services/vendor-partner/vendor-portal",
+          "tagline": "Lo gak perlu chat 50 orang. Semua jelas di satu layar.",
+          "excerpt": "Portal khusus vendor buat liat brief, timeline, checklist, sampe status pembayaran. Gak ada lagi miskom yang bikin lo lembur gak dibayar. Semua hitam di atas putih.",
+          "benefit": "Gak pusing. Gak miskom. Gak telat bayar.",
+          "icon": "monitor-smartphone",
+          "thumbnail": "https://picsum.photos/seed/vendor-portal/600/400",
+          "tags": ["vendor", "portal", "kejelasan", "koordinasi", "pembayaran"],
+          "body_html": "<h2>Kerja Sama Vendor Gak Mesti Ribet</h2><p>Pengalaman jadi vendor event itu seringnya kayak gini: chat 15 orang beda, brief berubah mendadak, dan invoice lo dibayar telat 2 bulan. Di NARA, kita pengen ngerubah itu.</p><h2>Apa Yang Lo Dapet di Portal Vendor?</h2><ul><li><strong>Brief Jelas & Detail:</strong> Spesifikasi, kuantitas, deadline — semua tertulis jelas. Gak ada lagi 'eh tambahin dong' mendadak.</li><li><strong>Checklist Interaktif:</strong> Lo bisa centang sendiri progress lo. Organizer langsung liat update-nya tanpa perlu lo chat.</li><li><strong>Timeline Transparan:</strong> Setup jam berapa, selesai jam berapa, kapan bisa pulang — semua tertera. Lo bisa atur logistik sendiri.</li><li><strong>Komunikasi Satu Arah:</strong> Semua pesan dari organizer ada di portal. Gak perlu cek WhatsApp, Telegram, email — semua di satu tempat.</li><li><strong>Status Pembayaran Real-Time:</strong> Invoice lo udah sampe mana? Udah approved? Kapan ditransfer? Lo bisa liat sendiri tanpa perlu nanya.</li></ul><h2>Kenapa Vendor Suka?</h2><p>Kejelasan bikin lo kerja lebih tenang. Pembayaran tepat waktu bikin lo bisa atur cash flow. Dan sistem rating bikin lo bisa bangun reputasi buat dapet job berikutnya.</p>"
+        },
+        {
+          "id": "vp-002",
+          "title": "Vendor Opportunity Marketplace",
+          "slug": "/services/vendor-partner/job-marketplace",
+          "tagline": "Cari job event? Di sini tempatnya.",
+          "excerpt": "Lo bisa browsing semua acara NARA yang lagi cari vendor. Liat brief, liat budget, langsung apply. Gak perlu kenal orang dalem — yang penting skill lo cocok.",
+          "benefit": "Job lancar. Reputasi naik. Pelanggan balik.",
+          "icon": "briefcase",
+          "thumbnail": "https://picsum.photos/seed/vendor-marketplace/600/400",
+          "tags": ["vendor", "marketplace", "peluang", "reputasi", "pekerjaan"],
+          "body_html": "<h2>Cari Kerjaan Gak Perlu Kenal Orang Dalem</h2><p>Di dunia event, vendor sering dapet kerjaan dari 'lo kenal siapa'. Kita pengen ubah itu. Di NARA, yang penting skill lo — bukan siapa yang lo kenal.</p><h2>Gimana Caranya?</h2><ul><li><strong>Bikin Profil Vendor:</strong> Tampilin portofolio terbaik lo, pengalaman, spesialisasi, harga, dan rating dari klien sebelumnya.</li><li><strong>Browse Job Board:</strong> Semua acara NARA yang lagi cari vendor ada di sini. Lo bisa filter berdasarkan kategori, lokasi, atau budget.</li><li><strong>Langsung Apply:</strong> Brief udah jelas. Budget udah transparan. Lo tinggal apply — kita yang cocokkan.</li><li><strong>Bangun Reputasi:</strong> Dapet rating bagus? Lo masuk daftar 'Vendor Pilihan'. Dapet akses prioritas ke job berikutnya, harga negosiasi lebih fleksibel.</li><li><strong>Bayaran Tepat Waktu:</strong> Semua transaksi lewat sistem. Invoice langsung diproses. Gak ada lagi drama 'ditunda mulu'.</li></ul><h2>Yang Udah Gabung</h2><p>Ratusan vendor dari berbagai kategori udah gabung di NARA Marketplace. Catering, sound system, dekorasi, lighting, dokumentasi — semua ada. Lo tinggal pilih job yang cocok.</p>"
+        },
+        {
+          "id": "vp-003",
+          "title": "Pelatihan & Sertifikasi Vendor",
+          "slug": "/services/vendor-partner/training",
+          "tagline": "Skill lo naik, job lo makin banyak.",
+          "excerpt": "NARA sediain pelatihan gratis buat vendor pilihan. Dari safety briefing sampe customer service — biar lo makin profesional dan makin banyak yang nyari.",
+          "benefit": "Skill naik. Rate naik. Job lancar.",
+          "icon": "graduation-cap",
+          "thumbnail": "https://picsum.photos/seed/vendor-training/600/400",
+          "tags": ["vendor", "pelatihan", "sertifikasi", "skill", "profesional"],
+          "body_html": "<h2>Kita Gak Cuma Nyari Vendor — Kita Bangun Mitra</h2><p>Vendor yang terampil adalah aset buat ekosistem event. Makanya kita investasi balik ke vendor: pelatihan gratis, sertifikasi, dan akses ke teknologi terbaru.</p><h2>Program Pelatihan Vendor</h2><ul><li><strong>Safety First:</strong> Pelatihan keselamatan kerja standar industri. Sertifikat berlaku 2 tahun.</li><li><strong>Customer Service Excellence:</strong> Gimana caranya ngadepin klien yang demanding, komunikasi yang efektif, dan ninggalin kesan profesional.</li><li><strong>Tech Upgrade:</strong> Pelatihan alat-alat baru, software terbaru, dan tren teknis di industri event.</li><li><strong>On-the-Job Mentoring:</strong> Lo bakal didampingin langsung sama kru NARA yang udah berpengalaman di acara-acara besar.</li></ul><h2>Benefit Buat Vendor</h2><p>Vendor yang udah ikut pelatihan bisa dapet rate lebih tinggi, akses ke job yang lebih besar, dan badge 'NARA Certified' di profil marketplace lo. Investasi kita buat lo, biar lo makin dipercaya klien.</p>"
+        }
+      ]
+    },
+    "team_culture": {
+      "category_name": "Untuk Tim NARA (Budaya Internal & Pengembangan)",
+      "category_slug": "/services/team-culture",
+      "category_description": "Tim solid, acara mulus. Kami percaya itu.",
+      "items": [
+        {
+          "id": "tc-001",
+          "title": "Ownership Mentality",
+          "slug": "/services/team-culture/ownership-mentality",
+          "tagline": "Bukan 'kerja aja'. Ini misi lo.",
+          "excerpt": "Di NARA, setiap kru adalah pemilik. Lo bukan cuma ngikutin perintah — lo yang tentuin gimana acara ini sukses. Kita semua punya saham di setiap event.",
+          "benefit": "Tim solid. Kualitas tinggi. Semua bangga.",
+          "icon": "flame",
+          "thumbnail": "https://picsum.photos/seed/team-ownership/600/400",
+          "tags": ["budaya", "kepemilikan", "tim", "solid", "quality"],
+          "body_html": "<h2>Lo Bukan Cuma Kerja Di Sini — Lo Pemiliknya</h2><p>Kita gak percaya sama mentalitas 'gue cuma disuruh'. Di NARA, setiap orang punya suara, setiap ide didengerin, dan setiap keberhasilan dirayakan bareng. Lo yang megang kendali.</p><h2>Budaya Yang Kita Bangun</h2><ul><li><strong>Bonus Kinerja Transparan:</strong> Setiap event ada profit share. Lo tau persis berapa yang lo dapet, berdasarkan metrik yang jelas.</li><li><strong>Kredit Publik:</strong> Nama lo dicantumin di laporan event dan media sosial. Lo berhak dapet pengakuan atas kerja keras lo.</li><li><strong>Saluran Feedback Terbuka:</strong> Dari kru junior sampe CEO — semua bisa kasih masukan. Gak ada yang takut ngomong.</li><li><strong>Jenjang Karier Jelas:</strong> Dari koordinator lapangan sampe project lead — lo tau apa yang harus lo capai buat naik level.</li><li><strong>Anggaran Belajar:</strong> Setiap kru dapet 2 juta per tahun buat kursus, sertifikasi, atau konferensi yang lo pengen.</li></ul>"
+        },
+        {
+          "id": "tc-002",
+          "title": "Continuous Learning & Development",
+          "slug": "/services/team-culture/continuous-learning",
+          "tagline": "Lo berkembang, kita berkembang.",
+          "excerpt": "Industri event berubah cepet. Makanya kita investasi di pelatihan: dari kursus online, konferensi, sampe mentoring langsung. Lo mau belajar apa? Kita support.",
+          "benefit": "Skill naik. Karier naik. Income naik.",
+          "icon": "book-open",
+          "thumbnail": "https://picsum.photos/seed/team-learning/600/400",
+          "tags": ["pembelajaran", "pengembangan", "skill", "karier"],
+          "body_html": "<h2>Belajar Gak Berhenti Setelah Lo Join</h2><p>Lo mau expert di bidang tertentu? Atau pengen belajar hal baru yang gak ada hubungannya sama job lo sekarang? Kita dukung. Karena lo yang lebih pintar bikin NARA lebih kuat.</p><h2>Program Pengembangan Kami</h2><ul><li><strong>Anggaran Kursus Online:</strong> 3 juta per tahun per kru. Lo pilih sendiri: Coursera, Udemy, apapun.</li><li><strong>Konferensi Tahunan:</strong> Kita kirim lo ke konferensi pilihan lo — tiket, akomodasi, transportasi ditanggung.</li><li><strong>Sesi Internal Dua Mingguan:</strong> Tim sharing session — lo bisa belajar dari kru lain atau presentasiin project yang lo banggain.</li><li><strong>Mentoring Eksternal:</strong> Lo bisa pilih mentor dari luar NARA buat coaching 1:1.</li><li><strong>Sertifikasi:</strong> Project management, digital marketing, safety certification — semua dibiayain.</li></ul><h2>Karir Di NARA</h2><p>Lebih dari 60% posisi senior diisi dari promosi internal. Kita lebih suka besarin orang dalam daripada nyari dari luar. Lo punya potensi? Kita kasih jalan.</p>"
+        },
+        {
+          "id": "tc-003",
+          "title": "Work-Life Balance & Mental Health",
+          "slug": "/services/team-culture/wellbeing",
+          "tagline": "Acara lo sukses, kepala lo waras.",
+          "excerpt": "Kita tau event itu stressful. Makanya kita bikin aturan wajib istirahat, konseling gratis, jam kerja fleksibel — biar lo tetep sehat dan happy.",
+          "benefit": "Sehat mental. Produktif maksimal.",
+          "icon": "heart",
+          "thumbnail": "https://picsum.photos/seed/team-wellbeing/600/400",
+          "tags": ["keseimbangan", "kesehatan mental", "wellbeing", "fleksibel"],
+          "body_html": "<h2>Event Itu Kerja Keras — Tapi Lo Gak Boleh Sampe Tumbang</h2><p>Kita ngerti industri ini bisa bikin stres. Deadline mepet, klien demanding, dan hari-H yang penuh adrenalin. Makanya wellbeing jadi prioritas kita — bukan cuma slogan.</p><h2>Yang Kita Lakuin</h2><ul><li><strong>Wajib Istirahat:</strong> Abis event besar, lo wajib ambil minimal 2 hari cuti. Gak bisa ditawar. Lo butuh recharge.</li><li><strong>Konseling Gratis & Anonim:</strong> Kerja sama dengan psikolog profesional. Lo bisa ngobrol tanpa takut stigma.</li><li><strong>Subsidi Gym:</strong> Kita ganti 50% biaya membership gym atau studio yoga pilihan lo.</li><li><strong>Jam Kerja Fleksibel:</strong> Jam inti cuma 10:00-15:00. Sisanya? Lo yang atur. Mau WFH kapan aja juga boleh.</li><li><strong>Team Retreat Dua Kali Setahun:</strong> Bukan meeting — ini liburan beneran. Panjat gunung, diving, atau cuma rebahan di villa.</li><li><strong>Cuti Darurat Tanpa Ditanya:</strong> Lo butuh cuti karena alasan personal? Gak perlu cerita detail. Langsung ACC.</li></ul>"
+        }
+      ]
+    },
+    "participant_benefits": {
+      "category_name": "Untuk Peserta (Member & Walk-in)",
+      "category_slug": "/services/participant",
+      "category_description": "Mau daftar atau langsung datang — pengalaman lo tetap premium.",
+      "items": [
+        {
+          "id": "pt-001",
+          "title": "Frictionless Ticketing & Fast Check-in",
+          "slug": "/services/participant/ticketing-checkin",
+          "tagline": "Beli tiket lo, masuk lo, duduk lo — gak pake ribet.",
+          "excerpt": "Mau beli tiket tanpa daftar akun? Bisa. Mau bayar pake QRIS, GoPay, atau transfer? Bisa. Mau masuk venue cuma dengan scan? Bisa. Semua cepet, semua lancar.",
+          "benefit": "Gak pake akun. Gak pake ngantri lama. Masuk aja.",
+          "icon": "qr-code",
+          "thumbnail": "https://picsum.photos/seed/participant-ticket/600/400",
+          "tags": ["tiket", "check-in", "QR", "walk-in", "member"],
+          "body_html": "<h2>Lo Datang, Lo Scan, Lo Masuk. Semudah Itu.</h2><p>Kita benci antrian. Makanya kita bikin sistem yang bikin lo masuk venue dalam hitungan detik. Mau lo member terdaftar atau tamu biasa — semua dapet pengalaman yang sama cepetnya.</p><h2>Beli Tiket Gak Pake Ribet</h2><ul><li><strong>Tanpa Akun:</strong> Lo gak perlu daftar member buat beli tiket. Cukup isi nama, NIK, email — beres. Kode Booking dan QR lo langsung dikirim.</li><li><strong>Semua Metode Bayar:</strong> QRIS, GoPay, OVO, ShopeePay, transfer bank, kartu kredit — semua bisa. Bahkan BNPL dari Kredivo atau Akulaku.</li><li><strong>Batas Aman Per NIK:</strong> Maksimal 5 tiket per NIK buat konser. Buat workshop? Cukup 1 per akun. Anti calo, lo tetep kebagian.</li></ul><h2>Check-in Secepat Kilat</h2><ul><li><strong>QR Unik Lo:</strong> Setiap tiket punya QR yang cuma bisa dipake sekali. Lo scan, lo masuk — gak bisa disalahgunakan.</li><li><strong>Mode Offline:</strong> Sinyal lemah? Gak masalah. Sistem kita tetep jalan. Data bakal sinkron begitu koneksi balik.</li><li><strong>Dasbor Kehadiran Real-Time:</strong> Buat lo yang bawa rombongan — organizer tau persis siapa aja yang udah datang.</li></ul>"
+        },
+        {
+          "id": "pt-002",
+          "title": "Digital Certificate, Materials & Loyalty",
+          "slug": "/services/participant/certificate-loyalty",
+          "tagline": "Abis acara, lo gak pulang kosong tangan.",
+          "excerpt": "Sertifikat digital langsung masuk email. Materi presentasi bisa lo download. Galeri foto acara bisa lo akses. Plus — makin sering lo datang, makin banyak poin yang lo dapet!",
+          "benefit": "Dapet ilmu. Dapet bukti. Dapet hadiah.",
+          "icon": "award",
+          "thumbnail": "https://picsum.photos/seed/participant-loyalty/600/400",
+          "tags": ["sertifikat", "materi", "loyalitas", "poin", "reward"],
+          "body_html": "<h2>Acara Lo Selesai — Tapi Benefit Lo Belum</h2><p>Kita gak mau lo cuma datang, duduk, pulang. Setiap acara NARA ninggalin sesuatu buat lo. Ilmu, bukti kehadiran, dan kesempatan buat dapet lebih banyak.</p><h2>Apa Yang Lo Dapet?</h2><ul><li><strong>Sertifikat Digital Otomatis:</strong> Buat workshop, seminar, bootcamp — sertifikat lo langsung digenerate dan dikirim ke email. Siap dipajang di LinkedIn.</li><li><strong>Materi & Slide:</strong> Presentasi pembicara, worksheet, template — semua bisa lo download dari portal peserta.</li><li><strong>Galeri Acara Eksklusif:</strong> Foto-foto keren selama acara — bisa lo download, share, atau simpen sendiri.</li><li><strong>Rekaman Sesi:</strong> Gak sempet dateng ke salah satu sesi? Atau pengen nonton ulang? Rekaman bisa lo akses kapan aja.</li></ul><h2>Program Loyalitas NARA</h2><ul><li><strong>Poin Otomatis:</strong> Setiap beli tiket, lo dapet poin. Gak perlu daftar — langsung masuk ke akun lo.</li><li><strong>Tiga Tier:</strong> Basic → Premium → Elite. Makin tinggi tier lo, makin gede multiplier hadiahnya.</li><li><strong>Tukerin Poin Lo:</strong> Diskon tiket, akses eksklusif, merchandise, atau meet & greet — lo yang pilih.</li></ul>"
+        },
+        {
+          "id": "pt-003",
+          "title": "Refund yang Adil & Tanpa Repot",
+          "slug": "/services/participant/refund",
+          "tagline": "Gak jadi datang? Kita balikin duit lo, gak pake drama.",
+          "excerpt": "Rencana berubah? Kita ngerti. Lo bisa refund tiket dengan mudah — member tinggal klik, tamu tinggal isi form. Semua proses dijelasin dari awal. Gak ada potongan tersembunyi.",
+          "benefit": "Refund gampang. Tanpa biaya siluman.",
+          "icon": "shield-check",
+          "thumbnail": "https://picsum.photos/seed/participant-refund/600/400",
+          "tags": ["refund", "pengembalian dana", "garansi", "fair"],
+          "body_html": "<h2>Refund Itu Hak Lo — Bukan Beban</h2><p>Banyak EO bikin refund seribet mungkin biar lo nyerah. Kita gak gitu. Lo berhak dapet duit balik dengan mudah dan jelas — karena itu memang hak lo sebagai pembeli.</p><h2>Gimana Caranya?</h2><ul><li><strong>Buat Member:</strong> Login ke dasbor Tiket Saya, pilih tiket yang mau direfund, pilih alasan — duit lo langsung diproses balik ke sumber pembayaran. Otomatis.</li><li><strong>Buat Tamu:</strong> Masuk ke halaman refund, masukin Kode Booking lo, verifikasi data diri — tim finance kita yang proses manual. Pasti dibayar.</li></ul><h2>Aturan Main Yang Wajar</h2><ul><li><strong>Event Dibatalkan EO?</strong> Refund 100%. Gak pake basa-basi.</li><li><strong>Event Dijadwal Ulang?</strong> Lo bisa pilih refund penuh atau terima tiket buat jadwal baru.</li><li><strong>Lo yang Batal?</strong> Tergantung seberapa deket sama hari-H. Tapi aturannya udah jelas dari awal — gak ada yang ditutupin.</li></ul>"
+        }
+      ]
+    }
+  }
+}

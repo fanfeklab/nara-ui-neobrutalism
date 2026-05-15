@@ -1,99 +1,91 @@
-import { Button } from "@/components/ui/button";
+import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Ticket, Speaker, Music, Megaphone, Zap, Laptop, ShieldCheck } from "lucide-react";
+import { ArrowRight, Zap, Combine, Map, Users, Lightbulb, ClipboardList, Shield, Speaker } from "lucide-react";
 import { cn } from "@/lib/utils";
+import servicesData from "@/data/services.json";
+
+const IconMap: Record<string, React.ElementType> = {
+  "zap": Zap,
+  "combine": Combine,
+  "map": Map,
+  "users": Users,
+  "lightbulb": Lightbulb,
+  "clipboard-list": ClipboardList,
+  "shield": Shield,
+  "speaker": Speaker,
+};
 
 export default function ServicesPage() {
-  const services = [
-    {
-      icon: Music,
-      title: "Produksi Konser Skala Penuh",
-      desc: "Dari tur stadion epik hingga panggung underground yang intim. Kami menangani desain tata panggung, pencahayaan, rekayasa suara (FOH), dan manajemen talenta terbaik di kelasnya.",
-      color: "bg-[#ccff00]"
-    },
-    {
-      icon: Ticket,
-      title: "Mesin Tiket Proprietary",
-      desc: "Nol ketergantungan pada vendor luar. Sistem tiket mandiri kami mampu menahan arus 100.000 pengunjung serentak dilengkapi QR Code dinamis anti-calo.",
-      color: "bg-[#8a2be2]"
-    },
-    {
-      icon: Speaker,
-      title: "Infrastruktur Audio Visual",
-      desc: "Kami tidak sekadar menyewa speaker. Kami merakit lanskap akustik dan permainan visual mematikan yang menghipnotis seluruh indera audiens.",
-      color: "bg-[#ff5500]"
-    },
-    {
-      icon: Megaphone,
-      title: "Konferensi B2B & Eksibisi",
-      desc: "Acara korporat tidak harus membosankan. Kami menyuntikkan energi agresi Neo-Brutalism ke dalam puncak teknologi, perilisan produk, dan networking tertutup.",
-      color: "bg-[#06b6d4]"
-    },
-    {
-      icon: ShieldCheck,
-      title: "Manajemen Keamanan & Keramaian",
-      desc: "Telemetri kerumunan cerdas, gelang akses RFID per zona, serta barikade militer. Protokol keamanan adalah sesuatu yang tidak pernah kami kompromikan.",
-      color: "bg-[#22c55e]"
-    },
-    {
-      icon: Laptop,
-      title: "Intervensi Ruang Digital & Periklanan",
-      desc: "Sirkuit marketing, kampanye media sosial guerilla, hingga penyiaran global 4K multi-cam untuk mereka yang tidak bisa berada di lapangan.",
-      color: "bg-white"
-    }
-  ];
+  const serviceCategories = Object.values(servicesData.services);
 
   return (
-    <div className="w-full">
-      {/* Header Section */}
-      <section className="bg-black text-white w-full py-24 border-b-2 border-black flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{ background: 'repeating-linear-gradient(45deg, #000, #000 10px, #222 10px, #222 20px)' }}></div>
-        <div className="relative z-10">
-          <h1 className="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6 text-white drop-shadow-[4px_4px_0_#ff5500]">
-            ARSENAL KAMI
+    <div className="w-full min-h-screen bg-background">
+      {/* Header */}
+      <section className="w-full py-20 bg-background  border-b-2 border-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6 relative inline-block text-foreground">
+            LAYANAN <span className="text-primary drop-shadow-[2px_2px_0_#000] dark:drop-shadow-none bg-black px-4 ml-2 border-4 border-black dark:border-white rounded-xl">KAMI</span>
           </h1>
-          <p className="font-body text-xl max-w-2xl text-gray-300 font-medium mx-auto">
-            Gudang persenjataan lengkap untuk mengorkestrasikan sebuah fenomena budaya yang sesungguhnya. Pilih alat Anda.
+          <p className="text-xl font-body max-w-2xl text-muted-foreground font-medium">
+            Dari sketsa kasar hingga gemuruh tepuk tangan. Kami orkestrasikan semuanya.
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="w-full py-24 bg-card border-b-2 border-black">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {services.map((svc, i) => (
-              <div key={i} className={cn("group bg-background border-4 border-black rounded-2xl p-8 shadow-brutal hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#000] transition-all flex flex-col", i === 0 ? "md:col-span-2 lg:col-span-2" : i === 4 ? "md:col-span-2 lg:col-span-1" : "")}>
-                <div className={`w-16 h-16 ${svc.color} border-2 border-black rounded-2xl flex items-center justify-center mb-8 shadow-brutal-sm`}>
-                  <svc.icon className={`w-8 h-8 ${svc.color === 'bg-black' ? 'text-white' : 'text-black'}`} />
-                </div>
-                <h3 className={cn("font-display font-black uppercase tracking-tighter mb-4 border-b-2 border-black pb-2", i === 0 ? "text-3xl lg:text-4xl" : "text-2xl")}>
-                  {svc.title}
-                </h3>
-                <p className={cn("font-body text-muted-foreground font-medium flex-1", i === 0 ? "text-lg lg:text-xl" : "")}>
-                  {svc.desc}
+      {/* Categories */}
+      <div className="flex flex-col">
+        {serviceCategories.map((category, index) => (
+          <section 
+            key={category.category_slug} 
+            className={cn("w-full py-16 md:py-24 border-b-2 border-black", index % 2 === 0 ? "bg-card" : "bg-card text-card-foreground text-white dark:bg-card dark:text-foreground")}
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="mb-12 md:max-w-3xl">
+                <h2 className="text-3xl md:text-5xl font-display font-black uppercase tracking-tighter mb-4">
+                  {category.category_name}
+                </h2>
+                <p className={cn("text-lg font-body font-medium", index % 2 === 0 ? "text-muted-foreground" : "text-gray-300 dark:text-muted-foreground")}>
+                  {category.category_description}
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* CTE */}
-      <section className="w-full py-32 bg-background text-center relative overflow-hidden">
-         {/* Decorative backgrounds */}
-         <div className="absolute top-10 left-[10%] w-32 h-32 bg-[#ff5500] border-4 border-black rounded-full mix-blend-multiply opacity-50 dark:opacity-20 blur-xl animate-pulse" />
-         <div className="absolute bottom-10 right-[10%] w-48 h-48 bg-[#06b6d4] border-4 border-black rounded-full mix-blend-multiply opacity-50 dark:opacity-20 blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                {category.items.map(item => {
+                  const Icon = IconMap[item.icon] || Zap;
+                  
+                  return (
+                    <div key={item.id} className="bg-card text-card-foreground border-4 border-black rounded-2xl shadow-brutal hover:-translate-y-2 hover:shadow-[8px_8px_0_0_#000] transition-all flex flex-col group">
+                      <div className="p-6 md:p-8 flex flex-col flex-1">
+                        <div className="w-14 h-14 bg-black rounded-xl flex items-center justify-center mb-6 shadow-brutal-sm group-hover:bg-secondary transition-colors group-hover:rotate-6">
+                          <Icon className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="font-display font-black text-2xl uppercase tracking-tight leading-tight mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="font-body text-sm font-bold text-secondary uppercase mb-4">
+                          {item.tagline}
+                        </p>
+                        <p className="font-body text-gray-700 font-medium mb-6 line-clamp-3">
+                          {item.excerpt}
+                        </p>
+                        
+                        <div className="mt-auto border-t-2 border-black pt-4">
+                           <Link to={item.slug} className="flex items-center gap-2 font-display font-black uppercase text-lg text-black hover:text-accent transition-colors">
+                             LIHAT DETAIL <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                           </Link>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
 
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black uppercase tracking-tighter mb-8 max-w-4xl mx-auto leading-tight">
-            BERHENTI <span className="text-muted-foreground border-black dark:border-white">MERAIH</span> HASIL BIASA.
-          </h2>
-          <Button asChild size="lg" className="w-full sm:w-auto max-w-full min-h-16 h-auto py-4 px-6 md:px-12 bg-black text-white hover:bg-[#8a2be2] border-2 border-black shadow-brutal text-lg md:text-xl rounded-2xl transition-all whitespace-normal text-center leading-tight">
-            <Link to="/contact">EKSKUSI BERSAMA KAMI TERKINI <ArrowRight className="w-6 h-6 ml-2 shrink-0 hidden sm:inline-block" /></Link>
-          </Button>
-        </div>
-      </section>
+            </div>
+          </section>
+        ))}
+      </div>
+
     </div>
-  );
+  )
 }

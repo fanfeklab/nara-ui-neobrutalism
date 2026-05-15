@@ -1,0 +1,88 @@
+{
+  "blog_articles": [
+    {
+      "id": "blog-001",
+      "title": "Logistik Acara Modern: Dari Spreadsheet ke Dasbor Real-Time",
+      "slug": "/blog/logistik-acara-modern-spreadsheet-dashboard",
+      "author": "Hanif S, Lead Project Engineer",
+      "date": "2025-05-10",
+      "date_readable": "10 Mei 2025",
+      "category": "Logistik Acara",
+      "read_time": "6 menit",
+      "excerpt": "Spreadsheet adalah musuh logistik. Kami berevolusi dari rantai email, ledakan WhatsApp, dan kekacauan pemesanan ganda ke dasbor real-time yang bisa diakses semua vendor, sponsor, dan kru. Ini bukan soal teknologi — ini soal kewarasan.",
+      "thumbnail": "https://picsum.photos/seed/logistics-modern/600/400",
+      "tags": ["logistik", "teknologi", "manajemen vendor", "efisiensi"],
+      "body_html": "<h2>Masalah Lama yang Masih Umum</h2><p>Sebelum NARA, kami lihat banyak organizer pake sistem 'spreadsheet + WhatsApp group'. Keliatannya sederhana, tapi dalam praktik? Chaos total.</p><p>Skenario familiar: Email vendor A tidak dibaca, follow-up via WhatsApp, vendor balas 'OK' tapi tidak jelas jam berapa. H-1 acara, organizer baru tahu vendor A setup jam 6 pagi (padahal venue buka jam 10). Panik, reschedule, biaya overtime tambah, crew stress.</p><h2>Triple Cost of Poor Logistics Visibility</h2><p>Chaos logistik punya 3 cost: Finansial (lembur, reschedule), Operasional (setup delay, soundcheck delay, event start late), dan Human (team stress, vendor relationship damage, reputasi drop).</p><h2>Evolusi NARA: Dasbor Real-Time</h2><p>Kami sadar: vendor tidak butuh 'better email'. Vendor butuh visibility penuh, clarity absolute, confidence tinggi. Kami bangun Portal Vendor dengan dasbor real-time.</p><h3>Fitur Inti</h3><p>Vendor lihat semua detail: setup time, role, equipment checklist, timeline, contact info, payment status. Semua jelas. Tidak ada miskomunikasi.</p><h3>Koordinasi Real-Time</h3><p>Bukan WhatsApp grup. Organizer punya chat channel per vendor. Semua pesan tercatat, attachment tersimpan, timestamp otomatis.</p><h3>Transparency Layer</h3><p>Organizer lihat dashboard overview: vendor readiness, equipment status, crew assignment, payment status. Semua real-time.</p><h2>Benefit Real dari System Ini</h2><p>Vendor stress turun 70%. Organizer control naik 300%. On-site execution smooth. Post-event learning terdokumentasi.</p>"
+    },
+    {
+      "id": "blog-002",
+      "title": "Tiket yang Tepat = Acara yang Terukur",
+      "slug": "/blog/tiket-tepat-acara-terukur",
+      "author": "Nadia Kirana, CEO",
+      "date": "2025-04-22",
+      "date_readable": "22 April 2025",
+      "category": "Teknologi Tiket",
+      "read_time": "8 menit",
+      "excerpt": "Tiket bukan hanya akses masuk. Tiket adalah titik data pertama yang memberitahu Anda siapa audiens Anda. Demografi, perilaku pra-acara, tingkat konversi—semuanya bisa ditangkap di lapisan tiket.",
+      "thumbnail": "https://picsum.photos/seed/ticket-measurement/600/400",
+      "tags": ["tiket", "analitik data", "wawasan audiens", "konversi"],
+      "body_html": "<h2>Tiket adalah Lebih dari Akses Fisik</h2><p>Kalau Anda pikir tiket itu cuma 'barcode untuk masuk venue', Anda kehilangan 70% value dari ticketing system. Tiket adalah first interaction antara organizer dan attendee. Di situ, organizer bisa collect data: siapa dia, dari mana tau event, budget, behavior.</p><h2>Case Study: Malang Tech Summit 2025</h2><p>Kami organize Tech Summit dengan target 5000 attendee. Sebelum launch, kami define ideal attendee: age 25-45, profession: software engineer, product manager, founder, investor. Tiers: Regular (Rp 750k), VIP (Rp 3jt), Student Discount (Rp 250k).</p><h2>Data Point Kami Collect</h2><p>Dari mana traffic datang? Conversion rate per channel? LinkedIn jadi prime channel untuk tech audience. Cart abandonment 45% — kami simplify BNPL flow.</p><h2>Pre-Event Phase</h2><p>Attendee segment: Jakarta Corporate (60%), Startup Founder (15%), Student/Fresh Grad (10%). Kami sesuaikan experience: special corporate lunch, pitch stage, career workshop.</p><h2>Post-Event: Data yang Lebih Dalam</h2><p>Checkin time, session attendance, attendee flow. Integration dengan post-event survey: NPS 8.7/10, 78% akan attend next year.</p><h2>ROI Calculation</h2><p>Develop & host ticketing platform = Rp 100jt. Return: 5 event x Rp 500jt extra revenue = Rp 2.5M. Total return 25x.</p>"
+    },
+    {
+      "id": "blog-003",
+      "title": "5 Kesalahan Pelacakan ROI Sponsor (Dan Cara Kami Memperbaikinya)",
+      "slug": "/blog/kesalahan-pelacakan-roi-sponsor",
+      "author": "Budi Santoso, CTO",
+      "date": "2025-04-05",
+      "date_readable": "5 April 2025",
+      "category": "Metrik Sponsor",
+      "read_time": "7 menit",
+      "excerpt": "Sponsor datang, stan ramai, tapi ROI tidak terukur. Kenapa? Karena penyelenggara sering: (1) tidak melacak kualitas prospek, (2) tidak mengukur kedalaman keterlibatan, (3) tidak mengkorelasikan ke konversi pasca-acara. Kami punya pendekatan sistematis.",
+      "thumbnail": "https://picsum.photos/seed/roi-sponsor/600/400",
+      "tags": ["metrik sponsor", "ROI", "pengukuran", "analitik data"],
+      "body_html": "<h2>The Problem is Real</h2><p>Sponsorship adalah investment significant. Tapi kebanyakan sponsor tidak tahu ROI mereka. Booth ramai, tapi tidak tau ada berapa qualified lead. Brand awareness lift? Tidak terukur.</p><h2>Error 1: Vanity Metrics Only</h2><p>'Booth Anda dapat 1000 pengunjung'. Wrong. Pengunjung bukan qualified lead. Kita implement Lead Qualification Framework: Hot, Warm, Cold, Invalid. Dari 1000 traffic, 120 hot lead (12%) — excellent.</p><h2>Error 2: No Engagement Depth Measurement</h2><p>'Estimasi media value Rp 100 juta'. Bullshit. Real engagement: time spent at booth. Micro: 0-2 min, Deep: 5-15 min, Very deep: 15+ min. 100 person dengan 15+ min engagement = likely to convert.</p><h2>Error 3: Zero Post-Event Conversion Tracking</h2><p>Event selesai, sponsor bye. Kita integrate lead ke CRM sponsor. Track: lead → opportunity → won deal. 24 dari 120 hot lead jadi customer = Rp 1.2M revenue.</p><h2>Error 4: Ignoring Engagement Depth Variation</h2><p>Founder segment: 9.2 min avg (highest). Student: 2.1 min (low). Jangan average. Segment your analysis.</p><h2>Error 5: Not Measuring Brand Awareness Lift</h2><p>Pre-post survey + control group. Awareness lift +14pp. Net new aware: 700 person = Rp 35jt media value.</p>"
+    },
+    {
+      "id": "blog-004",
+      "title": "Desain Pengalaman di Acara: Orkestra, Bukan Dekorasi",
+      "slug": "/blog/desain-pengalaman-acara-orkestra",
+      "author": "Nadia Kirana, CEO",
+      "date": "2025-03-20",
+      "date_readable": "20 Maret 2025",
+      "category": "Desain Pengalaman",
+      "read_time": "9 menit",
+      "excerpt": "Dekorasi cantik tidak membuat acara berkesan. Yang membuat kesan adalah orkestra sempurna: waktu, alur, momen kejutan, aliran yang alami, dan koneksi antar peserta. Kami pelajari cara mendesain setiap detik acara Anda.",
+      "thumbnail": "https://picsum.photos/seed/experience-design/600/400",
+      "tags": ["desain pengalaman", "psikologi acara", "perjalanan peserta", "alur"],
+      "body_html": "<h2>The Difference</h2><p>Dekorasi = visual aesthetics. Experience = how attendee FEEL throughout the event. A generic conference ballroom dengan experience design yang good lebih memorable daripada luxury resort dengan experience design yang lazy.</p><h2>Case Study: Digital Marketing Bootcamp</h2><p>Scenario A: No experience design. Peserta datang, venue tidak jelas, checkin antri 20 min, mentor late, awkward silence. By Day 3: attendance drop, energy low.</p><p>Scenario B: With experience design. Pre-event email personal. Checkin cepat. Ice-breaker 20 min. Mentor inspiring. Lunch facilitated. Daily retrospective. Result: attendance 100%, energy high, bonding strong.</p><h2>The Psychology Behind Experience Design</h2><p>Primacy effect: first 10 min set tone. Pacing & rhythm: 15-20 min attention span. Moments of surprise. Psychological safety. Meta-moment.</p><h2>ROI of Good Experience Design</h2><p>Cost: extra Rp 2-5 juta. Benefit: satisfaction naik 40-50%, retention naik 30%, referral naik 25%. Math: Rp 67.5 juta extra revenue for Rp 2.5 juta invest = 2,700% ROI.</p>"
+    },
+    {
+      "id": "blog-005",
+      "title": "Teknologi ERP untuk Acara: Bukan Overkill, Tapi Kebutuhan",
+      "slug": "/blog/teknologi-erp-untuk-acara",
+      "author": "Budi Santoso, CTO",
+      "date": "2025-03-08",
+      "date_readable": "8 Maret 2025",
+      "category": "Teknologi Acara",
+      "read_time": "10 menit",
+      "excerpt": "ERP terkesan korporat dan berlebihan untuk acara. Tapi ketika 50 vendor, 10 sponsor, 3.000 peserta harus diorkestra, spreadsheet sudah tidak cukup. Dasbor terpusat dengan akses berbasis peran adalah pengubah segalanya.",
+      "thumbnail": "https://picsum.photos/seed/erp-event/600/400",
+      "tags": ["teknologi", "ERP", "manajemen acara", "desain sistem"],
+      "body_html": "<h2>The Misconception</h2><p>'ERP itu untuk corporate, bukan event organizer.' 'Spreadsheet sudah cukup.' These statements is half-true.</p><h2>What is ERP (in Event Context)?</h2><p>Single source of truth for all business data: vendor database, sponsor database, attendee database, financial database, equipment database, crew database. All interconnected, accessible by relevant role, real-time updated.</p><h2>Why Spreadsheet Fails</h2><p>Scenario: Malang Tech Summit (5000 attendee, 50 vendor, 10 sponsor). Sheet 1: Vendor Master. Sheet 2: Attendee (10MB). Sheet 3: Sponsor ROI (formula broken). Sheet 4: Equipment (manual). Sheet 5: Crew Assignment (conflict check manual). Result: chaos.</p><h2>System B: ERP (NARA Implementation)</h2><p>Single database with modules: Vendor, Sponsor, Attendee, Equipment, Crew, Financial. Frontend role-based access. Integration: Ticketing, Payment Gateway, SMS/Email, Google Maps, Analytics.</p><h2>The Result</h2><p>Visibility, coordination, efficiency, quality, scale. Time saved: 40%, error prevented: save Rp 15 juta per event.</p><h2>Investment & ROI</h2><p>Cost to build: Rp 300 juta development + Rp 150 juta/year maintenance. Benefit per event: Rp 165 juta+. If 10 event/year: Rp 1.65M benefit vs Rp 150M cost = 1100% ROI.</p>"
+    },
+    {
+      "id": "blog-006",
+      "title": "Pelaporan Pasca-Acara: Dari Data Mentah ke Wawasan yang Dapat Ditindaklanjuti",
+      "slug": "/blog/pelaporan-pasca-acara-data-insight",
+      "author": "Hanif S, Lead Project Engineer",
+      "date": "2025-02-22",
+      "date_readable": "22 Februari 2025",
+      "category": "Analitik Acara",
+      "read_time": "7 menit",
+      "excerpt": "Acara selesai, data hilang. Kami percaya setiap acara adalah kesempatan belajar. Dari perilaku peserta hingga kinerja vendor, semuanya bisa diubah menjadi wawasan untuk acara berikutnya. Kami tunjukkan kerangka analitik kami.",
+      "thumbnail": "https://picsum.photos/seed/post-event-data/600/400",
+      "tags": ["analitik", "pelaporan", "pasca-acara", "wawasan data"],
+      "body_html": "<h2>The Waste of Unanalyzed Data</h2><p>Acara selesai. Organizer capek, team celebrate, then... poof. Data disappear. 5000 attendee, 50 vendor, 10 sponsor interaction data collected, tapi tidak dianalisis.</p><h2>The NARA Post-Event Reporting Framework</h2><p>Phase 1: Data Collection (During Event). Phase 2: Data Processing (Day After). Phase 3: Analysis & Insight Extraction (Day 3). Phase 4: Report Delivery (Day 5).</p><h2>Attendance & Engagement Insight</h2><p>4% no-show, 35% late. Action: start opening 08:45. Pagi mulai agak telat biar semua bisa hadir.</p><h2>Track Popularity Insight</h2><p>AI & ML track 36% attendance, SaaS Scaling 30%. Action: tambah porsi AI, pertahankan SaaS.</p><h2>Vendor Performance Insight</h2><p>Catering 4.8/5 rating. Action: lock-in vendor, negosiasi kontrak jangka panjang.</p><h2>ROI of Post-Event Analysis</h2><p>Cost: analyst 3 days = Rp 5 juta. Benefit: optimization save Rp 200-300jt, sponsor repeat naik Rp 300jt, vendor quality naik Rp 50jt = Rp 500jt+. Total ROI: 6000-8000%.</p>"
+    }
+  ]
+}

@@ -6,12 +6,12 @@ import { Sun, Moon, Cloud, CloudRain, Star } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const switchVariants = cva(
-  "peer group inline-flex shrink-0 cursor-pointer items-center rounded-full border-2 border-black shadow-brutal-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ccff00] focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 hover:translate-x-[1px] hover:translate-y-[1px] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]",
+  "peer group inline-flex shrink-0 cursor-pointer items-center rounded-full border-2 border-black shadow-brutal-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 active:shadow-brutal-active active:translate-x-[4px] active:translate-y-[4px]",
   {
     variants: {
       variant: {
         default:
-          "h-7 w-12 data-[state=checked]:bg-[#ccff00] data-[state=unchecked]:bg-muted",
+          "h-7 w-12 data-[state=checked]:bg-primary data-[state=unchecked]:bg-muted",
         theme:
           "h-9 w-16 relative overflow-hidden data-[state=checked]:bg-[#1e293b] data-[state=unchecked]:bg-[#bae6fd]", // slate-800 vs sky-200
       },
@@ -23,7 +23,7 @@ const switchVariants = cva(
 )
 
 const thumbVariants = cva(
-  "pointer-events-none block rounded-full border-2 border-black bg-white ring-0 transition-transform flex items-center justify-center overflow-hidden z-20 group relative",
+  "pointer-events-none block rounded-full border-2 border-black bg-card ring-0 transition-transform flex items-center justify-center overflow-hidden z-20 group relative",
   {
     variants: {
       variant: {

@@ -24,6 +24,10 @@ import SwitchDoc from "./pages/ui-docs/SwitchDoc";
 import SliderDoc from "./pages/ui-docs/SliderDoc";
 import ProgressDoc from "./pages/ui-docs/ProgressDoc";
 import CardDoc from "./pages/ui-docs/CardDoc";
+import EcommerceCardsDoc from "./pages/ui-docs/cards/EcommerceCardsDoc";
+import EditorialCardsDoc from "./pages/ui-docs/cards/EditorialCardsDoc";
+import EventCardsDoc from "./pages/ui-docs/cards/EventCardsDoc";
+import ProfileCardsDoc from "./pages/ui-docs/cards/ProfileCardsDoc";
 import DataTableDoc from "./pages/ui-docs/DataTableDoc";
 import ChartDoc from "./pages/ui-docs/ChartDoc";
 import StepperDoc from "./pages/ui-docs/StepperDoc";
@@ -68,10 +72,15 @@ import FormDoc from "./pages/ui-docs/FormDoc";
 
 import AboutPage from "./pages/public/AboutPage";
 import ServicesPage from "./pages/public/ServicesPage";
-import PortfolioPage from "./pages/public/PortfolioPage";
+import ServiceDetailPage from "./pages/public/ServiceDetailPage";
 import ClientsPage from "./pages/public/ClientsPage";
+import FaqPage from "./pages/public/FaqPage";
+import ContactPage from "./pages/public/ContactPage";
 import BlogPage from "./pages/public/BlogPage";
 import BlogDetailPage from "./pages/public/BlogDetailPage";
+import EventsPage from "./pages/public/EventsPage";
+import EventDetailPage from "./pages/public/EventDetailPage";
+import CheckoutPage from "./pages/public/CheckoutPage";
 
 export default function App() {
   return (
@@ -81,10 +90,16 @@ export default function App() {
           <Route path="/" element={<PublicPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/services/:category/:slug" element={<ServiceDetailPage />} />
+          <Route path="/portfolio" element={<Navigate to="/events?status=past" replace />} />
           <Route path="/clients" element={<ClientsPage />} />
+          <Route path="/faq" element={<FaqPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/events/:slug" element={<EventDetailPage />} />
+          <Route path="/checkout/:event_id" element={<CheckoutPage />} />
         </Route>
         
         <Route path="/dashboard" element={<Dashboard />} />
@@ -109,6 +124,10 @@ export default function App() {
           <Route path="toggle" element={<ToggleDoc />} />
           <Route path="aspect-ratio" element={<AspectRatioDoc />} />
           <Route path="cards" element={<CardDoc />} />
+          <Route path="cards-ecommerce" element={<EcommerceCardsDoc />} />
+          <Route path="cards-editorial" element={<EditorialCardsDoc />} />
+          <Route path="cards-event" element={<EventCardsDoc />} />
+          <Route path="cards-profile" element={<ProfileCardsDoc />} />
           <Route path="calendar" element={<CalendarDoc />} />
           <Route path="form" element={<FormDoc />} />
           <Route path="collapsible" element={<CollapsibleDoc />} />

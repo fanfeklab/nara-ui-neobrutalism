@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
+import { BRAND } from "@/config/brand.config";
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -28,17 +29,15 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
 
       {/* Sidebar Drawer */}
       <aside 
-        className={`fixed inset-y-0 left-0 z-50 w-[280px] bg-[#0a192f] text-white border-r-2 border-black transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 flex flex-col ${
+        className={`fixed inset-y-0 left-0 z-50 w-[280px] bg-background text-foreground text-white border-r-2 border-black transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 flex flex-col ${
           isSidebarOpen ? "translate-x-0 shadow-brutal-lg" : "-translate-x-full"
         }`}
       >
         <div className="h-16 flex items-center px-4 border-b-2 border-black/20 lg:border-transparent shrink-0 mt-2 lg:mt-0">
-          <div className="w-8 h-8 rounded-lg bg-[#ff5500] border-2 border-black flex items-center justify-center font-display font-bold text-black shadow-brutal-sm mr-3">
+          <div className="w-8 h-8 rounded-lg bg-accent border-2 border-black flex items-center justify-center font-display font-bold text-black shadow-brutal-sm mr-3">
             N
           </div>
-          <span className="font-display font-black text-xl tracking-tight text-white">
-            NARA EVENTS
-          </span>
+          <span className="font-display font-black text-xl tracking-tight text-white">{BRAND.name}</span>
           <Button 
             variant="ghost" 
             size="icon" 
@@ -156,9 +155,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
             >
               <PanelLeft className="w-5 h-5" />
             </Button>
-            <span className="font-display font-black text-xl tracking-tight hidden sm:block">
-              NARA EVENTS
-            </span>
+            <span className="font-display font-black text-xl tracking-tight hidden sm:block">{BRAND.name}</span>
           </div>
 
           <div className="flex items-center gap-4">
@@ -168,10 +165,10 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
             
             <div className="flex items-center gap-3 pl-4 border-l-2 border-black">
               <div className="w-10 h-10 rounded-full border-2 border-black overflow-hidden bg-primary shadow-brutal-sm">
-                <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=Nadia Kirana`} alt="Avatar" className="w-full h-full object-cover" />
+                <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${BRAND.founder.name}`} alt="Avatar" className="w-full h-full object-cover" />
               </div>
               <div className="hidden md:block leading-tight">
-                <p className="text-sm font-bold font-mono">Nadia Kirana</p>
+                <p className="text-sm font-bold font-mono">{BRAND.founder.name}</p>
                 <p className="text-xs font-mono text-muted-foreground uppercase">CEO</p>
               </div>
             </div>

@@ -55,8 +55,8 @@ const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
         {!selectedFile ? (
           <div
             className={cn(
-              "relative flex flex-col items-center justify-center w-full h-48 border-2 border-black border-dashed rounded-xl bg-white dark:bg-black transition-colors overflow-hidden group cursor-pointer",
-              dragActive ? "border-[#ccff00] bg-[#ccff00]/10" : "hover:bg-muted"
+              "relative flex flex-col items-center justify-center w-full h-48 border-2 border-black border-dashed rounded-xl bg-card dark:bg-black transition-colors overflow-hidden group cursor-pointer",
+              dragActive ? "border-primary bg-primary/10" : "hover:bg-muted"
             )}
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
@@ -71,7 +71,7 @@ const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
               {...props}
             />
             <div className="flex flex-col items-center justify-center pt-5 pb-6">
-              <div className="p-3 mb-4 rounded-full bg-[#ccff00] border-2 border-black group-hover:scale-110 transition-transform">
+              <div className="p-3 mb-4 rounded-full bg-primary border-2 border-black group-hover:scale-110 transition-transform">
                 <UploadCloud className="w-6 h-6 text-black" strokeWidth={2.5} />
               </div>
               <p className="mb-2 text-sm font-bold text-foreground font-display">

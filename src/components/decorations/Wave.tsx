@@ -8,7 +8,7 @@ interface WaveProps extends React.SVGProps<SVGSVGElement> {
 }
 
 export function Wave({
-  color = "#ccff00",
+  color = "var(--color-primary)",
   className,
   animate = "flow",
   ...props

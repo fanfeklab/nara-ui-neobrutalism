@@ -1,0 +1,116 @@
+{
+  "brand": {
+    "name": "NARA EVENTS",
+    "tagline": "Bersama Nara, Idemu Jadi Nyata!",
+    "colors": {
+      "primary": "#ccff00",
+      "secondary": "#000000"
+    },
+    "founded": 2024,
+    "location": "Malang, Jawa Timur"
+  },
+  "hero_section": {
+    "headline": "Bingung Ngurus Acara? Serahin ke Nara!",
+    "subheadline": "Dari venue, tiket, sampe sponsor — semua beres. Lo fokus aja.",
+    "cta_primary": {
+      "text": "Mulai Gratis Dulu!",
+      "action": "/consultation"
+    },
+    "cta_secondary": {
+      "text": "Intip Hasil Kerja Kami",
+      "action": "/portfolio"
+    },
+    "background_image": "https://picsum.photos/seed/hero-event/1920/1080"
+  },
+  "value_propositions": [
+    {
+      "id": "vp-001",
+      "title": "Tiket Aman, Semua Nyaman",
+      "description": "Sistem tiket in-house. Gak pake calo, gak pake crash pas war. Semua real-time, semua aman.",
+      "icon": "shield-check"
+    },
+    {
+      "id": "vp-002",
+      "title": "Sponsor Senang, Peserta Datang",
+      "description": "Sponsor lo bisa liat ROI langsung di dashboard. Peserta lo ngerasa diperhatiin dari awal sampe abis acara.",
+      "icon": "sparkles"
+    },
+    {
+      "id": "vp-003",
+      "title": "Vendor Jelas, Acara Berkualitas",
+      "description": "Briefing lewat satu portal. Timeline jelas. Pembayaran gak telat. Semua vendor seneng balik lagi.",
+      "icon": "handshake"
+    }
+  ],
+  "stats": {
+    "events_executed": 28,
+    "total_attendees": 150000,
+    "team_members": 8,
+    "client_satisfaction": 94,
+    "cities_coverage": 5
+  },
+  "cta_banners": {
+    "collaboration": {
+      "title": "Punya Ide Acara? Kita Biayain Bareng.",
+      "description": "Lo yang punya ide, kita yang urus. Bagi hasil transparan, tanpa drama. Cocok buat yang mau passive income.",
+      "button_text": "Ceritain Ide Lo",
+      "button_action": "/booking",
+      "background_color": "#ccff00",
+      "text_color": "#000000"
+    },
+    "newsletter": {
+      "title": "Tips Event Organizer Tiap Minggu, Gratis.",
+      "description": "Dari logistik sampe marketing — langsung masuk inbox. Gak pake spam, gak pake jualan.",
+      "input_placeholder": "Alamat Email Lo",
+      "button_text": "Subscribe, Bro!",
+      "button_action": "/subscribe"
+    },
+    "partnership": {
+      "title": "Gabung Jadi Vendor atau Sponsor",
+      "description": "Skill, network, atau budget — kita bisa kolaborasi bareng. Daftar sekarang biar kebagian job selanjutnya.",
+      "button_text": "Daftar Jadi Mitra",
+      "button_action": "/partnership",
+      "background_color": "#000000",
+      "text_color": "#ccff00"
+    }
+  },
+  "footer": {
+    "company_info": {
+      "name": "NARA EVENTS",
+      "legal_name": "PT. Nara Sukses Bersama",
+      "address": "Jl. Kawi No. 12, Malang, Jawa Timur 65114",
+      "phone": "+62 857 3100 0806",
+      "email": "hello@naraevents.id",
+      "website": "www.naraevents.id"
+    },
+    "contact_sections": {
+      "inquiries": { "title": "Tanya-Tanya", "email": "inquiry@naraevents.id", "phone": "+62 857 3100 0806" },
+      "partnership": { "title": "Jadi Mitra", "email": "partner@naraevents.id", "phone": "+62 857 3100 0807" },
+      "support": { "title": "Butuh Bantuan", "email": "support@naraevents.id", "phone": "+62 857 3100 0808" }
+    },
+    "social_media": {
+      "instagram": "https://instagram.com/naraevents.id",
+      "linkedin": "https://linkedin.com/company/nara-events",
+      "tiktok": "https://tiktok.com/@naraevents.id",
+      "youtube": "https://youtube.com/@naraevents"
+    },
+    "quick_links": [
+      { "text": "Hasil Kerja Kami", "url": "/portfolio" },
+      { "text": "Blog", "url": "/blog" },
+      { "text": "Layanan", "url": "/services" },
+      { "text": "Tim", "url": "/team" },
+      { "text": "Acara Mendatang", "url": "/events?status=upcoming" }
+    ],
+    "legal": [
+      { "text": "Privasi", "url": "/privacy" },
+      { "text": "Syarat & Ketentuan", "url": "/terms" },
+      { "text": "Perjanjian Vendor", "url": "/vendor-agreement" }
+    ],
+    "newsletter_signup": {
+      "title": "Dapetin Update Event Seru",
+      "placeholder": "Email lo...",
+      "button": "Gabung"
+    },
+    "copyright": "© 2026 PT. Nara Sukses Bersama. Dibangun dengan presisi. Dieksekusi dengan senang hati."
+  }
+}

@@ -4,12 +4,12 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const toggleVariants = cva(
-  "group/toggle inline-flex items-center justify-center gap-1 rounded-xl text-sm font-bold uppercase tracking-tight whitespace-nowrap transition-all outline-hidden hover:bg-[#ccff00] hover:text-black hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-brutal focus-visible:ring-2 focus-visible:ring-[#ccff00] disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-pressed:bg-[#ccff00] aria-pressed:text-black data-[state=on]:bg-[#ccff00] data-[state=on]:text-black [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-5",
+  "group/toggle inline-flex items-center justify-center gap-1 rounded-xl text-sm font-bold uppercase tracking-tight whitespace-nowrap transition-colors outline-hidden hover:brightness-105 active:translate-x-[6px] active:translate-y-[6px] active:shadow-brutal-active focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-pressed:bg-primary aria-pressed:text-black data-[state=on]:bg-primary data-[state=on]:text-black [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-5",
   {
     variants: {
       variant: {
-        default: "border-2 border-transparent hover:border-black data-[state=on]:border-black data-[state=on]:shadow-brutal data-[state=on]:-translate-x-[2px] data-[state=on]:-translate-y-[2px]",
-        outline: "border-2 border-black bg-transparent data-[state=on]:shadow-brutal data-[state=on]:-translate-x-[2px] data-[state=on]:-translate-y-[2px]",
+        default: "border-2 border-transparent hover:border-black data-[state=on]:border-black data-[state=on]:shadow-brutal-active data-[state=on]:translate-x-[6px] data-[state=on]:translate-y-[6px]",
+        outline: "border-2 border-black bg-transparent shadow-brutal data-[state=on]:shadow-brutal-active data-[state=on]:translate-x-[6px] data-[state=on]:translate-y-[6px]",
       },
       size: {
         default:

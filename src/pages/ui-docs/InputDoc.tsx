@@ -2,6 +2,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ComponentPreview } from "@/components/ui/component-preview";
 import { Search, Mail } from "lucide-react";
+import { BRAND } from "@/config/brand.config";
 
 export default function InputDoc() {
   return (

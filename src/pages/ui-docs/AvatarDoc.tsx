@@ -1,5 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback, AvatarBadge, AvatarGroup, AvatarGroupCount } from "@/components/ui/avatar";
 import { ComponentPreview } from "@/components/ui/component-preview";
+import { BRAND } from "@/config/brand.config";
 
 export default function AvatarDoc() {
   return (

@@ -25,10 +25,10 @@ const indicatorVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-[#ccff00]",
-        secondary: "bg-[#8a2be2]",
+        default: "bg-primary",
+        secondary: "bg-secondary",
         destructive: "bg-[#ef4444]",
-        striped: "bg-[#ccff00] bg-[linear-gradient(45deg,rgba(0,0,0,0.1)_25%,transparent_25%,transparent_50%,rgba(0,0,0,0.1)_50%,rgba(0,0,0,0.1)_75%,transparent_75%,transparent)] bg-[length:1rem_1rem]",
+        striped: "bg-primary bg-[linear-gradient(45deg,rgba(0,0,0,0.1)_25%,transparent_25%,transparent_50%,rgba(0,0,0,0.1)_50%,rgba(0,0,0,0.1)_75%,transparent_75%,transparent)] bg-[length:1rem_1rem]",
       },
     },
     defaultVariants: {

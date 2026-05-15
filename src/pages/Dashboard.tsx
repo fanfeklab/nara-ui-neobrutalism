@@ -10,7 +10,7 @@ export default function Dashboard() {
       <PageTransition>
         <div className="flex flex-col items-center justify-center p-4 md:p-8 text-center min-h-[60vh]">
           <div className="max-w-md w-full bg-card p-8 border-2 border-black shadow-brutal rounded-2xl flex flex-col items-center">
-            <div className="w-16 h-16 bg-[#8a2be2] border-2 border-black rounded-xl flex items-center justify-center mb-6 shadow-brutal-sm">
+            <div className="w-16 h-16 bg-secondary border-2 border-black rounded-xl flex items-center justify-center mb-6 shadow-brutal-sm">
               <Wrench className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-3xl font-display font-black mb-4 text-foreground">

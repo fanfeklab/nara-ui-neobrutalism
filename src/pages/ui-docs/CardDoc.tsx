@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { ComponentPreview } from "@/components/ui/component-preview";
+import { BRAND } from "@/config/brand.config";
 
 export default function CardDoc() {
   return (
@@ -41,7 +42,7 @@ export default function CardDoc() {
       <ComponentPreview
         title="Stats Card"
         description="A card styled for displaying metrics, utilizing background colors."
-        code={`import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"\nimport { Button } from "@/components/ui/button"\n\nexport function CardStats() {\n  return (\n    <Card className="w-[350px] bg-primary">\n      <CardHeader>\n        <CardTitle>Sales Stats</CardTitle>\n        <CardDescription className="text-primary-foreground/70">Monthly ticket sales</CardDescription>\n      </CardHeader>\n      <CardContent>\n        <p className="text-5xl font-mono font-black tracking-tighter text-black">1,240 <span className="text-xl">qty</span></p>\n      </CardContent>\n      <CardFooter className="justify-end">\n        <Button variant="solid" className="bg-white hover:bg-white text-black">View Report</Button>\n      </CardFooter>\n    </Card>\n  )\n}`}
+        code={`import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"\nimport { Button } from "@/components/ui/button"\n\nexport function CardStats() {\n  return (\n    <Card className="w-[350px] bg-primary">\n      <CardHeader>\n        <CardTitle>Sales Stats</CardTitle>\n        <CardDescription className="text-primary-foreground/70">Monthly ticket sales</CardDescription>\n      </CardHeader>\n      <CardContent>\n        <p className="text-5xl font-mono font-black tracking-tighter text-black">1,240 <span className="text-xl">qty</span></p>\n      </CardContent>\n      <CardFooter className="justify-end">\n        <Button variant="solid" className="bg-card hover:bg-card text-card-foreground">View Report</Button>\n      </CardFooter>\n    </Card>\n  )\n}`}
       >
         <Card className="w-[350px] bg-primary text-primary-foreground">
           <CardHeader className="border-black">
@@ -52,7 +53,7 @@ export default function CardDoc() {
             <p className="text-5xl font-mono font-black tracking-tighter text-black">1,240 <span className="text-xl">qty</span></p>
           </CardContent>
           <CardFooter className="justify-end">
-            <Button variant="solid" className="bg-white hover:bg-white text-black border-black">View Report</Button>
+            <Button variant="solid" className="bg-card hover:bg-card text-card-foreground border-black">View Report</Button>
           </CardFooter>
         </Card>
       </ComponentPreview>

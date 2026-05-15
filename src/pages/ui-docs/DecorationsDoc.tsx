@@ -28,8 +28,8 @@ export default function DecorationsDoc() {
           </TabsList>
           <TabsContent value="preview" className="p-8 border-2 border-black rounded-xl bg-card shadow-brutal flex gap-8 items-center justify-center min-h-[200px]">
              <Sparkle size={64} animate="spin" />
-             <Sparkle size={64} color="#8a2be2" animate="pulse" />
-             <Sparkle size={64} color="#ff5500" animate="none" />
+             <Sparkle size={64} color="var(--color-secondary)" animate="pulse" />
+             <Sparkle size={64} color="var(--color-accent)" animate="none" />
           </TabsContent>
           <TabsContent value="code">
             <CodeBlock language="tsx" code={`import { Sparkle } from "@/components/decorations/Sparkle";
@@ -38,7 +38,7 @@ export function SparkleDemo() {
   return (
     <div className="flex gap-4">
       <Sparkle size={64} animate="spin" />
-      <Sparkle size={64} color="#8a2be2" animate="pulse" />
+      <Sparkle size={64} color="var(--color-secondary)" animate="pulse" />
     </div>
   )
 }`} />
@@ -59,7 +59,7 @@ export function SparkleDemo() {
             <div className="py-8">
               <Marquee text="NEO-BRUTALISM UI" speed="normal" direction="left" />
               <div className="h-4" />
-              <Marquee text="COMPONENTS" speed="fast" direction="right" bg="bg-[#8a2be2]" itemClassName="text-white" />
+              <Marquee text="COMPONENTS" speed="fast" direction="right" bg="bg-secondary" itemClassName="text-white" />
             </div>
           </TabsContent>
           <TabsContent value="code">
@@ -69,7 +69,7 @@ export function MarqueeDemo() {
   return (
     <div className="space-y-4">
       <Marquee text="NEO-BRUTALISM UI" speed="normal" direction="left" />
-      <Marquee text="COMPONENTS" speed="fast" direction="right" bg="bg-[#8a2be2]" itemClassName="text-white" />
+      <Marquee text="COMPONENTS" speed="fast" direction="right" bg="bg-secondary" itemClassName="text-white" />
     </div>
   )
 }`} />
@@ -87,8 +87,8 @@ export function MarqueeDemo() {
             <TabsTrigger value="code">Code</TabsTrigger>
           </TabsList>
           <TabsContent value="preview" className="p-8 border-2 border-black rounded-xl bg-card shadow-brutal flex gap-8 items-center justify-center min-h-[300px]">
-             <AbstractBlob variant={1} color="#ff5500" animate="float" className="w-32 h-32" />
-             <AbstractBlob variant={2} color="#ccff00" animate="spin" className="w-32 h-32" />
+             <AbstractBlob variant={1} color="var(--color-accent)" animate="float" className="w-32 h-32" />
+             <AbstractBlob variant={2} color="var(--color-primary)" animate="spin" className="w-32 h-32" />
           </TabsContent>
           <TabsContent value="code">
             <CodeBlock language="tsx" code={`import { AbstractBlob } from "@/components/decorations/AbstractBlob";
@@ -96,8 +96,8 @@ export function MarqueeDemo() {
 export function BlobDemo() {
   return (
     <div className="flex gap-4">
-      <AbstractBlob variant={1} color="#ff5500" animate="float" className="w-32 h-32" />
-      <AbstractBlob variant={2} color="#ccff00" animate="spin" className="w-32 h-32" />
+      <AbstractBlob variant={1} color="var(--color-accent)" animate="float" className="w-32 h-32" />
+      <AbstractBlob variant={2} color="var(--color-primary)" animate="spin" className="w-32 h-32" />
     </div>
   )
 }`} />
@@ -116,8 +116,8 @@ export function BlobDemo() {
           </TabsList>
           <TabsContent value="preview" className="border-2 border-black rounded-xl bg-card shadow-brutal overflow-hidden">
              <div className="h-24 bg-card" />
-             <Wave color="#ccff00" animate="flow" className="-mt-10" />
-             <div className="h-24 bg-[#ccff00]" />
+             <Wave color="var(--color-primary)" animate="flow" className="-mt-10" />
+             <div className="h-24 bg-primary" />
           </TabsContent>
           <TabsContent value="code">
             <CodeBlock language="tsx" code={`import { Wave } from "@/components/decorations/Wave";
@@ -125,10 +125,10 @@ export function BlobDemo() {
 export function WaveDemo() {
   return (
     <div className="overflow-hidden">
-      <div className="h-24 bg-white" />
+      <div className="h-24 bg-card" />
       {/* Pull the wave up slightly using negative margin to eliminate gaps */}
-      <Wave color="#ccff00" animate="flow" className="-mt-10" />
-      <div className="h-24 bg-[#ccff00]" />
+      <Wave color="var(--color-primary)" animate="flow" className="-mt-10" />
+      <div className="h-24 bg-primary" />
     </div>
   )
 }`} />

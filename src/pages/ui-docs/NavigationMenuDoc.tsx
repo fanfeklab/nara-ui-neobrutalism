@@ -8,6 +8,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { ComponentPreview } from "@/components/ui/component-preview";
+import { BRAND } from "@/config/brand.config";
 
 export default function NavigationMenuDoc() {
   return (
@@ -39,9 +40,7 @@ export default function NavigationMenuDoc() {
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         href="/"
                       >
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          NARA EVENTS
-                        </div>
+                        <div className="mb-2 mt-4 text-lg font-medium">{BRAND.name}</div>
                         <p className="text-sm leading-tight text-muted-foreground">
                           Beautifully designed components built with Radix UI and Tailwind CSS.
                         </p>

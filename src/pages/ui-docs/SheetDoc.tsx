@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { BRAND } from "@/config/brand.config";
 
 export default function SheetDoc() {
   return (
@@ -69,7 +70,7 @@ export default function SheetDoc() {
                 <SheetTitle>Navigation Menu</SheetTitle>
               </SheetHeader>
               <div className="py-8 font-body space-y-4">
-                <p>Welcome to NARA EVENTS</p>
+                <p>Welcome to {BRAND.name}</p>
                 <p>Checkout our schedule, and events.</p>
               </div>
             </SheetContent>

@@ -18,7 +18,7 @@ export function Marquee({
   repeat = 10,
   speed = "normal",
   direction = "left",
-  bg = "bg-[#ccff00]",
+  bg = "bg-primary",
 }: MarqueeProps) {
   const items = Array.from({ length: repeat });
 

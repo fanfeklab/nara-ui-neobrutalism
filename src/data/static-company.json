@@ -1,0 +1,177 @@
+{
+  "static_pages": {
+    "about_full": {
+      "title": "Tentang NARA EVENTS",
+      "subtitle": "Sejak 2024, Kami Merekayasa Acara dengan Presisi",
+      "slug": "/about",
+      "body_html": "<h2>Kami Bukan EO Biasa</h2><p>Sejak 2024, NARA EVENTS hadir buat ngerubah cara orang bikin acara. Kami gak percaya sama yang namanya 'asal jadi' atau 'yang penting rame'. Setiap acara yang kami tangani harus terukur, transparan, dan ninggalin kesan.</p><h2>Kenapa Kami Ada?</h2><p>Industri event di Indonesia masih banyak yang main 'kira-kira'. Budget mengambang, vendor gak jelas, sponsor gak tau ROI-nya, dan peserta cuma datang-pulang tanpa kenangan. Kami pengen ngehancurin paradigma itu. Acara bukan cuma soal dekorasi cantik — acara adalah engineering problem yang butuh presisi.</p><h2>Apa yang Bikin Kami Beda?</h2><ul><li><strong>Data-Driven:</strong> Setiap keputusan berdasarkan data, bukan feeling. Dari pemilihan venue, harga tiket, sampe strategi marketing — semua ada angkanya.</li><li><strong>Transparan:</strong> Klien, sponsor, vendor — semua dapet akses ke dashboard real-time. Gak ada yang ditutupin.</li><li><strong>Full Stack:</strong> Dari konsep sampe laporan pasca-acara — kami handle semuanya. Lo tinggal review dan approve.</li><li><strong>Tim Kecil, Impact Gede:</strong> Dengan 8 orang, kami udah nge-handle 28+ acara dan 150.000+ peserta. Efisiensi adalah napas kami.</li></ul><h2>Mimpi Kami</h2><p>Jadi standar baru untuk industri event di Indonesia. Di mana setiap acara itu terukur, setiap sponsor tau ROI-nya, setiap vendor dihargai, dan setiap peserta pulang bawa kenangan.</p>"
+    },
+    "our_team": [
+      {
+        "id": "team-001",
+        "name": "Nadia Kirana",
+        "role": "CEO & Founder",
+        "bio": "Visioner di balik NARA. Percaya bahwa data-driven decision adalah fondasi dari event excellence. Sebelumnya Head of Business Development di perusahaan teknologi.",
+        "photo": "https://picsum.photos/seed/nadia-kirana/400/400",
+        "social": {
+          "linkedin": "https://linkedin.com/in/nadia-kirana",
+          "twitter": "https://twitter.com/nadia_kirana"
+        }
+      },
+      {
+        "id": "team-002",
+        "name": "Hanif S",
+        "role": "Lead Principal Architect & Software Engineering",
+        "bio": "Otak teknis di balik platform NARA ERP. Obsesi: eksekusi presisi dan logistik tanpa chaos. Sebelumnya senior engineer di Tokopedia dan Grab.",
+        "photo": "https://picsum.photos/seed/hanif-s/400/400",
+        "social": {
+          "linkedin": "https://linkedin.com/in/hanif-s",
+          "github": "https://github.com/fanfeklab"
+        }
+      },
+      {
+        "id": "team-003",
+        "name": "Budi Santoso",
+        "role": "CTO",
+        "bio": "Pemimpin teknologi NARA. Obsessed dengan data integrity dan pengukuran akurat. Sebelumnya engineering lead di startup fintech.",
+        "photo": "https://picsum.photos/seed/budi-santoso/400/400",
+        "social": {
+          "linkedin": "https://linkedin.com/in/budi-santoso",
+          "github": "https://github.com/budisantoso"
+        }
+      },
+      {
+        "id": "team-004",
+        "name": "Rina Melati",
+        "role": "Head of Operations",
+        "bio": "Ahli logistik yang memastikan setiap acara berjalan mulus. Latar belakang di manajemen operasional hotel bintang lima dan event internasional.",
+        "photo": "https://picsum.photos/seed/rina-melati/400/400",
+        "social": {
+          "linkedin": "https://linkedin.com/in/rina-melati"
+        }
+      },
+      {
+        "id": "team-005",
+        "name": "Dimas Ardian",
+        "role": "Creative Director",
+        "bio": "Desainer pengalaman yang mengubah konsep acara jadi realitas visual. Portofolio: konser, pameran, konferensi skala besar.",
+        "photo": "https://picsum.photos/seed/dimas-ardian/400/400",
+        "social": {
+          "linkedin": "https://linkedin.com/in/dimas-ardian",
+          "behance": "https://behance.net/dimasardian"
+        }
+      },
+      {
+        "id": "team-006",
+        "name": "Sari Wulandari",
+        "role": "Head of Finance",
+        "bio": "Mengelola keuangan NARA dengan prinsip transparansi penuh. Berpengalaman di akuntansi korporat dan audit keuangan.",
+        "photo": "https://picsum.photos/seed/sari-wulandari/400/400",
+        "social": {
+          "linkedin": "https://linkedin.com/in/sari-wulandari"
+        }
+      }
+    ],
+    "our_clients": [
+      { "id": "cl-001", "name": "BCA", "logo": "https://picsum.photos/seed/client-bca/200/100" },
+      { "id": "cl-002", "name": "Gojek", "logo": "https://picsum.photos/seed/client-gojek/200/100" },
+      { "id": "cl-003", "name": "Telkomsel", "logo": "https://picsum.photos/seed/client-telkomsel/200/100" },
+      { "id": "cl-004", "name": "Tokopedia", "logo": "https://picsum.photos/seed/client-tokopedia/200/100" },
+      { "id": "cl-005", "name": "Samsung", "logo": "https://picsum.photos/seed/client-samsung/200/100" },
+      { "id": "cl-006", "name": "Bintang", "logo": "https://picsum.photos/seed/client-bintang/200/100" },
+      { "id": "cl-007", "name": "Bank Mandiri", "logo": "https://picsum.photos/seed/client-mandiri/200/100" },
+      { "id": "cl-008", "name": "Indofood", "logo": "https://picsum.photos/seed/client-indofood/200/100" }
+    ],
+    "testimonials": [
+      {
+        "id": "tst-001",
+        "name": "Andi Prasetyo",
+        "role": "Marketing Director, Gojek",
+        "quote": "NARA ngubah cara kami ngeliat acara. Dari yang tadinya penuh ketidakpastian, sekarang semuanya terukur. Dasbor real-time mereka gila sih.",
+        "event": "Gojek Partner Summit 2025",
+        "photo": "https://picsum.photos/seed/testimoni-andi/100/100"
+      },
+      {
+        "id": "tst-002",
+        "name": "Maya Rahardjo",
+        "role": "VP People, Tokopedia",
+        "quote": "Leadership summit yang NARA kelola buat kami mulus banget di 5 kota bersamaan. Gak ada cacat. Profesionalisme mereka luar biasa.",
+        "event": "Tokopedia Leadership Summit 2025",
+        "photo": "https://picsum.photos/seed/testimoni-maya/100/100"
+      },
+      {
+        "id": "tst-003",
+        "name": "Rudi Hartono",
+        "role": "CEO, TechStartup Indonesia",
+        "quote": "Bootcamp Digital Marketing NARA adalah investasi terbaik buat tim kami. 100% peserta dapet kerja dalam 90 hari. Hasilnya nyata, bukan janji.",
+        "event": "Digital Marketing Bootcamp Batch 6 2025",
+        "photo": "https://picsum.photos/seed/testimoni-rudi/100/100"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Apa yang bikin NARA beda dari EO lain?",
+        "answer": "Kami gak cuma atur acara — kami yang ngedesain sistemnya. Semua berbasis data: dari analisis audiens, dasbor real-time, sampe laporan ROI yang bisa lo pake buat rapat. Kami gak jualan dekorasi — kami jualan hasil."
+      },
+      {
+        "question": "NARA cuma ngurusin acara di Malang aja?",
+        "answer": "Enggak dong. Kami udah eksekusi acara di Jakarta, Bandung, Surabaya, Medan, Makassar — dan pastinya Malang. Mau di kota lain? Gas aja, kita obrolin."
+      },
+      {
+        "question": "Berapa biaya pake jasa NARA?",
+        "answer": "Tergantung skala dan kompleksitas acara lo. Yang pasti: kita transparan soal biaya dari awal. Lo bisa booking konsultasi gratis dulu buat dapet estimasi. Gak ada hidden cost."
+      },
+      {
+        "question": "Berapa lama persiapan acara idealnya?",
+        "answer": "Standar: 3 bulan. Acara gede kayak konferensi atau festival: 6-12 bulan. Tapi kita juga bisa gercep kalo lo punya timeline mepet — selama ekspektasi lo realistis."
+      },
+      {
+        "question": "NARA punya sistem tiket sendiri?",
+        "answer": "Iya. Platform tiket internal yang udah terintegrasi sama semua sistem kita. Lo bisa atur harga, kuota, diskon, dan dapet data audiens yang lengkap."
+      },
+      {
+        "question": "Gimana NARA ngukur ROI sponsor?",
+        "answer": "Sponsor lo dapet dasbor sendiri yang ngeliatin: traffic stan, kualitas leads, engagement depth, media coverage, dan post-event conversion. Semua real-time dan transparan."
+      },
+      {
+        "question": "Bisa bantu ngurus perizinan acara?",
+        "answer": "Bisa banget. Tim legal kita udah biasa ngurusin izin keramaian, izin kebisingan, izin keamanan — di berbagai kota. Lo gak perlu pusing sama birokrasi."
+      }
+    ],
+    "contact": {
+      "title": "Hubungi Kami",
+      "subtitle": "Ngobrol Dulu, Gratis. Gak Ada Kewajiban Apa-Apa.",
+      "description": "Tim kami siap dengerin kebutuhan acara lo dan kasih masukan strategis tanpa biaya. Isi form di bawah atau hubungi kami langsung — kami ramah, gak gigit.",
+      "address": "Jl. Kawi No. 12, Malang, Jawa Timur 65114",
+      "phone": "+62 857 3100 0806",
+      "email": "hello@naraevents.id",
+      "working_hours": "Senin - Jumat, 09:00 - 17:00 WIB",
+      "form_fields": [
+        { "name": "full_name", "label": "Nama Lengkap", "type": "text", "required": true },
+        { "name": "company", "label": "Perusahaan", "type": "text", "required": false },
+        { "name": "email", "label": "Email", "type": "email", "required": true },
+        { "name": "phone", "label": "Nomor Telepon", "type": "tel", "required": false },
+        { "name": "event_type", "label": "Jenis Acara", "type": "select", "options": ["Konser", "Konferensi", "Workshop", "Pameran", "Bootcamp", "Lainnya"], "required": true },
+        { "name": "message", "label": "Pesan", "type": "textarea", "required": true }
+      ]
+    },
+    "privacy_policy": {
+      "title": "Kebijakan Privasi",
+      "slug": "/privacy",
+      "last_updated": "2025-01-15",
+      "body_html": "<h2>1. Data yang Kami Kumpulkan</h2><p>Kami mengumpulkan data yang lo kasih langsung: nama, email, nomor telepon, dan info perusahaan. Kami juga ngumpulin data otomatis kayak alamat IP, jenis browser, dan halaman yang lo kunjungi.</p><h2>2. Buat Apa Data Lo?</h2><p>Kami pake data lo buat: ngasih layanan yang lebih baik, komunikasi sama lo, proses transaksi, kirim update dan pemberitahuan, dan mematuhi kewajiban hukum. Gak lebih dari itu.</p><h2>3. Perlindungan Data</h2><p>Kami nerapin langkah keamanan teknis dan organisasional buat ngelindungin data lo dari akses, pengungkapan, perubahan, atau penghancuran yang gak sah.</p><h2>4. Hak Lo</h2><p>Sesuai UU PDP, lo punya hak buat akses, perbaiki, hapus, dan batasin pemrosesan data pribadi lo. Hubungi kami di privacy@naraevents.id buat urusan privasi.</p>"
+    },
+    "terms_of_service": {
+      "title": "Syarat & Ketentuan",
+      "slug": "/terms",
+      "last_updated": "2025-01-15",
+      "body_html": "<h2>1. Penerimaan Syarat</h2><p>Dengan pake layanan NARA EVENTS, lo setuju sama syarat dan ketentuan ini. Kalo lo gak setuju, mohon jangan pake layanan kami ya.</p><h2>2. Deskripsi Layanan</h2><p>NARA EVENTS nyediain layanan perencanaan dan eksekusi acara, termasuk manajemen acara, produksi, sistem tiket, pelaporan ROI sponsor, dan koordinasi vendor.</p><h2>3. Pembayaran</h2><p>Semua biaya layanan disepakati dalam kontrak terpisah. Pembayaran sesuai jadwal yang ditentuin di kontrak. Telat bayar bisa kena denda.</p><h2>4. Pembatalan dan Refund</h2><p>Ketentuan pembatalan dan refund diatur per kontrak. Umumnya, pembatalan kurang dari 30 hari sebelum acara gak bisa direfund.</p>"
+    },
+    "vendor_agreement": {
+      "title": "Perjanjian Vendor",
+      "slug": "/vendor-agreement",
+      "last_updated": "2025-01-15",
+      "body_html": "<h2>1. Ruang Lingkup Pekerjaan</h2><p>Vendor setuju buat nyediain layanan sesuai yang ditentuin dalam kontrak. Semua spesifikasi, timeline, dan hasil akhir didokumentasikan lewat Portal Vendor NARA biar jelas semua.</p><h2>2. Standar Kualitas</h2><p>Vendor harus memenuhi standar kualitas yang ditetapkan NARA. Performa dievaluasi tiap selesai acara. Rating di bawah 3.0/5.0? Maaf, kita cari yang lain.</p><h2>3. Pembayaran</h2><p>NARA berkomitmen bayar dalam 3 hari kerja setelah tugas selesai dan invoice disetujui. Semua ketentuan pembayaran transparan dan ada di kontrak.</p><h2>4. Kerahasiaan</h2><p>Vendor wajib jaga kerahasiaan semua info yang didapet selama kerja sama: data klien, sponsor, peserta, dan strategi bisnis NARA.</p>"
+    }
+  }
+}

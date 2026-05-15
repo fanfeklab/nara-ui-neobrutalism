@@ -67,7 +67,7 @@ function DialogContent({
         {children}
         {showCloseButton && (
           <DialogPrimitive.Close
-            className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 hover:bg-[#ccff00] focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none border-2 border-transparent hover:border-black p-1"
+            className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none border-2 border-transparent hover:border-black p-1"
           >
             <XIcon className="h-4 w-4" />
             <span className="sr-only">Close</span>
@@ -100,7 +100,7 @@ function DialogFooter({
     <div
       data-slot="dialog-footer"
       className={cn(
-        "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 pt-2",
+        "flex flex-col-reverse gap-3 sm:flex-row sm:justify-end sm:gap-2 pt-2",
         className
       )}
       {...props}
